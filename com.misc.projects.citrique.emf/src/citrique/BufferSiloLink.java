@@ -86,6 +86,6 @@ public interface BufferSiloLink extends PlantLink {
 	 * @model
 	 * @generated
 	 */
-	void RefreshDispose();
+	void refreshDispose();
 
 } // BufferSiloLink

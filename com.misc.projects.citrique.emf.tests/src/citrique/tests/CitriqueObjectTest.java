@@ -16,10 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link citrique.CitriqueObject#RefreshDescription() <em>Refresh Description</em>}</li>
- *   <li>{@link citrique.CitriqueObject#RefreshShortDescription() <em>Refresh Short Description</em>}</li>
- *   <li>{@link citrique.CitriqueObject#GetType() <em>Get Type</em>}</li>
- *   <li>{@link citrique.CitriqueObject#GetShortType() <em>Get Short Type</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#refreshDescription() <em>Refresh Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#refreshShortDescription() <em>Refresh Short Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#refreshType() <em>Refresh Type</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#refreshShortType() <em>Refresh Short Type</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -96,10 +96,10 @@ public class CitriqueObjectTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#RefreshDescription() <em>Refresh Description</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#refreshDescription() <em>Refresh Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#RefreshDescription()
+	 * @see citrique.CitriqueObject#refreshDescription()
 	 * @generated
 	 */
 	public void testRefreshDescription() {
@@ -109,10 +109,10 @@ public class CitriqueObjectTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#RefreshShortDescription() <em>Refresh Short Description</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#refreshShortDescription() <em>Refresh Short Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#RefreshShortDescription()
+	 * @see citrique.CitriqueObject#refreshShortDescription()
 	 * @generated
 	 */
 	public void testRefreshShortDescription() {
@@ -122,26 +122,26 @@ public class CitriqueObjectTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#GetType() <em>Get Type</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#refreshType() <em>Refresh Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#GetType()
+	 * @see citrique.CitriqueObject#refreshType()
 	 * @generated
 	 */
-	public void testGetType() {
+	public void testRefreshType() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#GetShortType() <em>Get Short Type</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#refreshShortType() <em>Refresh Short Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#GetShortType()
+	 * @see citrique.CitriqueObject#refreshShortType()
 	 * @generated
 	 */
-	public void testGetShortType() {
+	public void testRefreshShortType() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

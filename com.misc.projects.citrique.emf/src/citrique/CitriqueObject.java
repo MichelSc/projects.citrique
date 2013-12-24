@@ -238,7 +238,7 @@ public interface CitriqueObject extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void RefreshDescription();
+	void refreshDescription();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -246,7 +246,7 @@ public interface CitriqueObject extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void RefreshShortDescription();
+	void refreshShortDescription();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -254,7 +254,7 @@ public interface CitriqueObject extends EObject {
 	 * @model
 	 * @generated
 	 */
-	String GetType();
+	void refreshType();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -262,6 +262,6 @@ public interface CitriqueObject extends EObject {
 	 * @model
 	 * @generated
 	 */
-	String GetShortType();
+	void refreshShortType();
 
 } // CitriqueObject

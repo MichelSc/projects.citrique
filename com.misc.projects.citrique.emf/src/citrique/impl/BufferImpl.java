@@ -233,4 +233,12 @@ public class BufferImpl extends PlantNodeImpl implements Buffer {
 		return result.toString();
 	}
 
+	@Override
+	public void refreshShortType() {
+		String type = "BU";
+		this.setShortType(type);
+	}
+	
+	
+
 } //BufferImpl

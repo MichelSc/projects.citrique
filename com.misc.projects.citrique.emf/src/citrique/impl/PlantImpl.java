@@ -4,6 +4,7 @@ package citrique.impl;
 
 import citrique.Buffer;
 import citrique.BufferSiloLink;
+import citrique.CitriqueObject;
 import citrique.CitriquePackage;
 import citrique.Plant;
 import citrique.PlantLink;
@@ -12,8 +13,11 @@ import citrique.PlantObject;
 import citrique.Reactor;
 import citrique.Silo;
 import citrique.SiloReactorLink;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.HashSet;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link citrique.impl.PlantImpl#getSilo <em>Silo</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getReactor <em>Reactor</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getNode <em>Node</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getLinks <em>Links</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getLink <em>Link</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getBufferSiloLink <em>Buffer Silo Link</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getSiloReactorLink <em>Silo Reactor Link</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getPlantObject <em>Plant Object</em>}</li>
@@ -84,14 +88,14 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	protected EList<PlantNode> node;
 
 	/**
-	 * The cached value of the '{@link #getLinks() <em>Links</em>}' reference list.
+	 * The cached value of the '{@link #getLink() <em>Link</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLinks()
+	 * @see #getLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PlantLink> links;
+	protected EList<PlantLink> link;
 
 	/**
 	 * The cached value of the '{@link #getBufferSiloLink() <em>Buffer Silo Link</em>}' containment reference list.
@@ -195,11 +199,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PlantLink> getLinks() {
-		if (links == null) {
-			links = new EObjectResolvingEList<PlantLink>(PlantLink.class, this, CitriquePackage.PLANT__LINKS);
+	public EList<PlantLink> getLink() {
+		if (link == null) {
+			link = new EObjectResolvingEList<PlantLink>(PlantLink.class, this, CitriquePackage.PLANT__LINK);
 		}
-		return links;
+		return link;
 	}
 
 	/**
@@ -241,34 +245,65 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void RefreshNodes() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		HashSet<PlantNode> nodestobe = new HashSet<PlantNode>();
+		nodestobe.addAll(this.getBuffer());
+		nodestobe.addAll(this.getSilo());
+		nodestobe.addAll(this.getReactor());
+
+		HashSet<PlantNode> nodesasis = new HashSet<PlantNode>(this.getNode());
+		
+		HashSet<PlantNode> nodestoadd = new HashSet<PlantNode>(nodestobe); 
+		nodestoadd.removeAll(nodesasis);
+		
+		HashSet<PlantNode> nodestoremove = new HashSet<PlantNode>(nodesasis); 
+		nodestoremove.removeAll(nodestobe);
+		
+		this.getNode().addAll(nodestoadd);
+		this.getNode().removeAll(nodestoremove);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void RefreshLinks() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		HashSet<PlantLink> linkstobe = new HashSet<PlantLink>();
+		linkstobe.addAll(this.getBufferSiloLink());
+		linkstobe.addAll(this.getSiloReactorLink());
+
+		HashSet<PlantLink> linksasis = new HashSet<PlantLink>(this.getLink());
+		
+		HashSet<PlantLink> linkstoadd = new HashSet<PlantLink>(linkstobe); 
+		linkstoadd.removeAll(linksasis);
+		
+		HashSet<PlantLink> linkstoremove = new HashSet<PlantLink>(linksasis); 
+		linkstoremove.removeAll(linkstobe);
+		
+		this.getLink().addAll(linkstoadd);
+		this.getLink().removeAll(linkstoremove);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void RefreshChildren() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		HashSet<CitriqueObject> objectstobe = new HashSet<CitriqueObject>();
+		objectstobe.addAll(this.getNode());
+		objectstobe.addAll(this.getLink());
+
+		HashSet<CitriqueObject> objectsasis = new HashSet<CitriqueObject>(this.getChild());
+		
+		HashSet<CitriqueObject> objectstoadd = new HashSet<CitriqueObject>(objectstobe); 
+		objectstoadd.removeAll(objectsasis);
+		
+		HashSet<CitriqueObject> objectstoremove = new HashSet<CitriqueObject>(objectsasis); 
+		objectstoremove.removeAll(objectstobe);
+		
+		this.getChild().addAll(objectstoadd);
+		this.getChild().removeAll(objectstoremove);
 	}
 
 	/**
@@ -309,8 +344,8 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				return getReactor();
 			case CitriquePackage.PLANT__NODE:
 				return getNode();
-			case CitriquePackage.PLANT__LINKS:
-				return getLinks();
+			case CitriquePackage.PLANT__LINK:
+				return getLink();
 			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
 				return getBufferSiloLink();
 			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
@@ -346,9 +381,9 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				getNode().clear();
 				getNode().addAll((Collection<? extends PlantNode>)newValue);
 				return;
-			case CitriquePackage.PLANT__LINKS:
-				getLinks().clear();
-				getLinks().addAll((Collection<? extends PlantLink>)newValue);
+			case CitriquePackage.PLANT__LINK:
+				getLink().clear();
+				getLink().addAll((Collection<? extends PlantLink>)newValue);
 				return;
 			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
 				getBufferSiloLink().clear();
@@ -386,8 +421,8 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 			case CitriquePackage.PLANT__NODE:
 				getNode().clear();
 				return;
-			case CitriquePackage.PLANT__LINKS:
-				getLinks().clear();
+			case CitriquePackage.PLANT__LINK:
+				getLink().clear();
 				return;
 			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
 				getBufferSiloLink().clear();
@@ -418,8 +453,8 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				return reactor != null && !reactor.isEmpty();
 			case CitriquePackage.PLANT__NODE:
 				return node != null && !node.isEmpty();
-			case CitriquePackage.PLANT__LINKS:
-				return links != null && !links.isEmpty();
+			case CitriquePackage.PLANT__LINK:
+				return link != null && !link.isEmpty();
 			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
 				return bufferSiloLink != null && !bufferSiloLink.isEmpty();
 			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
@@ -451,4 +486,9 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 		return super.eInvoke(operationID, arguments);
 	}
 
+	@Override
+	public void refreshShortType() {
+		String type = "PL";
+		this.setShortType(type);
+	}
 } //PlantImpl

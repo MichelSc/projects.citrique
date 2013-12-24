@@ -11,12 +11,9 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -196,12 +193,13 @@ public class SiloReactorLinkImpl extends PlantLinkImpl implements SiloReactorLin
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
-	public void RefreshDispose() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void refreshDispose() {
+		if ( this.getReactor()==null || this.getSilo()==null){
+			this.setReactor(null);
+			this.setSilo(null);
+			this.getPlant().getSiloReactorLink().remove(this);
+		}
 	}
 
 	/**
@@ -319,10 +317,15 @@ public class SiloReactorLinkImpl extends PlantLinkImpl implements SiloReactorLin
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case CitriquePackage.SILO_REACTOR_LINK___REFRESH_DISPOSE:
-				RefreshDispose();
+				refreshDispose();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
+	@Override
+	public void refreshShortType() {
+		String type = "S-L";
+		this.setShortType(type);
+	}
 } //SiloReactorLinkImpl

@@ -271,7 +271,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCitriqueObject__GetType() {
+	public EOperation getCitriqueObject__RefreshType() {
 		return citriqueObjectEClass.getEOperations().get(2);
 	}
 
@@ -280,7 +280,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCitriqueObject__GetShortType() {
+	public EOperation getCitriqueObject__RefreshShortType() {
 		return citriqueObjectEClass.getEOperations().get(3);
 	}
 
@@ -379,7 +379,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPlant_Links() {
+	public EReference getPlant_Link() {
 		return (EReference)plantEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -595,7 +595,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBufferSiloLink__RefreshDispose() {
+	public EOperation getBufferSiloLink__RefreshDispose_1() {
 		return bufferSiloLinkEClass.getEOperations().get(0);
 	}
 
@@ -631,7 +631,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSiloReactorLink__RefreshDispose() {
+	public EOperation getSiloReactorLink__RefreshDispose_1() {
 		return siloReactorLinkEClass.getEOperations().get(0);
 	}
 
@@ -674,8 +674,8 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 		createEAttribute(citriqueObjectEClass, CITRIQUE_OBJECT__SHORT_NAME);
 		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_DESCRIPTION);
 		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION);
-		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___GET_TYPE);
-		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___GET_SHORT_TYPE);
+		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_TYPE);
+		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_SHORT_TYPE);
 
 		citriqueDomainEClass = createEClass(CITRIQUE_DOMAIN);
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANTS);
@@ -689,7 +689,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 		createEReference(plantEClass, PLANT__SILO);
 		createEReference(plantEClass, PLANT__REACTOR);
 		createEReference(plantEClass, PLANT__NODE);
-		createEReference(plantEClass, PLANT__LINKS);
+		createEReference(plantEClass, PLANT__LINK);
 		createEReference(plantEClass, PLANT__BUFFER_SILO_LINK);
 		createEReference(plantEClass, PLANT__SILO_REACTOR_LINK);
 		createEReference(plantEClass, PLANT__PLANT_OBJECT);
@@ -776,13 +776,13 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 		initEAttribute(getCitriqueObject_Description(), ecorePackage.getEString(), "Description", null, 0, 1, CitriqueObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCitriqueObject_ShortName(), ecorePackage.getEString(), "ShortName", null, 0, 1, CitriqueObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getCitriqueObject__RefreshDescription(), null, "RefreshDescription", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCitriqueObject__RefreshDescription(), null, "refreshDescription", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getCitriqueObject__RefreshShortDescription(), null, "RefreshShortDescription", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCitriqueObject__RefreshShortDescription(), null, "refreshShortDescription", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getCitriqueObject__GetType(), ecorePackage.getEString(), "GetType", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCitriqueObject__RefreshType(), null, "refreshType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getCitriqueObject__GetShortType(), ecorePackage.getEString(), "GetShortType", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getCitriqueObject__RefreshShortType(), null, "refreshShortType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(citriqueDomainEClass, CitriqueDomain.class, "CitriqueDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCitriqueDomain_Plants(), this.getPlant(), null, "Plants", null, 0, -1, CitriqueDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -797,7 +797,7 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 		initEReference(getPlant_Silo(), this.getSilo(), null, "Silo", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_Reactor(), this.getReactor(), null, "Reactor", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_Node(), this.getPlantNode(), null, "Node", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlant_Links(), this.getPlantLink(), null, "Links", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlant_Link(), this.getPlantLink(), null, "Link", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_BufferSiloLink(), this.getBufferSiloLink(), null, "BufferSiloLink", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_SiloReactorLink(), this.getSiloReactorLink(), null, "SiloReactorLink", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_PlantObject(), this.getPlantObject(), null, "PlantObject", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -831,13 +831,13 @@ public class CitriquePackageImpl extends EPackageImpl implements CitriquePackage
 		initEReference(getBufferSiloLink_Silo(), this.getSilo(), this.getSilo_BufferLinks(), "Silo", null, 1, 1, BufferSiloLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBufferSiloLink_Buffer(), this.getBuffer(), this.getBuffer_SiloLinks(), "Buffer", null, 1, 1, BufferSiloLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getBufferSiloLink__RefreshDispose(), null, "RefreshDispose", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getBufferSiloLink__RefreshDispose_1(), null, "refreshDispose", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(siloReactorLinkEClass, SiloReactorLink.class, "SiloReactorLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSiloReactorLink_Silo(), this.getSilo(), this.getSilo_ReactorLinks(), "Silo", null, 1, 1, SiloReactorLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSiloReactorLink_Reactor(), this.getReactor(), this.getReactor_SiloLinks(), "Reactor", null, 1, 1, SiloReactorLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getSiloReactorLink__RefreshDispose(), null, "RefreshDispose", 0, 1, IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSiloReactorLink__RefreshDispose_1(), null, "refreshDispose", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

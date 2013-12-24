@@ -5,7 +5,9 @@ package citrique.impl;
 import citrique.CitriquePackage;
 import citrique.Reactor;
 import citrique.SiloReactorLink;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -157,4 +159,9 @@ public class ReactorImpl extends PlantNodeImpl implements Reactor {
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public void refreshShortType() {
+		String type = "RE";
+		this.setShortType(type);
+	}
 } //ReactorImpl

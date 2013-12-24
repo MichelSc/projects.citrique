@@ -60,7 +60,7 @@ public class PlantItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNodePropertyDescriptor(object);
-			addLinksPropertyDescriptor(object);
+			addLinkPropertyDescriptor(object);
 			addPlantObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -89,19 +89,19 @@ public class PlantItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Links feature.
+	 * This adds a property descriptor for the Link feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLinksPropertyDescriptor(Object object) {
+	protected void addLinkPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Plant_Links_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_Links_feature", "_UI_Plant_type"),
-				 CitriquePackage.Literals.PLANT__LINKS,
+				 getString("_UI_Plant_Link_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_Link_feature", "_UI_Plant_type"),
+				 CitriquePackage.Literals.PLANT__LINK,
 				 true,
 				 false,
 				 true,

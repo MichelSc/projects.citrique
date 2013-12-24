@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link citrique.BufferSiloLink#RefreshDispose() <em>Refresh Dispose</em>}</li>
+ *   <li>{@link citrique.BufferSiloLink#refreshDispose() <em>Refresh Dispose</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -74,13 +74,13 @@ public class BufferSiloLinkTest extends PlantLinkTest {
 	}
 
 	/**
-	 * Tests the '{@link citrique.BufferSiloLink#RefreshDispose() <em>Refresh Dispose</em>}' operation.
+	 * Tests the '{@link citrique.BufferSiloLink#refreshDispose() <em>Refresh Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.BufferSiloLink#RefreshDispose()
+	 * @see citrique.BufferSiloLink#refreshDispose()
 	 * @generated
 	 */
-	public void testRefreshDispose() {
+	public void testRefreshDispose_1() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

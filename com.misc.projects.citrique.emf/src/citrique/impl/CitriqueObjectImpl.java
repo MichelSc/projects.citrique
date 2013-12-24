@@ -401,15 +401,36 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME, oldShortName, shortName));
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
-	public void RefreshDescription() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void refreshDescription() {
+		String type = this.getType();
+		String name = this.getName();
+		String description = type + ": "+name;
+		this.setDescription(description);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void refreshShortDescription() {
+		String type = this.getShortType();
+		String name = this.getShortName();
+		String description = type + ": "+name;
+		this.setShortDescription(description);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void refreshType() {
+		String type = this.eClass().getName();
+		this.setType(type);
 	}
 
 	/**
@@ -417,29 +438,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void RefreshShortDescription() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String GetType() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String GetShortType() {
+	public void refreshShortType() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -620,15 +619,17 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_DESCRIPTION:
-				RefreshDescription();
+				refreshDescription();
 				return null;
 			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION:
-				RefreshShortDescription();
+				refreshShortDescription();
 				return null;
-			case CitriquePackage.CITRIQUE_OBJECT___GET_TYPE:
-				return GetType();
-			case CitriquePackage.CITRIQUE_OBJECT___GET_SHORT_TYPE:
-				return GetShortType();
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_TYPE:
+				refreshType();
+				return null;
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_SHORT_TYPE:
+				refreshShortType();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}

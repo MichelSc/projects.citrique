@@ -83,6 +83,6 @@ public interface SiloReactorLink extends PlantLink {
 	 * @model
 	 * @generated
 	 */
-	void RefreshDispose();
+	void refreshDispose();
 
 } // SiloReactorLink

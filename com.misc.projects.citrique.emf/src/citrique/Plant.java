@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link citrique.Plant#getSilo <em>Silo</em>}</li>
  *   <li>{@link citrique.Plant#getReactor <em>Reactor</em>}</li>
  *   <li>{@link citrique.Plant#getNode <em>Node</em>}</li>
- *   <li>{@link citrique.Plant#getLinks <em>Links</em>}</li>
+ *   <li>{@link citrique.Plant#getLink <em>Link</em>}</li>
  *   <li>{@link citrique.Plant#getBufferSiloLink <em>Buffer Silo Link</em>}</li>
  *   <li>{@link citrique.Plant#getSiloReactorLink <em>Silo Reactor Link</em>}</li>
  *   <li>{@link citrique.Plant#getPlantObject <em>Plant Object</em>}</li>
@@ -93,20 +93,20 @@ public interface Plant extends CitriqueObject {
 	EList<PlantNode> getNode();
 
 	/**
-	 * Returns the value of the '<em><b>Links</b></em>' reference list.
+	 * Returns the value of the '<em><b>Link</b></em>' reference list.
 	 * The list contents are of type {@link citrique.PlantLink}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Links</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Link</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Links</em>' reference list.
-	 * @see citrique.CitriquePackage#getPlant_Links()
+	 * @return the value of the '<em>Link</em>' reference list.
+	 * @see citrique.CitriquePackage#getPlant_Link()
 	 * @model
 	 * @generated
 	 */
-	EList<PlantLink> getLinks();
+	EList<PlantLink> getLink();
 
 	/**
 	 * Returns the value of the '<em><b>Buffer Silo Link</b></em>' containment reference list.

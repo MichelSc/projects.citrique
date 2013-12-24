@@ -6,7 +6,9 @@ import citrique.BufferSiloLink;
 import citrique.CitriquePackage;
 import citrique.Silo;
 import citrique.SiloReactorLink;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -266,4 +268,9 @@ public class SiloImpl extends PlantNodeImpl implements Silo {
 		return result.toString();
 	}
 
+	@Override
+	public void refreshShortType() {
+		String type = "SI";
+		this.setShortType(type);
+	}
 } //SiloImpl
