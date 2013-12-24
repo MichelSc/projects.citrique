@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Citrique -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="citrique.presentation.CitriqueModelWizardID"
+            name="%_UI_CitriqueModelWizard_label"
+            class="citrique.presentation.CitriqueModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CitriqueModelFile.gif">
+         <description>%_UI_CitriqueModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Citrique -->
+      <editor
+            id="citrique.presentation.CitriqueEditorID"
+            name="%_UI_CitriqueEditor_label"
+            icon="icons/full/obj16/CitriqueModelFile.gif"
+            extensions="citrique"
+            class="citrique.presentation.CitriqueEditor"
+            contributorClass="citrique.presentation.CitriqueActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

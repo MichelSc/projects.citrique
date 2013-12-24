@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.projects.citrique.emf/src" modelPluginID="com.misc.projects.citrique.emf"
+    modelName="Citrique" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Citrique.ecore</foreignModel>
+  <genPackages prefix="Citrique" disposableProviderFactory="true" ecorePackage="Citrique.ecore#/">
+    <genClasses ecoreClass="Citrique.ecore#//CitriqueObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//CitriqueObject/Children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//CitriqueObject/Parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/Type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/Description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/ShortType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/ShortDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//CitriqueObject/ShortName"/>
+      <genOperations ecoreOperation="Citrique.ecore#//CitriqueObject/RefreshInit"/>
+      <genOperations ecoreOperation="Citrique.ecore#//CitriqueObject/RefreshDispose"/>
+      <genOperations ecoreOperation="Citrique.ecore#//CitriqueObject/RefreshChildren"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//CitriqueDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//CitriqueDomain/Plants"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//PlantObject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//PlantObject/Plant"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//Plant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/Buffers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/Silos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/Reactors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/Nodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/Links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/BufferSiloLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/SiloReactorLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Plant/PlantObjects"/>
+      <genOperations ecoreOperation="Citrique.ecore#//Plant/RefreshNodes"/>
+      <genOperations ecoreOperation="Citrique.ecore#//Plant/RefreshLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//Buffer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Buffer/SiloLinks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//Buffer/Capacity"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//Silo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Silo/BufferLinks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Silo/ReactorLinks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//Silo/Capacity"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//Reactor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//Reactor/SiloLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//PlantNode"/>
+    <genClasses ecoreClass="Citrique.ecore#//PlantLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//PlantLink/Length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//PlantLink/HeightFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Citrique.ecore#//PlantLink/HeightTo"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//BufferSiloLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//BufferSiloLink/Silo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//BufferSiloLink/Buffer"/>
+    </genClasses>
+    <genClasses ecoreClass="Citrique.ecore#//LinkSiloReactor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//LinkSiloReactor/Silo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//LinkSiloReactor/Reactor"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

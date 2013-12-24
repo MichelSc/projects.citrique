@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="citrique" nsURI="http://com.misc.projects.citrique.emf" nsPrefix="citrique">
+  <eClassifiers xsi:type="ecore:EClass" name="CitriqueObject">
+    <eOperations name="RefreshInit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="RefreshInit set all the data that can be derived as soon as the object is owned.&#xA;"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Child" upperBound="-1"
+        eType="#//CitriqueObject" eOpposite="#//CitriqueObject/Parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parent" eType="#//CitriqueObject"
+        eOpposite="#//CitriqueObject/Child"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CitriqueDomain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Plants" upperBound="-1"
+        eType="#//Plant" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlantObject" eSuperTypes="#//CitriqueObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" eType="#//Plant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Plant" eSuperTypes="#//CitriqueObject">
+    <eOperations name="RefreshNodes"/>
+    <eOperations name="RefreshLinks"/>
+    <eOperations name="RefreshChildren"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Buffer" upperBound="-1"
+        eType="#//Buffer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" upperBound="-1" eType="#//Silo"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reactor" upperBound="-1"
+        eType="#//Reactor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Node" upperBound="-1" eType="#//PlantNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Links" upperBound="-1"
+        eType="#//PlantLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BufferSiloLink" upperBound="-1"
+        eType="#//BufferSiloLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SiloReactorLink" upperBound="-1"
+        eType="#//LinkSiloReactor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PlantObject" upperBound="-1"
+        eType="#//PlantObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Buffer" eSuperTypes="#//PlantNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SiloLinks" upperBound="-1"
+        eType="#//BufferSiloLink" eOpposite="#//BufferSiloLink/Buffer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Silo" eSuperTypes="#//PlantNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BufferLinks" upperBound="-1"
+        eType="#//BufferSiloLink" eOpposite="#//BufferSiloLink/Silo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ReactorLinks" upperBound="-1"
+        eType="#//LinkSiloReactor" eOpposite="#//LinkSiloReactor/Silo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reactor" eSuperTypes="#//PlantNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SiloLinks" upperBound="-1"
+        eType="#//LinkSiloReactor" eOpposite="#//LinkSiloReactor/Reactor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlantNode" eSuperTypes="#//PlantObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PlantLink" eSuperTypes="#//PlantObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HeightFrom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="HeightTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BufferSiloLink" eSuperTypes="#//PlantLink">
+    <eOperations name="RefreshDispose">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="RefreshDispose calculate if the object must be dropped and drop it if so"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" lowerBound="1" eType="#//Silo"
+        eOpposite="#//Silo/BufferLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Buffer" lowerBound="1"
+        eType="#//Buffer" eOpposite="#//Buffer/SiloLinks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkSiloReactor" eSuperTypes="#//PlantLink">
+    <eOperations name="RefreshDispose"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" lowerBound="1" eType="#//Silo"
+        eOpposite="#//Silo/ReactorLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reactor" lowerBound="1"
+        eType="#//Reactor" eOpposite="#//Reactor/SiloLinks"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkSiloReactor" eSuperTypes="#//PlantLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" lowerBound="1" eType="#//Silo"
+        eOpposite="#//Silo/ReactorLinks"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reactor" lowerBound="1"
+        eType="#//Reactor" eOpposite="#//Reactor/SiloLinks"/>
+  </eClassifiers>
+</ecore:EPackage>
