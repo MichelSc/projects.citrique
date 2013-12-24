@@ -5,25 +5,19 @@ package citrique.impl;
 import citrique.Buffer;
 import citrique.BufferSiloLink;
 import citrique.CitriquePackage;
-import citrique.LinkSiloReactor;
 import citrique.Plant;
 import citrique.PlantLink;
 import citrique.PlantNode;
 import citrique.PlantObject;
 import citrique.Reactor;
 import citrique.Silo;
-
+import citrique.SiloReactorLink;
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -35,14 +29,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link citrique.impl.PlantImpl#getBuffers <em>Buffers</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getSilos <em>Silos</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getReactors <em>Reactors</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getBuffer <em>Buffer</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getSilo <em>Silo</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getReactor <em>Reactor</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getNode <em>Node</em>}</li>
  *   <li>{@link citrique.impl.PlantImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getBufferSiloLinks <em>Buffer Silo Links</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getSiloReactorLinks <em>Silo Reactor Links</em>}</li>
- *   <li>{@link citrique.impl.PlantImpl#getPlantObjects <em>Plant Objects</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getBufferSiloLink <em>Buffer Silo Link</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getSiloReactorLink <em>Silo Reactor Link</em>}</li>
+ *   <li>{@link citrique.impl.PlantImpl#getPlantObject <em>Plant Object</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,44 +44,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	/**
-	 * The cached value of the '{@link #getBuffers() <em>Buffers</em>}' containment reference list.
+	 * The cached value of the '{@link #getBuffer() <em>Buffer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBuffers()
+	 * @see #getBuffer()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Buffer> buffers;
+	protected EList<Buffer> buffer;
 
 	/**
-	 * The cached value of the '{@link #getSilos() <em>Silos</em>}' containment reference list.
+	 * The cached value of the '{@link #getSilo() <em>Silo</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSilos()
+	 * @see #getSilo()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Silo> silos;
+	protected EList<Silo> silo;
 
 	/**
-	 * The cached value of the '{@link #getReactors() <em>Reactors</em>}' containment reference list.
+	 * The cached value of the '{@link #getReactor() <em>Reactor</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReactors()
+	 * @see #getReactor()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Reactor> reactors;
+	protected EList<Reactor> reactor;
 
 	/**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' reference list.
+	 * The cached value of the '{@link #getNode() <em>Node</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNodes()
+	 * @see #getNode()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PlantNode> nodes;
+	protected EList<PlantNode> node;
 
 	/**
 	 * The cached value of the '{@link #getLinks() <em>Links</em>}' reference list.
@@ -100,34 +94,34 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	protected EList<PlantLink> links;
 
 	/**
-	 * The cached value of the '{@link #getBufferSiloLinks() <em>Buffer Silo Links</em>}' containment reference list.
+	 * The cached value of the '{@link #getBufferSiloLink() <em>Buffer Silo Link</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBufferSiloLinks()
+	 * @see #getBufferSiloLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BufferSiloLink> bufferSiloLinks;
+	protected EList<BufferSiloLink> bufferSiloLink;
 
 	/**
-	 * The cached value of the '{@link #getSiloReactorLinks() <em>Silo Reactor Links</em>}' containment reference list.
+	 * The cached value of the '{@link #getSiloReactorLink() <em>Silo Reactor Link</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSiloReactorLinks()
+	 * @see #getSiloReactorLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LinkSiloReactor> siloReactorLinks;
+	protected EList<SiloReactorLink> siloReactorLink;
 
 	/**
-	 * The cached value of the '{@link #getPlantObjects() <em>Plant Objects</em>}' reference list.
+	 * The cached value of the '{@link #getPlantObject() <em>Plant Object</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlantObjects()
+	 * @see #getPlantObject()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PlantObject> plantObjects;
+	protected EList<PlantObject> plantObject;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,11 +147,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Buffer> getBuffers() {
-		if (buffers == null) {
-			buffers = new EObjectContainmentEList<Buffer>(Buffer.class, this, CitriquePackage.PLANT__BUFFERS);
+	public EList<Buffer> getBuffer() {
+		if (buffer == null) {
+			buffer = new EObjectContainmentEList<Buffer>(Buffer.class, this, CitriquePackage.PLANT__BUFFER);
 		}
-		return buffers;
+		return buffer;
 	}
 
 	/**
@@ -165,11 +159,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Silo> getSilos() {
-		if (silos == null) {
-			silos = new EObjectContainmentEList<Silo>(Silo.class, this, CitriquePackage.PLANT__SILOS);
+	public EList<Silo> getSilo() {
+		if (silo == null) {
+			silo = new EObjectContainmentEList<Silo>(Silo.class, this, CitriquePackage.PLANT__SILO);
 		}
-		return silos;
+		return silo;
 	}
 
 	/**
@@ -177,11 +171,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Reactor> getReactors() {
-		if (reactors == null) {
-			reactors = new EObjectContainmentEList<Reactor>(Reactor.class, this, CitriquePackage.PLANT__REACTORS);
+	public EList<Reactor> getReactor() {
+		if (reactor == null) {
+			reactor = new EObjectContainmentEList<Reactor>(Reactor.class, this, CitriquePackage.PLANT__REACTOR);
 		}
-		return reactors;
+		return reactor;
 	}
 
 	/**
@@ -189,11 +183,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PlantNode> getNodes() {
-		if (nodes == null) {
-			nodes = new EObjectResolvingEList<PlantNode>(PlantNode.class, this, CitriquePackage.PLANT__NODES);
+	public EList<PlantNode> getNode() {
+		if (node == null) {
+			node = new EObjectResolvingEList<PlantNode>(PlantNode.class, this, CitriquePackage.PLANT__NODE);
 		}
-		return nodes;
+		return node;
 	}
 
 	/**
@@ -213,11 +207,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<BufferSiloLink> getBufferSiloLinks() {
-		if (bufferSiloLinks == null) {
-			bufferSiloLinks = new EObjectContainmentEList<BufferSiloLink>(BufferSiloLink.class, this, CitriquePackage.PLANT__BUFFER_SILO_LINKS);
+	public EList<BufferSiloLink> getBufferSiloLink() {
+		if (bufferSiloLink == null) {
+			bufferSiloLink = new EObjectContainmentEList<BufferSiloLink>(BufferSiloLink.class, this, CitriquePackage.PLANT__BUFFER_SILO_LINK);
 		}
-		return bufferSiloLinks;
+		return bufferSiloLink;
 	}
 
 	/**
@@ -225,11 +219,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LinkSiloReactor> getSiloReactorLinks() {
-		if (siloReactorLinks == null) {
-			siloReactorLinks = new EObjectContainmentEList<LinkSiloReactor>(LinkSiloReactor.class, this, CitriquePackage.PLANT__SILO_REACTOR_LINKS);
+	public EList<SiloReactorLink> getSiloReactorLink() {
+		if (siloReactorLink == null) {
+			siloReactorLink = new EObjectContainmentEList<SiloReactorLink>(SiloReactorLink.class, this, CitriquePackage.PLANT__SILO_REACTOR_LINK);
 		}
-		return siloReactorLinks;
+		return siloReactorLink;
 	}
 
 	/**
@@ -237,11 +231,11 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PlantObject> getPlantObjects() {
-		if (plantObjects == null) {
-			plantObjects = new EObjectResolvingEList<PlantObject>(PlantObject.class, this, CitriquePackage.PLANT__PLANT_OBJECTS);
+	public EList<PlantObject> getPlantObject() {
+		if (plantObject == null) {
+			plantObject = new EObjectResolvingEList<PlantObject>(PlantObject.class, this, CitriquePackage.PLANT__PLANT_OBJECT);
 		}
-		return plantObjects;
+		return plantObject;
 	}
 
 	/**
@@ -271,19 +265,30 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void RefreshChildren() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CitriquePackage.PLANT__BUFFERS:
-				return ((InternalEList<?>)getBuffers()).basicRemove(otherEnd, msgs);
-			case CitriquePackage.PLANT__SILOS:
-				return ((InternalEList<?>)getSilos()).basicRemove(otherEnd, msgs);
-			case CitriquePackage.PLANT__REACTORS:
-				return ((InternalEList<?>)getReactors()).basicRemove(otherEnd, msgs);
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-				return ((InternalEList<?>)getBufferSiloLinks()).basicRemove(otherEnd, msgs);
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
-				return ((InternalEList<?>)getSiloReactorLinks()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.PLANT__BUFFER:
+				return ((InternalEList<?>)getBuffer()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.PLANT__SILO:
+				return ((InternalEList<?>)getSilo()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.PLANT__REACTOR:
+				return ((InternalEList<?>)getReactor()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+				return ((InternalEList<?>)getBufferSiloLink()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
+				return ((InternalEList<?>)getSiloReactorLink()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -296,22 +301,22 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CitriquePackage.PLANT__BUFFERS:
-				return getBuffers();
-			case CitriquePackage.PLANT__SILOS:
-				return getSilos();
-			case CitriquePackage.PLANT__REACTORS:
-				return getReactors();
-			case CitriquePackage.PLANT__NODES:
-				return getNodes();
+			case CitriquePackage.PLANT__BUFFER:
+				return getBuffer();
+			case CitriquePackage.PLANT__SILO:
+				return getSilo();
+			case CitriquePackage.PLANT__REACTOR:
+				return getReactor();
+			case CitriquePackage.PLANT__NODE:
+				return getNode();
 			case CitriquePackage.PLANT__LINKS:
 				return getLinks();
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-				return getBufferSiloLinks();
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
-				return getSiloReactorLinks();
-			case CitriquePackage.PLANT__PLANT_OBJECTS:
-				return getPlantObjects();
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+				return getBufferSiloLink();
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
+				return getSiloReactorLink();
+			case CitriquePackage.PLANT__PLANT_OBJECT:
+				return getPlantObject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -325,37 +330,37 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CitriquePackage.PLANT__BUFFERS:
-				getBuffers().clear();
-				getBuffers().addAll((Collection<? extends Buffer>)newValue);
+			case CitriquePackage.PLANT__BUFFER:
+				getBuffer().clear();
+				getBuffer().addAll((Collection<? extends Buffer>)newValue);
 				return;
-			case CitriquePackage.PLANT__SILOS:
-				getSilos().clear();
-				getSilos().addAll((Collection<? extends Silo>)newValue);
+			case CitriquePackage.PLANT__SILO:
+				getSilo().clear();
+				getSilo().addAll((Collection<? extends Silo>)newValue);
 				return;
-			case CitriquePackage.PLANT__REACTORS:
-				getReactors().clear();
-				getReactors().addAll((Collection<? extends Reactor>)newValue);
+			case CitriquePackage.PLANT__REACTOR:
+				getReactor().clear();
+				getReactor().addAll((Collection<? extends Reactor>)newValue);
 				return;
-			case CitriquePackage.PLANT__NODES:
-				getNodes().clear();
-				getNodes().addAll((Collection<? extends PlantNode>)newValue);
+			case CitriquePackage.PLANT__NODE:
+				getNode().clear();
+				getNode().addAll((Collection<? extends PlantNode>)newValue);
 				return;
 			case CitriquePackage.PLANT__LINKS:
 				getLinks().clear();
 				getLinks().addAll((Collection<? extends PlantLink>)newValue);
 				return;
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-				getBufferSiloLinks().clear();
-				getBufferSiloLinks().addAll((Collection<? extends BufferSiloLink>)newValue);
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+				getBufferSiloLink().clear();
+				getBufferSiloLink().addAll((Collection<? extends BufferSiloLink>)newValue);
 				return;
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
-				getSiloReactorLinks().clear();
-				getSiloReactorLinks().addAll((Collection<? extends LinkSiloReactor>)newValue);
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
+				getSiloReactorLink().clear();
+				getSiloReactorLink().addAll((Collection<? extends SiloReactorLink>)newValue);
 				return;
-			case CitriquePackage.PLANT__PLANT_OBJECTS:
-				getPlantObjects().clear();
-				getPlantObjects().addAll((Collection<? extends PlantObject>)newValue);
+			case CitriquePackage.PLANT__PLANT_OBJECT:
+				getPlantObject().clear();
+				getPlantObject().addAll((Collection<? extends PlantObject>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -369,29 +374,29 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.PLANT__BUFFERS:
-				getBuffers().clear();
+			case CitriquePackage.PLANT__BUFFER:
+				getBuffer().clear();
 				return;
-			case CitriquePackage.PLANT__SILOS:
-				getSilos().clear();
+			case CitriquePackage.PLANT__SILO:
+				getSilo().clear();
 				return;
-			case CitriquePackage.PLANT__REACTORS:
-				getReactors().clear();
+			case CitriquePackage.PLANT__REACTOR:
+				getReactor().clear();
 				return;
-			case CitriquePackage.PLANT__NODES:
-				getNodes().clear();
+			case CitriquePackage.PLANT__NODE:
+				getNode().clear();
 				return;
 			case CitriquePackage.PLANT__LINKS:
 				getLinks().clear();
 				return;
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-				getBufferSiloLinks().clear();
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+				getBufferSiloLink().clear();
 				return;
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
-				getSiloReactorLinks().clear();
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
+				getSiloReactorLink().clear();
 				return;
-			case CitriquePackage.PLANT__PLANT_OBJECTS:
-				getPlantObjects().clear();
+			case CitriquePackage.PLANT__PLANT_OBJECT:
+				getPlantObject().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -405,22 +410,22 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.PLANT__BUFFERS:
-				return buffers != null && !buffers.isEmpty();
-			case CitriquePackage.PLANT__SILOS:
-				return silos != null && !silos.isEmpty();
-			case CitriquePackage.PLANT__REACTORS:
-				return reactors != null && !reactors.isEmpty();
-			case CitriquePackage.PLANT__NODES:
-				return nodes != null && !nodes.isEmpty();
+			case CitriquePackage.PLANT__BUFFER:
+				return buffer != null && !buffer.isEmpty();
+			case CitriquePackage.PLANT__SILO:
+				return silo != null && !silo.isEmpty();
+			case CitriquePackage.PLANT__REACTOR:
+				return reactor != null && !reactor.isEmpty();
+			case CitriquePackage.PLANT__NODE:
+				return node != null && !node.isEmpty();
 			case CitriquePackage.PLANT__LINKS:
 				return links != null && !links.isEmpty();
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-				return bufferSiloLinks != null && !bufferSiloLinks.isEmpty();
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
-				return siloReactorLinks != null && !siloReactorLinks.isEmpty();
-			case CitriquePackage.PLANT__PLANT_OBJECTS:
-				return plantObjects != null && !plantObjects.isEmpty();
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+				return bufferSiloLink != null && !bufferSiloLink.isEmpty();
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
+				return siloReactorLink != null && !siloReactorLink.isEmpty();
+			case CitriquePackage.PLANT__PLANT_OBJECT:
+				return plantObject != null && !plantObject.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -438,6 +443,9 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				return null;
 			case CitriquePackage.PLANT___REFRESH_LINKS:
 				RefreshLinks();
+				return null;
+			case CitriquePackage.PLANT___REFRESH_CHILDREN:
+				RefreshChildren();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

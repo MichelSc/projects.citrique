@@ -60,32 +60,32 @@ public class CitriqueObjectItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addChildrenPropertyDescriptor(object);
+			addChildPropertyDescriptor(object);
 			addParentPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
 			addShortTypePropertyDescriptor(object);
 			addShortDescriptionPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 			addShortNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Children feature.
+	 * This adds a property descriptor for the Child feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addChildrenPropertyDescriptor(Object object) {
+	protected void addChildPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CitriqueObject_Children_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Children_feature", "_UI_CitriqueObject_type"),
-				 CitriquePackage.Literals.CITRIQUE_OBJECT__CHILDREN,
+				 getString("_UI_CitriqueObject_Child_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Child_feature", "_UI_CitriqueObject_type"),
+				 CitriquePackage.Literals.CITRIQUE_OBJECT__CHILD,
 				 true,
 				 false,
 				 true,
@@ -287,9 +287,9 @@ public class CitriqueObjectItemProvider
 		switch (notification.getFeatureID(CitriqueObject.class)) {
 			case CitriquePackage.CITRIQUE_OBJECT__NAME:
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
-			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
+			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -23,8 +23,8 @@ import org.eclipse.emf.common.util.EList;
 public interface Reactor extends PlantNode {
 	/**
 	 * Returns the value of the '<em><b>Silo Links</b></em>' reference list.
-	 * The list contents are of type {@link citrique.LinkSiloReactor}.
-	 * It is bidirectional and its opposite is '{@link citrique.LinkSiloReactor#getReactor <em>Reactor</em>}'.
+	 * The list contents are of type {@link citrique.SiloReactorLink}.
+	 * It is bidirectional and its opposite is '{@link citrique.SiloReactorLink#getReactor <em>Reactor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Silo Links</em>' reference list isn't clear,
@@ -33,10 +33,10 @@ public interface Reactor extends PlantNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Silo Links</em>' reference list.
 	 * @see citrique.CitriquePackage#getReactor_SiloLinks()
-	 * @see citrique.LinkSiloReactor#getReactor
+	 * @see citrique.SiloReactorLink#getReactor
 	 * @model opposite="Reactor"
 	 * @generated
 	 */
-	EList<LinkSiloReactor> getSiloLinks();
+	EList<SiloReactorLink> getSiloLinks();
 
 } // Reactor

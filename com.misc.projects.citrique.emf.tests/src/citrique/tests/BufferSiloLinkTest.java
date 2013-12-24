@@ -11,6 +11,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Buffer Silo Link</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link citrique.BufferSiloLink#RefreshDispose() <em>Refresh Dispose</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class BufferSiloLinkTest extends PlantLinkTest {
@@ -65,6 +71,19 @@ public class BufferSiloLinkTest extends PlantLinkTest {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link citrique.BufferSiloLink#RefreshDispose() <em>Refresh Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique.BufferSiloLink#RefreshDispose()
+	 * @generated
+	 */
+	public void testRefreshDispose() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //BufferSiloLinkTest

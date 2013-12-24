@@ -39,4 +39,12 @@ public interface CitriqueDomain extends EObject {
 	 */
 	EList<Plant> getPlants();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void Refresh();
+
 } // CitriqueDomain

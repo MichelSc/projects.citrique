@@ -66,7 +66,7 @@ public class CitriqueFactoryImpl extends EFactoryImpl implements CitriqueFactory
 			case CitriquePackage.PLANT_NODE: return createPlantNode();
 			case CitriquePackage.PLANT_LINK: return createPlantLink();
 			case CitriquePackage.BUFFER_SILO_LINK: return createBufferSiloLink();
-			case CitriquePackage.LINK_SILO_REACTOR: return createLinkSiloReactor();
+			case CitriquePackage.SILO_REACTOR_LINK: return createSiloReactorLink();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -177,9 +177,9 @@ public class CitriqueFactoryImpl extends EFactoryImpl implements CitriqueFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkSiloReactor createLinkSiloReactor() {
-		LinkSiloReactorImpl linkSiloReactor = new LinkSiloReactorImpl();
-		return linkSiloReactor;
+	public SiloReactorLink createSiloReactorLink() {
+		SiloReactorLinkImpl siloReactorLink = new SiloReactorLinkImpl();
+		return siloReactorLink;
 	}
 
 	/**

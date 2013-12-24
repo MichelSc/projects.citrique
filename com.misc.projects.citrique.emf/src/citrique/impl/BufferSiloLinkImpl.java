@@ -7,9 +7,11 @@ import citrique.BufferSiloLink;
 import citrique.CitriquePackage;
 import citrique.Silo;
 
+import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -194,6 +196,17 @@ public class BufferSiloLinkImpl extends PlantLinkImpl implements BufferSiloLink 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void RefreshDispose() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -293,6 +306,21 @@ public class BufferSiloLinkImpl extends PlantLinkImpl implements BufferSiloLink 
 				return buffer != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case CitriquePackage.BUFFER_SILO_LINK___REFRESH_DISPOSE:
+				RefreshDispose();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //BufferSiloLinkImpl

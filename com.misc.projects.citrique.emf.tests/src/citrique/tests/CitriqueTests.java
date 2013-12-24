@@ -32,6 +32,7 @@ public class CitriqueTests extends TestSuite {
 	public static Test suite() {
 		TestSuite suite = new CitriqueTests("citrique Tests");
 		suite.addTestSuite(CitriqueObjectTest.class);
+		suite.addTestSuite(CitriqueDomainTest.class);
 		suite.addTestSuite(PlantObjectTest.class);
 		suite.addTestSuite(PlantTest.class);
 		suite.addTestSuite(BufferTest.class);
@@ -40,7 +41,7 @@ public class CitriqueTests extends TestSuite {
 		suite.addTestSuite(PlantNodeTest.class);
 		suite.addTestSuite(PlantLinkTest.class);
 		suite.addTestSuite(BufferSiloLinkTest.class);
-		suite.addTestSuite(LinkSiloReactorTest.class);
+		suite.addTestSuite(SiloReactorLinkTest.class);
 		return suite;
 	}
 

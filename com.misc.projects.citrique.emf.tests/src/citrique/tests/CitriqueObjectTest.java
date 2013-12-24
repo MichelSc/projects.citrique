@@ -16,9 +16,10 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link citrique.CitriqueObject#RefreshInit() <em>Refresh Init</em>}</li>
- *   <li>{@link citrique.CitriqueObject#RefreshDispose() <em>Refresh Dispose</em>}</li>
- *   <li>{@link citrique.CitriqueObject#RefreshChildren() <em>Refresh Children</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#RefreshDescription() <em>Refresh Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#RefreshShortDescription() <em>Refresh Short Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#GetType() <em>Get Type</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#GetShortType() <em>Get Short Type</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -95,39 +96,52 @@ public class CitriqueObjectTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#RefreshInit() <em>Refresh Init</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#RefreshDescription() <em>Refresh Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#RefreshInit()
+	 * @see citrique.CitriqueObject#RefreshDescription()
 	 * @generated
 	 */
-	public void testRefreshInit() {
+	public void testRefreshDescription() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#RefreshDispose() <em>Refresh Dispose</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#RefreshShortDescription() <em>Refresh Short Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#RefreshDispose()
+	 * @see citrique.CitriqueObject#RefreshShortDescription()
 	 * @generated
 	 */
-	public void testRefreshDispose() {
+	public void testRefreshShortDescription() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueObject#RefreshChildren() <em>Refresh Children</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueObject#GetType() <em>Get Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueObject#RefreshChildren()
+	 * @see citrique.CitriqueObject#GetType()
 	 * @generated
 	 */
-	public void testRefreshChildren() {
+	public void testGetType() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link citrique.CitriqueObject#GetShortType() <em>Get Short Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique.CitriqueObject#GetShortType()
+	 * @generated
+	 */
+	public void testGetShortType() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

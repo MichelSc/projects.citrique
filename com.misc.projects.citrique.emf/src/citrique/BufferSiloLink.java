@@ -77,4 +77,15 @@ public interface BufferSiloLink extends PlantLink {
 	 */
 	void setBuffer(Buffer value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * RefreshDispose calculate if the object must be dropped and drop it if so
+	 * <!-- end-model-doc -->
+	 * @model
+	 * @generated
+	 */
+	void RefreshDispose();
+
 } // BufferSiloLink

@@ -4,7 +4,7 @@ package citrique.provider;
 
 
 import citrique.CitriquePackage;
-import citrique.LinkSiloReactor;
+import citrique.SiloReactorLink;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,12 +21,12 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
 /**
- * This is the item provider adapter for a {@link citrique.LinkSiloReactor} object.
+ * This is the item provider adapter for a {@link citrique.SiloReactorLink} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkSiloReactorItemProvider
+public class SiloReactorLinkItemProvider
 	extends PlantLinkItemProvider
 	implements
 		IEditingDomainItemProvider,
@@ -40,7 +40,7 @@ public class LinkSiloReactorItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkSiloReactorItemProvider(AdapterFactory adapterFactory) {
+	public SiloReactorLinkItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -72,9 +72,9 @@ public class LinkSiloReactorItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LinkSiloReactor_Silo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LinkSiloReactor_Silo_feature", "_UI_LinkSiloReactor_type"),
-				 CitriquePackage.Literals.LINK_SILO_REACTOR__SILO,
+				 getString("_UI_SiloReactorLink_Silo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SiloReactorLink_Silo_feature", "_UI_SiloReactorLink_type"),
+				 CitriquePackage.Literals.SILO_REACTOR_LINK__SILO,
 				 true,
 				 false,
 				 true,
@@ -94,9 +94,9 @@ public class LinkSiloReactorItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_LinkSiloReactor_Reactor_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_LinkSiloReactor_Reactor_feature", "_UI_LinkSiloReactor_type"),
-				 CitriquePackage.Literals.LINK_SILO_REACTOR__REACTOR,
+				 getString("_UI_SiloReactorLink_Reactor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SiloReactorLink_Reactor_feature", "_UI_SiloReactorLink_type"),
+				 CitriquePackage.Literals.SILO_REACTOR_LINK__REACTOR,
 				 true,
 				 false,
 				 true,
@@ -106,14 +106,14 @@ public class LinkSiloReactorItemProvider
 	}
 
 	/**
-	 * This returns LinkSiloReactor.gif.
+	 * This returns SiloReactorLink.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkSiloReactor"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SiloReactorLink"));
 	}
 
 	/**
@@ -124,10 +124,10 @@ public class LinkSiloReactorItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LinkSiloReactor)object).getName();
+		String label = ((SiloReactorLink)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_LinkSiloReactor_type") :
-			getString("_UI_LinkSiloReactor_type") + " " + label;
+			getString("_UI_SiloReactorLink_type") :
+			getString("_UI_SiloReactorLink_type") + " " + label;
 	}
 
 	/**

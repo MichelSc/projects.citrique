@@ -3,12 +3,16 @@
 package citrique.impl;
 
 import citrique.CitriquePackage;
-import citrique.LinkSiloReactor;
 import citrique.Reactor;
 import citrique.Silo;
+import citrique.SiloReactorLink;
+
+import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -17,19 +21,19 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Link Silo Reactor</b></em>'.
+ * An implementation of the model object '<em><b>Silo Reactor Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link citrique.impl.LinkSiloReactorImpl#getSilo <em>Silo</em>}</li>
- *   <li>{@link citrique.impl.LinkSiloReactorImpl#getReactor <em>Reactor</em>}</li>
+ *   <li>{@link citrique.impl.SiloReactorLinkImpl#getSilo <em>Silo</em>}</li>
+ *   <li>{@link citrique.impl.SiloReactorLinkImpl#getReactor <em>Reactor</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReactor {
+public class SiloReactorLinkImpl extends PlantLinkImpl implements SiloReactorLink {
 	/**
 	 * The cached value of the '{@link #getSilo() <em>Silo</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -55,7 +59,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkSiloReactorImpl() {
+	protected SiloReactorLinkImpl() {
 		super();
 	}
 
@@ -66,7 +70,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CitriquePackage.Literals.LINK_SILO_REACTOR;
+		return CitriquePackage.Literals.SILO_REACTOR_LINK;
 	}
 
 	/**
@@ -80,7 +84,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 			silo = (Silo)eResolveProxy(oldSilo);
 			if (silo != oldSilo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CitriquePackage.LINK_SILO_REACTOR__SILO, oldSilo, silo));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CitriquePackage.SILO_REACTOR_LINK__SILO, oldSilo, silo));
 			}
 		}
 		return silo;
@@ -104,7 +108,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 		Silo oldSilo = silo;
 		silo = newSilo;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CitriquePackage.LINK_SILO_REACTOR__SILO, oldSilo, newSilo);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CitriquePackage.SILO_REACTOR_LINK__SILO, oldSilo, newSilo);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -126,7 +130,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.LINK_SILO_REACTOR__SILO, newSilo, newSilo));
+			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.SILO_REACTOR_LINK__SILO, newSilo, newSilo));
 	}
 
 	/**
@@ -140,7 +144,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 			reactor = (Reactor)eResolveProxy(oldReactor);
 			if (reactor != oldReactor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CitriquePackage.LINK_SILO_REACTOR__REACTOR, oldReactor, reactor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CitriquePackage.SILO_REACTOR_LINK__REACTOR, oldReactor, reactor));
 			}
 		}
 		return reactor;
@@ -164,7 +168,7 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 		Reactor oldReactor = reactor;
 		reactor = newReactor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CitriquePackage.LINK_SILO_REACTOR__REACTOR, oldReactor, newReactor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CitriquePackage.SILO_REACTOR_LINK__REACTOR, oldReactor, newReactor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -186,7 +190,18 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.LINK_SILO_REACTOR__REACTOR, newReactor, newReactor));
+			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.SILO_REACTOR_LINK__REACTOR, newReactor, newReactor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void RefreshDispose() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -197,11 +212,11 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				if (silo != null)
 					msgs = ((InternalEObject)silo).eInverseRemove(this, CitriquePackage.SILO__REACTOR_LINKS, Silo.class, msgs);
 				return basicSetSilo((Silo)otherEnd, msgs);
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				if (reactor != null)
 					msgs = ((InternalEObject)reactor).eInverseRemove(this, CitriquePackage.REACTOR__SILO_LINKS, Reactor.class, msgs);
 				return basicSetReactor((Reactor)otherEnd, msgs);
@@ -217,9 +232,9 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				return basicSetSilo(null, msgs);
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				return basicSetReactor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -233,10 +248,10 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				if (resolve) return getSilo();
 				return basicGetSilo();
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				if (resolve) return getReactor();
 				return basicGetReactor();
 		}
@@ -251,10 +266,10 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				setSilo((Silo)newValue);
 				return;
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				setReactor((Reactor)newValue);
 				return;
 		}
@@ -269,10 +284,10 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				setSilo((Silo)null);
 				return;
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				setReactor((Reactor)null);
 				return;
 		}
@@ -287,12 +302,27 @@ public class LinkSiloReactorImpl extends PlantLinkImpl implements LinkSiloReacto
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.LINK_SILO_REACTOR__SILO:
+			case CitriquePackage.SILO_REACTOR_LINK__SILO:
 				return silo != null;
-			case CitriquePackage.LINK_SILO_REACTOR__REACTOR:
+			case CitriquePackage.SILO_REACTOR_LINK__REACTOR:
 				return reactor != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //LinkSiloReactorImpl
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case CitriquePackage.SILO_REACTOR_LINK___REFRESH_DISPOSE:
+				RefreshDispose();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //SiloReactorLinkImpl

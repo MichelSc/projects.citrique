@@ -30,13 +30,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link citrique.impl.CitriqueObjectImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link citrique.impl.CitriqueObjectImpl#getChild <em>Child</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getType <em>Type</em>}</li>
- *   <li>{@link citrique.impl.CitriqueObjectImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortType <em>Short Type</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortDescription <em>Short Description</em>}</li>
+ *   <li>{@link citrique.impl.CitriqueObjectImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortName <em>Short Name</em>}</li>
  * </ul>
  * </p>
@@ -45,14 +45,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements CitriqueObject {
 	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
+	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChildren()
+	 * @see #getChild()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CitriqueObject> children;
+	protected EList<CitriqueObject> child;
 
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
@@ -105,26 +105,6 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getShortType() <em>Short Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -163,6 +143,26 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String shortDescription = SHORT_DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getShortName() <em>Short Name</em>}' attribute.
@@ -208,11 +208,11 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CitriqueObject> getChildren() {
-		if (children == null) {
-			children = new EObjectWithInverseResolvingEList<CitriqueObject>(CitriqueObject.class, this, CitriquePackage.CITRIQUE_OBJECT__CHILDREN, CitriquePackage.CITRIQUE_OBJECT__PARENT);
+	public EList<CitriqueObject> getChild() {
+		if (child == null) {
+			child = new EObjectWithInverseResolvingEList<CitriqueObject>(CitriqueObject.class, this, CitriquePackage.CITRIQUE_OBJECT__CHILD, CitriquePackage.CITRIQUE_OBJECT__PARENT);
 		}
-		return children;
+		return child;
 	}
 
 	/**
@@ -265,9 +265,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		if (newParent != parent) {
 			NotificationChain msgs = null;
 			if (parent != null)
-				msgs = ((InternalEObject)parent).eInverseRemove(this, CitriquePackage.CITRIQUE_OBJECT__CHILDREN, CitriqueObject.class, msgs);
+				msgs = ((InternalEObject)parent).eInverseRemove(this, CitriquePackage.CITRIQUE_OBJECT__CHILD, CitriqueObject.class, msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, CitriquePackage.CITRIQUE_OBJECT__CHILDREN, CitriqueObject.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, CitriquePackage.CITRIQUE_OBJECT__CHILD, CitriqueObject.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -406,7 +406,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void RefreshInit() {
+	public void RefreshDescription() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -417,7 +417,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void RefreshDispose() {
+	public void RefreshShortDescription() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -428,7 +428,18 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void RefreshChildren() {
+	public String GetType() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String GetShortType() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -443,11 +454,11 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChildren()).basicAdd(otherEnd, msgs);
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChild()).basicAdd(otherEnd, msgs);
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				if (parent != null)
-					msgs = ((InternalEObject)parent).eInverseRemove(this, CitriquePackage.CITRIQUE_OBJECT__CHILDREN, CitriqueObject.class, msgs);
+					msgs = ((InternalEObject)parent).eInverseRemove(this, CitriquePackage.CITRIQUE_OBJECT__CHILD, CitriqueObject.class, msgs);
 				return basicSetParent((CitriqueObject)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -461,8 +472,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				return ((InternalEList<?>)getChild()).basicRemove(otherEnd, msgs);
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				return basicSetParent(null, msgs);
 		}
@@ -477,8 +488,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				return getChildren();
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				return getChild();
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
@@ -486,12 +497,12 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return getName();
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
 				return getType();
-			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
-				return getDescription();
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 				return getShortType();
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				return getShortDescription();
+			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
+				return getDescription();
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				return getShortName();
 		}
@@ -507,9 +518,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				getChildren().clear();
-				getChildren().addAll((Collection<? extends CitriqueObject>)newValue);
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				getChild().clear();
+				getChild().addAll((Collection<? extends CitriqueObject>)newValue);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				setParent((CitriqueObject)newValue);
@@ -520,14 +531,14 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
 				setType((String)newValue);
 				return;
-			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 				setShortType((String)newValue);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				setShortDescription((String)newValue);
+				return;
+			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				setShortName((String)newValue);
@@ -544,8 +555,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				getChildren().clear();
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				getChild().clear();
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				setParent((CitriqueObject)null);
@@ -556,14 +567,14 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 				setShortType(SHORT_TYPE_EDEFAULT);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				setShortDescription(SHORT_DESCRIPTION_EDEFAULT);
+				return;
+			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				setShortName(SHORT_NAME_EDEFAULT);
@@ -580,20 +591,20 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CitriquePackage.CITRIQUE_OBJECT__CHILDREN:
-				return children != null && !children.isEmpty();
+			case CitriquePackage.CITRIQUE_OBJECT__CHILD:
+				return child != null && !child.isEmpty();
 			case CitriquePackage.CITRIQUE_OBJECT__PARENT:
 				return parent != null;
 			case CitriquePackage.CITRIQUE_OBJECT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 				return SHORT_TYPE_EDEFAULT == null ? shortType != null : !SHORT_TYPE_EDEFAULT.equals(shortType);
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				return SHORT_DESCRIPTION_EDEFAULT == null ? shortDescription != null : !SHORT_DESCRIPTION_EDEFAULT.equals(shortDescription);
+			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				return SHORT_NAME_EDEFAULT == null ? shortName != null : !SHORT_NAME_EDEFAULT.equals(shortName);
 		}
@@ -608,15 +619,16 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_INIT:
-				RefreshInit();
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_DESCRIPTION:
+				RefreshDescription();
 				return null;
-			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_DISPOSE:
-				RefreshDispose();
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION:
+				RefreshShortDescription();
 				return null;
-			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_CHILDREN:
-				RefreshChildren();
-				return null;
+			case CitriquePackage.CITRIQUE_OBJECT___GET_TYPE:
+				return GetType();
+			case CitriquePackage.CITRIQUE_OBJECT___GET_SHORT_TYPE:
+				return GetShortType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -635,12 +647,12 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		result.append(name);
 		result.append(", Type: ");
 		result.append(type);
-		result.append(", Description: ");
-		result.append(description);
 		result.append(", ShortType: ");
 		result.append(shortType);
 		result.append(", ShortDescription: ");
 		result.append(shortDescription);
+		result.append(", Description: ");
+		result.append(description);
 		result.append(", ShortName: ");
 		result.append(shortName);
 		result.append(')');

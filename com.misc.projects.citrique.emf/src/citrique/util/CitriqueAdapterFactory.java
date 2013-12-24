@@ -108,8 +108,8 @@ public class CitriqueAdapterFactory extends AdapterFactoryImpl {
 				return createBufferSiloLinkAdapter();
 			}
 			@Override
-			public Adapter caseLinkSiloReactor(LinkSiloReactor object) {
-				return createLinkSiloReactorAdapter();
+			public Adapter caseSiloReactorLink(SiloReactorLink object) {
+				return createSiloReactorLinkAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -272,16 +272,16 @@ public class CitriqueAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link citrique.LinkSiloReactor <em>Link Silo Reactor</em>}'.
+	 * Creates a new adapter for an object of class '{@link citrique.SiloReactorLink <em>Silo Reactor Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see citrique.LinkSiloReactor
+	 * @see citrique.SiloReactorLink
 	 * @generated
 	 */
-	public Adapter createLinkSiloReactorAdapter() {
+	public Adapter createSiloReactorLinkAdapter() {
 		return null;
 	}
 

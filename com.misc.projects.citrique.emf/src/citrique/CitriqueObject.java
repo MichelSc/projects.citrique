@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link citrique.CitriqueObject#getChildren <em>Children</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#getChild <em>Child</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getParent <em>Parent</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getName <em>Name</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getType <em>Type</em>}</li>
- *   <li>{@link citrique.CitriqueObject#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortType <em>Short Type</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortDescription <em>Short Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortName <em>Short Name</em>}</li>
  * </ul>
  * </p>
@@ -31,26 +31,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CitriqueObject extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
+	 * Returns the value of the '<em><b>Child</b></em>' reference list.
 	 * The list contents are of type {@link citrique.CitriqueObject}.
 	 * It is bidirectional and its opposite is '{@link citrique.CitriqueObject#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Children</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Child</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
-	 * @see citrique.CitriquePackage#getCitriqueObject_Children()
+	 * @return the value of the '<em>Child</em>' reference list.
+	 * @see citrique.CitriquePackage#getCitriqueObject_Child()
 	 * @see citrique.CitriqueObject#getParent
 	 * @model opposite="Parent"
 	 * @generated
 	 */
-	EList<CitriqueObject> getChildren();
+	EList<CitriqueObject> getChild();
 
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link citrique.CitriqueObject#getChildren <em>Children</em>}'.
+	 * It is bidirectional and its opposite is '{@link citrique.CitriqueObject#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
@@ -60,8 +60,8 @@ public interface CitriqueObject extends EObject {
 	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(CitriqueObject)
 	 * @see citrique.CitriquePackage#getCitriqueObject_Parent()
-	 * @see citrique.CitriqueObject#getChildren
-	 * @model opposite="Children"
+	 * @see citrique.CitriqueObject#getChild
+	 * @model opposite="Child"
 	 * @generated
 	 */
 	CitriqueObject getParent();
@@ -235,25 +235,10 @@ public interface CitriqueObject extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * RefreshInit set all the data that can be derived as soon as the object is owned.
-	 * 
-	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
 	 */
-	void RefreshInit();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * RefreshDispose calculate if the object must be dropped and drop it if so
-	 * <!-- end-model-doc -->
-	 * @model
-	 * @generated
-	 */
-	void RefreshDispose();
+	void RefreshDescription();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,6 +246,22 @@ public interface CitriqueObject extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void RefreshChildren();
+	void RefreshShortDescription();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String GetType();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	String GetShortType();
 
 } // CitriqueObject

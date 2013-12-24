@@ -112,13 +112,13 @@ public interface CitriqueFactory extends EFactory {
 	BufferSiloLink createBufferSiloLink();
 
 	/**
-	 * Returns a new object of class '<em>Link Silo Reactor</em>'.
+	 * Returns a new object of class '<em>Silo Reactor Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Link Silo Reactor</em>'.
+	 * @return a new object of class '<em>Silo Reactor Link</em>'.
 	 * @generated
 	 */
-	LinkSiloReactor createLinkSiloReactor();
+	SiloReactorLink createSiloReactorLink();
 
 	/**
 	 * Returns the package supported by this factory.

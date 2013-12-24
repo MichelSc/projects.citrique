@@ -6,6 +6,7 @@ import citrique.CitriqueDomain;
 import citrique.CitriquePackage;
 import citrique.Plant;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -80,6 +81,17 @@ public class CitriqueDomainImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void Refresh() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -147,6 +159,21 @@ public class CitriqueDomainImpl extends MinimalEObjectImpl.Container implements 
 				return plants != null && !plants.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case CitriquePackage.CITRIQUE_DOMAIN___REFRESH:
+				Refresh();
+				return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //CitriqueDomainImpl

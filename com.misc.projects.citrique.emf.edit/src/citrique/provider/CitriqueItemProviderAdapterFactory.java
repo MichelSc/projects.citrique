@@ -302,26 +302,26 @@ public class CitriqueItemProviderAdapterFactory extends CitriqueAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link citrique.LinkSiloReactor} instances.
+	 * This keeps track of the one adapter used for all {@link citrique.SiloReactorLink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkSiloReactorItemProvider linkSiloReactorItemProvider;
+	protected SiloReactorLinkItemProvider siloReactorLinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link citrique.LinkSiloReactor}.
+	 * This creates an adapter for a {@link citrique.SiloReactorLink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLinkSiloReactorAdapter() {
-		if (linkSiloReactorItemProvider == null) {
-			linkSiloReactorItemProvider = new LinkSiloReactorItemProvider(this);
+	public Adapter createSiloReactorLinkAdapter() {
+		if (siloReactorLinkItemProvider == null) {
+			siloReactorLinkItemProvider = new SiloReactorLinkItemProvider(this);
 		}
 
-		return linkSiloReactorItemProvider;
+		return siloReactorLinkItemProvider;
 	}
 
 	/**
@@ -433,7 +433,7 @@ public class CitriqueItemProviderAdapterFactory extends CitriqueAdapterFactory i
 		if (plantNodeItemProvider != null) plantNodeItemProvider.dispose();
 		if (plantLinkItemProvider != null) plantLinkItemProvider.dispose();
 		if (bufferSiloLinkItemProvider != null) bufferSiloLinkItemProvider.dispose();
-		if (linkSiloReactorItemProvider != null) linkSiloReactorItemProvider.dispose();
+		if (siloReactorLinkItemProvider != null) siloReactorLinkItemProvider.dispose();
 	}
 
 }

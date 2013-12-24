@@ -43,8 +43,8 @@ public interface Silo extends PlantNode {
 
 	/**
 	 * Returns the value of the '<em><b>Reactor Links</b></em>' reference list.
-	 * The list contents are of type {@link citrique.LinkSiloReactor}.
-	 * It is bidirectional and its opposite is '{@link citrique.LinkSiloReactor#getSilo <em>Silo</em>}'.
+	 * The list contents are of type {@link citrique.SiloReactorLink}.
+	 * It is bidirectional and its opposite is '{@link citrique.SiloReactorLink#getSilo <em>Silo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reactor Links</em>' reference list isn't clear,
@@ -53,11 +53,11 @@ public interface Silo extends PlantNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reactor Links</em>' reference list.
 	 * @see citrique.CitriquePackage#getSilo_ReactorLinks()
-	 * @see citrique.LinkSiloReactor#getSilo
+	 * @see citrique.SiloReactorLink#getSilo
 	 * @model opposite="Silo"
 	 * @generated
 	 */
-	EList<LinkSiloReactor> getReactorLinks();
+	EList<SiloReactorLink> getReactorLinks();
 
 	/**
 	 * Returns the value of the '<em><b>Capacity</b></em>' attribute.

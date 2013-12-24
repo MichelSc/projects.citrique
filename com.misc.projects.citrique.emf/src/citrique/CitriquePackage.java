@@ -68,13 +68,13 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_OBJECT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__CHILDREN = 0;
+	int CITRIQUE_OBJECT__CHILD = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -104,22 +104,13 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_OBJECT__TYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CITRIQUE_OBJECT__DESCRIPTION = 4;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_TYPE = 5;
+	int CITRIQUE_OBJECT__SHORT_TYPE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Short Description</b></em>' attribute.
@@ -128,7 +119,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_DESCRIPTION = 6;
+	int CITRIQUE_OBJECT__SHORT_DESCRIPTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_OBJECT__DESCRIPTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -149,31 +149,40 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_OBJECT_FEATURE_COUNT = 8;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_INIT = 0;
+	int CITRIQUE_OBJECT___REFRESH_DESCRIPTION = 0;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_DISPOSE = 1;
+	int CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = 1;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_CHILDREN = 2;
+	int CITRIQUE_OBJECT___GET_TYPE = 2;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_OBJECT___GET_SHORT_TYPE = 3;
 
 	/**
 	 * The number of operations of the '<em>Object</em>' class.
@@ -182,7 +191,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_OPERATION_COUNT = 3;
+	int CITRIQUE_OBJECT_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link citrique.impl.CitriqueDomainImpl <em>Domain</em>}' class.
@@ -213,13 +222,22 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_DOMAIN_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Refresh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_DOMAIN___REFRESH = 0;
+
+	/**
 	 * The number of operations of the '<em>Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_DOMAIN_OPERATION_COUNT = 0;
+	int CITRIQUE_DOMAIN_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link citrique.impl.PlantObjectImpl <em>Plant Object</em>}' class.
@@ -232,13 +250,13 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_OBJECT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OBJECT__CHILDREN = CITRIQUE_OBJECT__CHILDREN;
+	int PLANT_OBJECT__CHILD = CITRIQUE_OBJECT__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -268,15 +286,6 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_OBJECT__TYPE = CITRIQUE_OBJECT__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANT_OBJECT__DESCRIPTION = CITRIQUE_OBJECT__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -293,6 +302,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_OBJECT__SHORT_DESCRIPTION = CITRIQUE_OBJECT__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_OBJECT__DESCRIPTION = CITRIQUE_OBJECT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -322,31 +340,40 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_OBJECT_FEATURE_COUNT = CITRIQUE_OBJECT_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OBJECT___REFRESH_INIT = CITRIQUE_OBJECT___REFRESH_INIT;
+	int PLANT_OBJECT___REFRESH_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OBJECT___REFRESH_DISPOSE = CITRIQUE_OBJECT___REFRESH_DISPOSE;
+	int PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OBJECT___REFRESH_CHILDREN = CITRIQUE_OBJECT___REFRESH_CHILDREN;
+	int PLANT_OBJECT___GET_TYPE = CITRIQUE_OBJECT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_OBJECT___GET_SHORT_TYPE = CITRIQUE_OBJECT___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Plant Object</em>' class.
@@ -368,13 +395,13 @@ public interface CitriquePackage extends EPackage {
 	int PLANT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__CHILDREN = CITRIQUE_OBJECT__CHILDREN;
+	int PLANT__CHILD = CITRIQUE_OBJECT__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -404,15 +431,6 @@ public interface CitriquePackage extends EPackage {
 	int PLANT__TYPE = CITRIQUE_OBJECT__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANT__DESCRIPTION = CITRIQUE_OBJECT__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,6 +449,15 @@ public interface CitriquePackage extends EPackage {
 	int PLANT__SHORT_DESCRIPTION = CITRIQUE_OBJECT__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__DESCRIPTION = CITRIQUE_OBJECT__DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -440,40 +467,40 @@ public interface CitriquePackage extends EPackage {
 	int PLANT__SHORT_NAME = CITRIQUE_OBJECT__SHORT_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Buffers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Buffer</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__BUFFERS = CITRIQUE_OBJECT_FEATURE_COUNT + 0;
+	int PLANT__BUFFER = CITRIQUE_OBJECT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Silos</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Silo</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__SILOS = CITRIQUE_OBJECT_FEATURE_COUNT + 1;
+	int PLANT__SILO = CITRIQUE_OBJECT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Reactors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Reactor</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__REACTORS = CITRIQUE_OBJECT_FEATURE_COUNT + 2;
+	int PLANT__REACTOR = CITRIQUE_OBJECT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Nodes</b></em>' reference list.
+	 * The feature id for the '<em><b>Node</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__NODES = CITRIQUE_OBJECT_FEATURE_COUNT + 3;
+	int PLANT__NODE = CITRIQUE_OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Links</b></em>' reference list.
@@ -485,31 +512,31 @@ public interface CitriquePackage extends EPackage {
 	int PLANT__LINKS = CITRIQUE_OBJECT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Buffer Silo Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Buffer Silo Link</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__BUFFER_SILO_LINKS = CITRIQUE_OBJECT_FEATURE_COUNT + 5;
+	int PLANT__BUFFER_SILO_LINK = CITRIQUE_OBJECT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Silo Reactor Links</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Silo Reactor Link</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__SILO_REACTOR_LINKS = CITRIQUE_OBJECT_FEATURE_COUNT + 6;
+	int PLANT__SILO_REACTOR_LINK = CITRIQUE_OBJECT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Plant Objects</b></em>' reference list.
+	 * The feature id for the '<em><b>Plant Object</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__PLANT_OBJECTS = CITRIQUE_OBJECT_FEATURE_COUNT + 7;
+	int PLANT__PLANT_OBJECT = CITRIQUE_OBJECT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Plant</em>' class.
@@ -521,31 +548,40 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_FEATURE_COUNT = CITRIQUE_OBJECT_FEATURE_COUNT + 8;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT___REFRESH_INIT = CITRIQUE_OBJECT___REFRESH_INIT;
+	int PLANT___REFRESH_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT___REFRESH_DISPOSE = CITRIQUE_OBJECT___REFRESH_DISPOSE;
+	int PLANT___REFRESH_SHORT_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT___REFRESH_CHILDREN = CITRIQUE_OBJECT___REFRESH_CHILDREN;
+	int PLANT___GET_TYPE = CITRIQUE_OBJECT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT___GET_SHORT_TYPE = CITRIQUE_OBJECT___GET_SHORT_TYPE;
 
 	/**
 	 * The operation id for the '<em>Refresh Nodes</em>' operation.
@@ -566,13 +602,22 @@ public interface CitriquePackage extends EPackage {
 	int PLANT___REFRESH_LINKS = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT___REFRESH_CHILDREN = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Plant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
+	int PLANT_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link citrique.impl.PlantNodeImpl <em>Plant Node</em>}' class.
@@ -585,13 +630,13 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_NODE = 7;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_NODE__CHILDREN = PLANT_OBJECT__CHILDREN;
+	int PLANT_NODE__CHILD = PLANT_OBJECT__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -621,15 +666,6 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_NODE__TYPE = PLANT_OBJECT__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANT_NODE__DESCRIPTION = PLANT_OBJECT__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,6 +682,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_NODE__SHORT_DESCRIPTION = PLANT_OBJECT__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_NODE__DESCRIPTION = PLANT_OBJECT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -675,31 +720,40 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_NODE_FEATURE_COUNT = PLANT_OBJECT_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_NODE___REFRESH_INIT = PLANT_OBJECT___REFRESH_INIT;
+	int PLANT_NODE___REFRESH_DESCRIPTION = PLANT_OBJECT___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_NODE___REFRESH_DISPOSE = PLANT_OBJECT___REFRESH_DISPOSE;
+	int PLANT_NODE___REFRESH_SHORT_DESCRIPTION = PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_NODE___REFRESH_CHILDREN = PLANT_OBJECT___REFRESH_CHILDREN;
+	int PLANT_NODE___GET_TYPE = PLANT_OBJECT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_NODE___GET_SHORT_TYPE = PLANT_OBJECT___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Plant Node</em>' class.
@@ -721,13 +775,13 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER = 4;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER__CHILDREN = PLANT_NODE__CHILDREN;
+	int BUFFER__CHILD = PLANT_NODE__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -757,15 +811,6 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER__TYPE = PLANT_NODE__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUFFER__DESCRIPTION = PLANT_NODE__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -782,6 +827,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER__DESCRIPTION = PLANT_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -829,31 +883,40 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER_FEATURE_COUNT = PLANT_NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER___REFRESH_INIT = PLANT_NODE___REFRESH_INIT;
+	int BUFFER___REFRESH_DESCRIPTION = PLANT_NODE___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER___REFRESH_DISPOSE = PLANT_NODE___REFRESH_DISPOSE;
+	int BUFFER___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
+	int BUFFER___GET_TYPE = PLANT_NODE___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER___GET_SHORT_TYPE = PLANT_NODE___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Buffer</em>' class.
@@ -875,13 +938,13 @@ public interface CitriquePackage extends EPackage {
 	int SILO = 5;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SILO__CHILDREN = PLANT_NODE__CHILDREN;
+	int SILO__CHILD = PLANT_NODE__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -911,15 +974,6 @@ public interface CitriquePackage extends EPackage {
 	int SILO__TYPE = PLANT_NODE__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SILO__DESCRIPTION = PLANT_NODE__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -936,6 +990,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int SILO__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO__DESCRIPTION = PLANT_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -992,31 +1055,40 @@ public interface CitriquePackage extends EPackage {
 	int SILO_FEATURE_COUNT = PLANT_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SILO___REFRESH_INIT = PLANT_NODE___REFRESH_INIT;
+	int SILO___REFRESH_DESCRIPTION = PLANT_NODE___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SILO___REFRESH_DISPOSE = PLANT_NODE___REFRESH_DISPOSE;
+	int SILO___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SILO___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
+	int SILO___GET_TYPE = PLANT_NODE___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO___GET_SHORT_TYPE = PLANT_NODE___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Silo</em>' class.
@@ -1038,13 +1110,13 @@ public interface CitriquePackage extends EPackage {
 	int REACTOR = 6;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACTOR__CHILDREN = PLANT_NODE__CHILDREN;
+	int REACTOR__CHILD = PLANT_NODE__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1074,15 +1146,6 @@ public interface CitriquePackage extends EPackage {
 	int REACTOR__TYPE = PLANT_NODE__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REACTOR__DESCRIPTION = PLANT_NODE__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1099,6 +1162,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int REACTOR__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACTOR__DESCRIPTION = PLANT_NODE__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -1137,31 +1209,40 @@ public interface CitriquePackage extends EPackage {
 	int REACTOR_FEATURE_COUNT = PLANT_NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACTOR___REFRESH_INIT = PLANT_NODE___REFRESH_INIT;
+	int REACTOR___REFRESH_DESCRIPTION = PLANT_NODE___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACTOR___REFRESH_DISPOSE = PLANT_NODE___REFRESH_DISPOSE;
+	int REACTOR___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REACTOR___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
+	int REACTOR___GET_TYPE = PLANT_NODE___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACTOR___GET_SHORT_TYPE = PLANT_NODE___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Reactor</em>' class.
@@ -1183,13 +1264,13 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_LINK = 8;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_LINK__CHILDREN = PLANT_OBJECT__CHILDREN;
+	int PLANT_LINK__CHILD = PLANT_OBJECT__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1219,15 +1300,6 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_LINK__TYPE = PLANT_OBJECT__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLANT_LINK__DESCRIPTION = PLANT_OBJECT__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1244,6 +1316,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_LINK__SHORT_DESCRIPTION = PLANT_OBJECT__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_LINK__DESCRIPTION = PLANT_OBJECT__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -1300,31 +1381,40 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_LINK_FEATURE_COUNT = PLANT_OBJECT_FEATURE_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_LINK___REFRESH_INIT = PLANT_OBJECT___REFRESH_INIT;
+	int PLANT_LINK___REFRESH_DESCRIPTION = PLANT_OBJECT___REFRESH_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Dispose</em>' operation.
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_LINK___REFRESH_DISPOSE = PLANT_OBJECT___REFRESH_DISPOSE;
+	int PLANT_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The operation id for the '<em>Get Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_LINK___REFRESH_CHILDREN = PLANT_OBJECT___REFRESH_CHILDREN;
+	int PLANT_LINK___GET_TYPE = PLANT_OBJECT___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_LINK___GET_SHORT_TYPE = PLANT_OBJECT___GET_SHORT_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Plant Link</em>' class.
@@ -1346,13 +1436,13 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER_SILO_LINK = 9;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER_SILO_LINK__CHILDREN = PLANT_LINK__CHILDREN;
+	int BUFFER_SILO_LINK__CHILD = PLANT_LINK__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1382,15 +1472,6 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER_SILO_LINK__TYPE = PLANT_LINK__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUFFER_SILO_LINK__DESCRIPTION = PLANT_LINK__DESCRIPTION;
-
-	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1407,6 +1488,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER_SILO_LINK__SHORT_DESCRIPTION = PLANT_LINK__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK__DESCRIPTION = PLANT_LINK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -1481,13 +1571,40 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER_SILO_LINK_FEATURE_COUNT = PLANT_LINK_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER_SILO_LINK___REFRESH_INIT = PLANT_LINK___REFRESH_INIT;
+	int BUFFER_SILO_LINK___REFRESH_DESCRIPTION = PLANT_LINK___REFRESH_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_LINK___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK___GET_TYPE = PLANT_LINK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK___GET_SHORT_TYPE = PLANT_LINK___GET_SHORT_TYPE;
 
 	/**
 	 * The operation id for the '<em>Refresh Dispose</em>' operation.
@@ -1496,16 +1613,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER_SILO_LINK___REFRESH_DISPOSE = PLANT_LINK___REFRESH_DISPOSE;
-
-	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUFFER_SILO_LINK___REFRESH_CHILDREN = PLANT_LINK___REFRESH_CHILDREN;
+	int BUFFER_SILO_LINK___REFRESH_DISPOSE = PLANT_LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Buffer Silo Link</em>' class.
@@ -1514,26 +1622,26 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUFFER_SILO_LINK_OPERATION_COUNT = PLANT_LINK_OPERATION_COUNT + 0;
+	int BUFFER_SILO_LINK_OPERATION_COUNT = PLANT_LINK_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link citrique.impl.LinkSiloReactorImpl <em>Link Silo Reactor</em>}' class.
+	 * The meta object id for the '{@link citrique.impl.SiloReactorLinkImpl <em>Silo Reactor Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.impl.LinkSiloReactorImpl
-	 * @see citrique.impl.CitriquePackageImpl#getLinkSiloReactor()
+	 * @see citrique.impl.SiloReactorLinkImpl
+	 * @see citrique.impl.CitriquePackageImpl#getSiloReactorLink()
 	 * @generated
 	 */
-	int LINK_SILO_REACTOR = 10;
+	int SILO_REACTOR_LINK = 10;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__CHILDREN = PLANT_LINK__CHILDREN;
+	int SILO_REACTOR_LINK__CHILD = PLANT_LINK__CHILD;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1542,7 +1650,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__PARENT = PLANT_LINK__PARENT;
+	int SILO_REACTOR_LINK__PARENT = PLANT_LINK__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1551,7 +1659,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__NAME = PLANT_LINK__NAME;
+	int SILO_REACTOR_LINK__NAME = PLANT_LINK__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1560,16 +1668,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__TYPE = PLANT_LINK__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_SILO_REACTOR__DESCRIPTION = PLANT_LINK__DESCRIPTION;
+	int SILO_REACTOR_LINK__TYPE = PLANT_LINK__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
@@ -1578,7 +1677,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__SHORT_TYPE = PLANT_LINK__SHORT_TYPE;
+	int SILO_REACTOR_LINK__SHORT_TYPE = PLANT_LINK__SHORT_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Short Description</b></em>' attribute.
@@ -1587,7 +1686,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__SHORT_DESCRIPTION = PLANT_LINK__SHORT_DESCRIPTION;
+	int SILO_REACTOR_LINK__SHORT_DESCRIPTION = PLANT_LINK__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK__DESCRIPTION = PLANT_LINK__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -1596,7 +1704,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__SHORT_NAME = PLANT_LINK__SHORT_NAME;
+	int SILO_REACTOR_LINK__SHORT_NAME = PLANT_LINK__SHORT_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Plant</b></em>' reference.
@@ -1605,7 +1713,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__PLANT = PLANT_LINK__PLANT;
+	int SILO_REACTOR_LINK__PLANT = PLANT_LINK__PLANT;
 
 	/**
 	 * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -1614,7 +1722,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__LENGTH = PLANT_LINK__LENGTH;
+	int SILO_REACTOR_LINK__LENGTH = PLANT_LINK__LENGTH;
 
 	/**
 	 * The feature id for the '<em><b>Height From</b></em>' attribute.
@@ -1623,7 +1731,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__HEIGHT_FROM = PLANT_LINK__HEIGHT_FROM;
+	int SILO_REACTOR_LINK__HEIGHT_FROM = PLANT_LINK__HEIGHT_FROM;
 
 	/**
 	 * The feature id for the '<em><b>Height To</b></em>' attribute.
@@ -1632,7 +1740,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__HEIGHT_TO = PLANT_LINK__HEIGHT_TO;
+	int SILO_REACTOR_LINK__HEIGHT_TO = PLANT_LINK__HEIGHT_TO;
 
 	/**
 	 * The feature id for the '<em><b>Silo</b></em>' reference.
@@ -1641,7 +1749,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__SILO = PLANT_LINK_FEATURE_COUNT + 0;
+	int SILO_REACTOR_LINK__SILO = PLANT_LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Reactor</b></em>' reference.
@@ -1650,25 +1758,52 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR__REACTOR = PLANT_LINK_FEATURE_COUNT + 1;
+	int SILO_REACTOR_LINK__REACTOR = PLANT_LINK_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Link Silo Reactor</em>' class.
+	 * The number of structural features of the '<em>Silo Reactor Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR_FEATURE_COUNT = PLANT_LINK_FEATURE_COUNT + 2;
+	int SILO_REACTOR_LINK_FEATURE_COUNT = PLANT_LINK_FEATURE_COUNT + 2;
 
 	/**
-	 * The operation id for the '<em>Refresh Init</em>' operation.
+	 * The operation id for the '<em>Refresh Description</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR___REFRESH_INIT = PLANT_LINK___REFRESH_INIT;
+	int SILO_REACTOR_LINK___REFRESH_DESCRIPTION = PLANT_LINK___REFRESH_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Short Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_LINK___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK___GET_TYPE = PLANT_LINK___GET_TYPE;
+
+	/**
+	 * The operation id for the '<em>Get Short Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK___GET_SHORT_TYPE = PLANT_LINK___GET_SHORT_TYPE;
 
 	/**
 	 * The operation id for the '<em>Refresh Dispose</em>' operation.
@@ -1677,26 +1812,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR___REFRESH_DISPOSE = PLANT_LINK___REFRESH_DISPOSE;
+	int SILO_REACTOR_LINK___REFRESH_DISPOSE = PLANT_LINK_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Refresh Children</em>' operation.
+	 * The number of operations of the '<em>Silo Reactor Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_SILO_REACTOR___REFRESH_CHILDREN = PLANT_LINK___REFRESH_CHILDREN;
-
-	/**
-	 * The number of operations of the '<em>Link Silo Reactor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_SILO_REACTOR_OPERATION_COUNT = PLANT_LINK_OPERATION_COUNT + 0;
-
+	int SILO_REACTOR_LINK_OPERATION_COUNT = PLANT_LINK_OPERATION_COUNT + 1;
 
 	/**
 	 * Returns the meta object for class '{@link citrique.CitriqueObject <em>Object</em>}'.
@@ -1709,15 +1834,15 @@ public interface CitriquePackage extends EPackage {
 	EClass getCitriqueObject();
 
 	/**
-	 * Returns the meta object for the reference list '{@link citrique.CitriqueObject#getChildren <em>Children</em>}'.
+	 * Returns the meta object for the reference list '{@link citrique.CitriqueObject#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
-	 * @see citrique.CitriqueObject#getChildren()
+	 * @return the meta object for the reference list '<em>Child</em>'.
+	 * @see citrique.CitriqueObject#getChild()
 	 * @see #getCitriqueObject()
 	 * @generated
 	 */
-	EReference getCitriqueObject_Children();
+	EReference getCitriqueObject_Child();
 
 	/**
 	 * Returns the meta object for the reference '{@link citrique.CitriqueObject#getParent <em>Parent</em>}'.
@@ -1797,34 +1922,44 @@ public interface CitriquePackage extends EPackage {
 	EAttribute getCitriqueObject_ShortName();
 
 	/**
-	 * Returns the meta object for the '{@link citrique.CitriqueObject#RefreshInit() <em>Refresh Init</em>}' operation.
+	 * Returns the meta object for the '{@link citrique.CitriqueObject#RefreshDescription() <em>Refresh Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh Init</em>' operation.
-	 * @see citrique.CitriqueObject#RefreshInit()
+	 * @return the meta object for the '<em>Refresh Description</em>' operation.
+	 * @see citrique.CitriqueObject#RefreshDescription()
 	 * @generated
 	 */
-	EOperation getCitriqueObject__RefreshInit();
+	EOperation getCitriqueObject__RefreshDescription();
 
 	/**
-	 * Returns the meta object for the '{@link citrique.CitriqueObject#RefreshDispose() <em>Refresh Dispose</em>}' operation.
+	 * Returns the meta object for the '{@link citrique.CitriqueObject#RefreshShortDescription() <em>Refresh Short Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh Dispose</em>' operation.
-	 * @see citrique.CitriqueObject#RefreshDispose()
+	 * @return the meta object for the '<em>Refresh Short Description</em>' operation.
+	 * @see citrique.CitriqueObject#RefreshShortDescription()
 	 * @generated
 	 */
-	EOperation getCitriqueObject__RefreshDispose();
+	EOperation getCitriqueObject__RefreshShortDescription();
 
 	/**
-	 * Returns the meta object for the '{@link citrique.CitriqueObject#RefreshChildren() <em>Refresh Children</em>}' operation.
+	 * Returns the meta object for the '{@link citrique.CitriqueObject#GetType() <em>Get Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Refresh Children</em>' operation.
-	 * @see citrique.CitriqueObject#RefreshChildren()
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see citrique.CitriqueObject#GetType()
 	 * @generated
 	 */
-	EOperation getCitriqueObject__RefreshChildren();
+	EOperation getCitriqueObject__GetType();
+
+	/**
+	 * Returns the meta object for the '{@link citrique.CitriqueObject#GetShortType() <em>Get Short Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Short Type</em>' operation.
+	 * @see citrique.CitriqueObject#GetShortType()
+	 * @generated
+	 */
+	EOperation getCitriqueObject__GetShortType();
 
 	/**
 	 * Returns the meta object for class '{@link citrique.CitriqueDomain <em>Domain</em>}'.
@@ -1846,6 +1981,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCitriqueDomain_Plants();
+
+	/**
+	 * Returns the meta object for the '{@link citrique.CitriqueDomain#Refresh() <em>Refresh</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh</em>' operation.
+	 * @see citrique.CitriqueDomain#Refresh()
+	 * @generated
+	 */
+	EOperation getCitriqueDomain__Refresh();
 
 	/**
 	 * Returns the meta object for class '{@link citrique.PlantObject <em>Plant Object</em>}'.
@@ -1879,48 +2024,48 @@ public interface CitriquePackage extends EPackage {
 	EClass getPlant();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getBuffers <em>Buffers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getBuffer <em>Buffer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Buffers</em>'.
-	 * @see citrique.Plant#getBuffers()
+	 * @return the meta object for the containment reference list '<em>Buffer</em>'.
+	 * @see citrique.Plant#getBuffer()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_Buffers();
+	EReference getPlant_Buffer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getSilos <em>Silos</em>}'.
+	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getSilo <em>Silo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Silos</em>'.
-	 * @see citrique.Plant#getSilos()
+	 * @return the meta object for the containment reference list '<em>Silo</em>'.
+	 * @see citrique.Plant#getSilo()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_Silos();
+	EReference getPlant_Silo();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getReactors <em>Reactors</em>}'.
+	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getReactor <em>Reactor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Reactors</em>'.
-	 * @see citrique.Plant#getReactors()
+	 * @return the meta object for the containment reference list '<em>Reactor</em>'.
+	 * @see citrique.Plant#getReactor()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_Reactors();
+	EReference getPlant_Reactor();
 
 	/**
-	 * Returns the meta object for the reference list '{@link citrique.Plant#getNodes <em>Nodes</em>}'.
+	 * Returns the meta object for the reference list '{@link citrique.Plant#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Nodes</em>'.
-	 * @see citrique.Plant#getNodes()
+	 * @return the meta object for the reference list '<em>Node</em>'.
+	 * @see citrique.Plant#getNode()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_Nodes();
+	EReference getPlant_Node();
 
 	/**
 	 * Returns the meta object for the reference list '{@link citrique.Plant#getLinks <em>Links</em>}'.
@@ -1934,37 +2079,37 @@ public interface CitriquePackage extends EPackage {
 	EReference getPlant_Links();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getBufferSiloLinks <em>Buffer Silo Links</em>}'.
+	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getBufferSiloLink <em>Buffer Silo Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Buffer Silo Links</em>'.
-	 * @see citrique.Plant#getBufferSiloLinks()
+	 * @return the meta object for the containment reference list '<em>Buffer Silo Link</em>'.
+	 * @see citrique.Plant#getBufferSiloLink()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_BufferSiloLinks();
+	EReference getPlant_BufferSiloLink();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getSiloReactorLinks <em>Silo Reactor Links</em>}'.
+	 * Returns the meta object for the containment reference list '{@link citrique.Plant#getSiloReactorLink <em>Silo Reactor Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Silo Reactor Links</em>'.
-	 * @see citrique.Plant#getSiloReactorLinks()
+	 * @return the meta object for the containment reference list '<em>Silo Reactor Link</em>'.
+	 * @see citrique.Plant#getSiloReactorLink()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_SiloReactorLinks();
+	EReference getPlant_SiloReactorLink();
 
 	/**
-	 * Returns the meta object for the reference list '{@link citrique.Plant#getPlantObjects <em>Plant Objects</em>}'.
+	 * Returns the meta object for the reference list '{@link citrique.Plant#getPlantObject <em>Plant Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Plant Objects</em>'.
-	 * @see citrique.Plant#getPlantObjects()
+	 * @return the meta object for the reference list '<em>Plant Object</em>'.
+	 * @see citrique.Plant#getPlantObject()
 	 * @see #getPlant()
 	 * @generated
 	 */
-	EReference getPlant_PlantObjects();
+	EReference getPlant_PlantObject();
 
 	/**
 	 * Returns the meta object for the '{@link citrique.Plant#RefreshNodes() <em>Refresh Nodes</em>}' operation.
@@ -1985,6 +2130,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getPlant__RefreshLinks();
+
+	/**
+	 * Returns the meta object for the '{@link citrique.Plant#RefreshChildren() <em>Refresh Children</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Children</em>' operation.
+	 * @see citrique.Plant#RefreshChildren()
+	 * @generated
+	 */
+	EOperation getPlant__RefreshChildren();
 
 	/**
 	 * Returns the meta object for class '{@link citrique.Buffer <em>Buffer</em>}'.
@@ -2168,36 +2323,56 @@ public interface CitriquePackage extends EPackage {
 	EReference getBufferSiloLink_Buffer();
 
 	/**
-	 * Returns the meta object for class '{@link citrique.LinkSiloReactor <em>Link Silo Reactor</em>}'.
+	 * Returns the meta object for the '{@link citrique.BufferSiloLink#RefreshDispose() <em>Refresh Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link Silo Reactor</em>'.
-	 * @see citrique.LinkSiloReactor
+	 * @return the meta object for the '<em>Refresh Dispose</em>' operation.
+	 * @see citrique.BufferSiloLink#RefreshDispose()
 	 * @generated
 	 */
-	EClass getLinkSiloReactor();
+	EOperation getBufferSiloLink__RefreshDispose();
 
 	/**
-	 * Returns the meta object for the reference '{@link citrique.LinkSiloReactor#getSilo <em>Silo</em>}'.
+	 * Returns the meta object for class '{@link citrique.SiloReactorLink <em>Silo Reactor Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Silo Reactor Link</em>'.
+	 * @see citrique.SiloReactorLink
+	 * @generated
+	 */
+	EClass getSiloReactorLink();
+
+	/**
+	 * Returns the meta object for the reference '{@link citrique.SiloReactorLink#getSilo <em>Silo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Silo</em>'.
-	 * @see citrique.LinkSiloReactor#getSilo()
-	 * @see #getLinkSiloReactor()
+	 * @see citrique.SiloReactorLink#getSilo()
+	 * @see #getSiloReactorLink()
 	 * @generated
 	 */
-	EReference getLinkSiloReactor_Silo();
+	EReference getSiloReactorLink_Silo();
 
 	/**
-	 * Returns the meta object for the reference '{@link citrique.LinkSiloReactor#getReactor <em>Reactor</em>}'.
+	 * Returns the meta object for the reference '{@link citrique.SiloReactorLink#getReactor <em>Reactor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Reactor</em>'.
-	 * @see citrique.LinkSiloReactor#getReactor()
-	 * @see #getLinkSiloReactor()
+	 * @see citrique.SiloReactorLink#getReactor()
+	 * @see #getSiloReactorLink()
 	 * @generated
 	 */
-	EReference getLinkSiloReactor_Reactor();
+	EReference getSiloReactorLink_Reactor();
+
+	/**
+	 * Returns the meta object for the '{@link citrique.SiloReactorLink#RefreshDispose() <em>Refresh Dispose</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Dispose</em>' operation.
+	 * @see citrique.SiloReactorLink#RefreshDispose()
+	 * @generated
+	 */
+	EOperation getSiloReactorLink__RefreshDispose();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2233,12 +2408,12 @@ public interface CitriquePackage extends EPackage {
 		EClass CITRIQUE_OBJECT = eINSTANCE.getCitriqueObject();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Child</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CITRIQUE_OBJECT__CHILDREN = eINSTANCE.getCitriqueObject_Children();
+		EReference CITRIQUE_OBJECT__CHILD = eINSTANCE.getCitriqueObject_Child();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
@@ -2297,28 +2472,36 @@ public interface CitriquePackage extends EPackage {
 		EAttribute CITRIQUE_OBJECT__SHORT_NAME = eINSTANCE.getCitriqueObject_ShortName();
 
 		/**
-		 * The meta object literal for the '<em><b>Refresh Init</b></em>' operation.
+		 * The meta object literal for the '<em><b>Refresh Description</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CITRIQUE_OBJECT___REFRESH_INIT = eINSTANCE.getCitriqueObject__RefreshInit();
+		EOperation CITRIQUE_OBJECT___REFRESH_DESCRIPTION = eINSTANCE.getCitriqueObject__RefreshDescription();
 
 		/**
-		 * The meta object literal for the '<em><b>Refresh Dispose</b></em>' operation.
+		 * The meta object literal for the '<em><b>Refresh Short Description</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CITRIQUE_OBJECT___REFRESH_DISPOSE = eINSTANCE.getCitriqueObject__RefreshDispose();
+		EOperation CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = eINSTANCE.getCitriqueObject__RefreshShortDescription();
 
 		/**
-		 * The meta object literal for the '<em><b>Refresh Children</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CITRIQUE_OBJECT___REFRESH_CHILDREN = eINSTANCE.getCitriqueObject__RefreshChildren();
+		EOperation CITRIQUE_OBJECT___GET_TYPE = eINSTANCE.getCitriqueObject__GetType();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Short Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CITRIQUE_OBJECT___GET_SHORT_TYPE = eINSTANCE.getCitriqueObject__GetShortType();
 
 		/**
 		 * The meta object literal for the '{@link citrique.impl.CitriqueDomainImpl <em>Domain</em>}' class.
@@ -2337,6 +2520,14 @@ public interface CitriquePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CITRIQUE_DOMAIN__PLANTS = eINSTANCE.getCitriqueDomain_Plants();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CITRIQUE_DOMAIN___REFRESH = eINSTANCE.getCitriqueDomain__Refresh();
 
 		/**
 		 * The meta object literal for the '{@link citrique.impl.PlantObjectImpl <em>Plant Object</em>}' class.
@@ -2367,36 +2558,36 @@ public interface CitriquePackage extends EPackage {
 		EClass PLANT = eINSTANCE.getPlant();
 
 		/**
-		 * The meta object literal for the '<em><b>Buffers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Buffer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__BUFFERS = eINSTANCE.getPlant_Buffers();
+		EReference PLANT__BUFFER = eINSTANCE.getPlant_Buffer();
 
 		/**
-		 * The meta object literal for the '<em><b>Silos</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Silo</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__SILOS = eINSTANCE.getPlant_Silos();
+		EReference PLANT__SILO = eINSTANCE.getPlant_Silo();
 
 		/**
-		 * The meta object literal for the '<em><b>Reactors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Reactor</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__REACTORS = eINSTANCE.getPlant_Reactors();
+		EReference PLANT__REACTOR = eINSTANCE.getPlant_Reactor();
 
 		/**
-		 * The meta object literal for the '<em><b>Nodes</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Node</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__NODES = eINSTANCE.getPlant_Nodes();
+		EReference PLANT__NODE = eINSTANCE.getPlant_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Links</b></em>' reference list feature.
@@ -2407,28 +2598,28 @@ public interface CitriquePackage extends EPackage {
 		EReference PLANT__LINKS = eINSTANCE.getPlant_Links();
 
 		/**
-		 * The meta object literal for the '<em><b>Buffer Silo Links</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Buffer Silo Link</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__BUFFER_SILO_LINKS = eINSTANCE.getPlant_BufferSiloLinks();
+		EReference PLANT__BUFFER_SILO_LINK = eINSTANCE.getPlant_BufferSiloLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Silo Reactor Links</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Silo Reactor Link</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__SILO_REACTOR_LINKS = eINSTANCE.getPlant_SiloReactorLinks();
+		EReference PLANT__SILO_REACTOR_LINK = eINSTANCE.getPlant_SiloReactorLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Plant Objects</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Plant Object</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLANT__PLANT_OBJECTS = eINSTANCE.getPlant_PlantObjects();
+		EReference PLANT__PLANT_OBJECT = eINSTANCE.getPlant_PlantObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Refresh Nodes</b></em>' operation.
@@ -2445,6 +2636,14 @@ public interface CitriquePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation PLANT___REFRESH_LINKS = eINSTANCE.getPlant__RefreshLinks();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Children</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLANT___REFRESH_CHILDREN = eINSTANCE.getPlant__RefreshChildren();
 
 		/**
 		 * The meta object literal for the '{@link citrique.impl.BufferImpl <em>Buffer</em>}' class.
@@ -2595,14 +2794,22 @@ public interface CitriquePackage extends EPackage {
 		EReference BUFFER_SILO_LINK__BUFFER = eINSTANCE.getBufferSiloLink_Buffer();
 
 		/**
-		 * The meta object literal for the '{@link citrique.impl.LinkSiloReactorImpl <em>Link Silo Reactor</em>}' class.
+		 * The meta object literal for the '<em><b>Refresh Dispose</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see citrique.impl.LinkSiloReactorImpl
-		 * @see citrique.impl.CitriquePackageImpl#getLinkSiloReactor()
 		 * @generated
 		 */
-		EClass LINK_SILO_REACTOR = eINSTANCE.getLinkSiloReactor();
+		EOperation BUFFER_SILO_LINK___REFRESH_DISPOSE = eINSTANCE.getBufferSiloLink__RefreshDispose();
+
+		/**
+		 * The meta object literal for the '{@link citrique.impl.SiloReactorLinkImpl <em>Silo Reactor Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see citrique.impl.SiloReactorLinkImpl
+		 * @see citrique.impl.CitriquePackageImpl#getSiloReactorLink()
+		 * @generated
+		 */
+		EClass SILO_REACTOR_LINK = eINSTANCE.getSiloReactorLink();
 
 		/**
 		 * The meta object literal for the '<em><b>Silo</b></em>' reference feature.
@@ -2610,7 +2817,7 @@ public interface CitriquePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_SILO_REACTOR__SILO = eINSTANCE.getLinkSiloReactor_Silo();
+		EReference SILO_REACTOR_LINK__SILO = eINSTANCE.getSiloReactorLink_Silo();
 
 		/**
 		 * The meta object literal for the '<em><b>Reactor</b></em>' reference feature.
@@ -2618,7 +2825,15 @@ public interface CitriquePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LINK_SILO_REACTOR__REACTOR = eINSTANCE.getLinkSiloReactor_Reactor();
+		EReference SILO_REACTOR_LINK__REACTOR = eINSTANCE.getSiloReactorLink_Reactor();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Dispose</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SILO_REACTOR_LINK___REFRESH_DISPOSE = eINSTANCE.getSiloReactorLink__RefreshDispose();
 
 	}
 

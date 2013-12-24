@@ -59,27 +59,27 @@ public class PlantItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNodesPropertyDescriptor(object);
+			addNodePropertyDescriptor(object);
 			addLinksPropertyDescriptor(object);
-			addPlantObjectsPropertyDescriptor(object);
+			addPlantObjectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nodes feature.
+	 * This adds a property descriptor for the Node feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNodesPropertyDescriptor(Object object) {
+	protected void addNodePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Plant_Nodes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_Nodes_feature", "_UI_Plant_type"),
-				 CitriquePackage.Literals.PLANT__NODES,
+				 getString("_UI_Plant_Node_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_Node_feature", "_UI_Plant_type"),
+				 CitriquePackage.Literals.PLANT__NODE,
 				 true,
 				 false,
 				 true,
@@ -111,19 +111,19 @@ public class PlantItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Plant Objects feature.
+	 * This adds a property descriptor for the Plant Object feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPlantObjectsPropertyDescriptor(Object object) {
+	protected void addPlantObjectPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Plant_PlantObjects_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_PlantObjects_feature", "_UI_Plant_type"),
-				 CitriquePackage.Literals.PLANT__PLANT_OBJECTS,
+				 getString("_UI_Plant_PlantObject_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_PlantObject_feature", "_UI_Plant_type"),
+				 CitriquePackage.Literals.PLANT__PLANT_OBJECT,
 				 true,
 				 false,
 				 true,
@@ -144,11 +144,11 @@ public class PlantItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CitriquePackage.Literals.PLANT__BUFFERS);
-			childrenFeatures.add(CitriquePackage.Literals.PLANT__SILOS);
-			childrenFeatures.add(CitriquePackage.Literals.PLANT__REACTORS);
-			childrenFeatures.add(CitriquePackage.Literals.PLANT__BUFFER_SILO_LINKS);
-			childrenFeatures.add(CitriquePackage.Literals.PLANT__SILO_REACTOR_LINKS);
+			childrenFeatures.add(CitriquePackage.Literals.PLANT__BUFFER);
+			childrenFeatures.add(CitriquePackage.Literals.PLANT__SILO);
+			childrenFeatures.add(CitriquePackage.Literals.PLANT__REACTOR);
+			childrenFeatures.add(CitriquePackage.Literals.PLANT__BUFFER_SILO_LINK);
+			childrenFeatures.add(CitriquePackage.Literals.PLANT__SILO_REACTOR_LINK);
 		}
 		return childrenFeatures;
 	}
@@ -203,11 +203,11 @@ public class PlantItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Plant.class)) {
-			case CitriquePackage.PLANT__BUFFERS:
-			case CitriquePackage.PLANT__SILOS:
-			case CitriquePackage.PLANT__REACTORS:
-			case CitriquePackage.PLANT__BUFFER_SILO_LINKS:
-			case CitriquePackage.PLANT__SILO_REACTOR_LINKS:
+			case CitriquePackage.PLANT__BUFFER:
+			case CitriquePackage.PLANT__SILO:
+			case CitriquePackage.PLANT__REACTOR:
+			case CitriquePackage.PLANT__BUFFER_SILO_LINK:
+			case CitriquePackage.PLANT__SILO_REACTOR_LINK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,28 +227,28 @@ public class PlantItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.PLANT__BUFFERS,
+				(CitriquePackage.Literals.PLANT__BUFFER,
 				 CitriqueFactory.eINSTANCE.createBuffer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.PLANT__SILOS,
+				(CitriquePackage.Literals.PLANT__SILO,
 				 CitriqueFactory.eINSTANCE.createSilo()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.PLANT__REACTORS,
+				(CitriquePackage.Literals.PLANT__REACTOR,
 				 CitriqueFactory.eINSTANCE.createReactor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.PLANT__BUFFER_SILO_LINKS,
+				(CitriquePackage.Literals.PLANT__BUFFER_SILO_LINK,
 				 CitriqueFactory.eINSTANCE.createBufferSiloLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.PLANT__SILO_REACTOR_LINKS,
-				 CitriqueFactory.eINSTANCE.createLinkSiloReactor()));
+				(CitriquePackage.Literals.PLANT__SILO_REACTOR_LINK,
+				 CitriqueFactory.eINSTANCE.createSiloReactorLink()));
 	}
 
 }

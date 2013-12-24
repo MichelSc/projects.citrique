@@ -2,34 +2,24 @@
  */
 package citrique.tests;
 
-import citrique.CitriqueDomain;
 import citrique.CitriqueFactory;
-
-import junit.framework.TestCase;
+import citrique.SiloReactorLink;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Domain</b></em>'.
+ * A test case for the model object '<em><b>Silo Reactor Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link citrique.CitriqueDomain#Refresh() <em>Refresh</em>}</li>
+ *   <li>{@link citrique.SiloReactorLink#RefreshDispose() <em>Refresh Dispose</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class CitriqueDomainTest extends TestCase {
-
-	/**
-	 * The fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CitriqueDomain fixture = null;
+public class SiloReactorLinkTest extends PlantLinkTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,37 +27,28 @@ public class CitriqueDomainTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(CitriqueDomainTest.class);
+		TestRunner.run(SiloReactorLinkTest.class);
 	}
 
 	/**
-	 * Constructs a new Domain test case with the given name.
+	 * Constructs a new Silo Reactor Link test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CitriqueDomainTest(String name) {
+	public SiloReactorLinkTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this Domain test case.
+	 * Returns the fixture for this Silo Reactor Link test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(CitriqueDomain fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
-	 * Returns the fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CitriqueDomain getFixture() {
-		return fixture;
+	@Override
+	protected SiloReactorLink getFixture() {
+		return (SiloReactorLink)fixture;
 	}
 
 	/**
@@ -78,7 +59,7 @@ public class CitriqueDomainTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(CitriqueFactory.eINSTANCE.createCitriqueDomain());
+		setFixture(CitriqueFactory.eINSTANCE.createSiloReactorLink());
 	}
 
 	/**
@@ -93,16 +74,16 @@ public class CitriqueDomainTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueDomain#Refresh() <em>Refresh</em>}' operation.
+	 * Tests the '{@link citrique.SiloReactorLink#RefreshDispose() <em>Refresh Dispose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueDomain#Refresh()
+	 * @see citrique.SiloReactorLink#RefreshDispose()
 	 * @generated
 	 */
-	public void testRefresh() {
+	public void testRefreshDispose() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
 	}
 
-} //CitriqueDomainTest
+} //SiloReactorLinkTest

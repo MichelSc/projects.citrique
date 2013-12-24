@@ -12,14 +12,14 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link citrique.Plant#getBuffers <em>Buffers</em>}</li>
- *   <li>{@link citrique.Plant#getSilos <em>Silos</em>}</li>
- *   <li>{@link citrique.Plant#getReactors <em>Reactors</em>}</li>
- *   <li>{@link citrique.Plant#getNodes <em>Nodes</em>}</li>
+ *   <li>{@link citrique.Plant#getBuffer <em>Buffer</em>}</li>
+ *   <li>{@link citrique.Plant#getSilo <em>Silo</em>}</li>
+ *   <li>{@link citrique.Plant#getReactor <em>Reactor</em>}</li>
+ *   <li>{@link citrique.Plant#getNode <em>Node</em>}</li>
  *   <li>{@link citrique.Plant#getLinks <em>Links</em>}</li>
- *   <li>{@link citrique.Plant#getBufferSiloLinks <em>Buffer Silo Links</em>}</li>
- *   <li>{@link citrique.Plant#getSiloReactorLinks <em>Silo Reactor Links</em>}</li>
- *   <li>{@link citrique.Plant#getPlantObjects <em>Plant Objects</em>}</li>
+ *   <li>{@link citrique.Plant#getBufferSiloLink <em>Buffer Silo Link</em>}</li>
+ *   <li>{@link citrique.Plant#getSiloReactorLink <em>Silo Reactor Link</em>}</li>
+ *   <li>{@link citrique.Plant#getPlantObject <em>Plant Object</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,68 +29,68 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Plant extends CitriqueObject {
 	/**
-	 * Returns the value of the '<em><b>Buffers</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Buffer</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique.Buffer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Buffers</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Buffer</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Buffers</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getPlant_Buffers()
+	 * @return the value of the '<em>Buffer</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getPlant_Buffer()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Buffer> getBuffers();
+	EList<Buffer> getBuffer();
 
 	/**
-	 * Returns the value of the '<em><b>Silos</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Silo</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique.Silo}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Silos</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Silo</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Silos</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getPlant_Silos()
+	 * @return the value of the '<em>Silo</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getPlant_Silo()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Silo> getSilos();
+	EList<Silo> getSilo();
 
 	/**
-	 * Returns the value of the '<em><b>Reactors</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Reactor</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique.Reactor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reactors</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Reactor</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reactors</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getPlant_Reactors()
+	 * @return the value of the '<em>Reactor</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getPlant_Reactor()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Reactor> getReactors();
+	EList<Reactor> getReactor();
 
 	/**
-	 * Returns the value of the '<em><b>Nodes</b></em>' reference list.
+	 * Returns the value of the '<em><b>Node</b></em>' reference list.
 	 * The list contents are of type {@link citrique.PlantNode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nodes</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Node</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nodes</em>' reference list.
-	 * @see citrique.CitriquePackage#getPlant_Nodes()
+	 * @return the value of the '<em>Node</em>' reference list.
+	 * @see citrique.CitriquePackage#getPlant_Node()
 	 * @model
 	 * @generated
 	 */
-	EList<PlantNode> getNodes();
+	EList<PlantNode> getNode();
 
 	/**
 	 * Returns the value of the '<em><b>Links</b></em>' reference list.
@@ -109,52 +109,52 @@ public interface Plant extends CitriqueObject {
 	EList<PlantLink> getLinks();
 
 	/**
-	 * Returns the value of the '<em><b>Buffer Silo Links</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Buffer Silo Link</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique.BufferSiloLink}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Buffer Silo Links</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Buffer Silo Link</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Buffer Silo Links</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getPlant_BufferSiloLinks()
+	 * @return the value of the '<em>Buffer Silo Link</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getPlant_BufferSiloLink()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<BufferSiloLink> getBufferSiloLinks();
+	EList<BufferSiloLink> getBufferSiloLink();
 
 	/**
-	 * Returns the value of the '<em><b>Silo Reactor Links</b></em>' containment reference list.
-	 * The list contents are of type {@link citrique.LinkSiloReactor}.
+	 * Returns the value of the '<em><b>Silo Reactor Link</b></em>' containment reference list.
+	 * The list contents are of type {@link citrique.SiloReactorLink}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Silo Reactor Links</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Silo Reactor Link</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Silo Reactor Links</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getPlant_SiloReactorLinks()
+	 * @return the value of the '<em>Silo Reactor Link</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getPlant_SiloReactorLink()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<LinkSiloReactor> getSiloReactorLinks();
+	EList<SiloReactorLink> getSiloReactorLink();
 
 	/**
-	 * Returns the value of the '<em><b>Plant Objects</b></em>' reference list.
+	 * Returns the value of the '<em><b>Plant Object</b></em>' reference list.
 	 * The list contents are of type {@link citrique.PlantObject}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Plant Objects</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Plant Object</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Plant Objects</em>' reference list.
-	 * @see citrique.CitriquePackage#getPlant_PlantObjects()
+	 * @return the value of the '<em>Plant Object</em>' reference list.
+	 * @see citrique.CitriquePackage#getPlant_PlantObject()
 	 * @model
 	 * @generated
 	 */
-	EList<PlantObject> getPlantObjects();
+	EList<PlantObject> getPlantObject();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,5 +171,13 @@ public interface Plant extends CitriqueObject {
 	 * @generated
 	 */
 	void RefreshLinks();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void RefreshChildren();
 
 } // Plant

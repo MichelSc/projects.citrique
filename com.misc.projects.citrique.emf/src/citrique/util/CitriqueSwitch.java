@@ -144,12 +144,12 @@ public class CitriqueSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CitriquePackage.LINK_SILO_REACTOR: {
-				LinkSiloReactor linkSiloReactor = (LinkSiloReactor)theEObject;
-				T result = caseLinkSiloReactor(linkSiloReactor);
-				if (result == null) result = casePlantLink(linkSiloReactor);
-				if (result == null) result = casePlantObject(linkSiloReactor);
-				if (result == null) result = caseCitriqueObject(linkSiloReactor);
+			case CitriquePackage.SILO_REACTOR_LINK: {
+				SiloReactorLink siloReactorLink = (SiloReactorLink)theEObject;
+				T result = caseSiloReactorLink(siloReactorLink);
+				if (result == null) result = casePlantLink(siloReactorLink);
+				if (result == null) result = casePlantObject(siloReactorLink);
+				if (result == null) result = caseCitriqueObject(siloReactorLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,17 +308,17 @@ public class CitriqueSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link Silo Reactor</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Silo Reactor Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link Silo Reactor</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Silo Reactor Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLinkSiloReactor(LinkSiloReactor object) {
+	public T caseSiloReactorLink(SiloReactorLink object) {
 		return null;
 	}
 

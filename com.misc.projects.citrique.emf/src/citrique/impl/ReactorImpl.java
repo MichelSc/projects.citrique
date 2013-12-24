@@ -3,18 +3,13 @@
 package citrique.impl;
 
 import citrique.CitriquePackage;
-import citrique.LinkSiloReactor;
 import citrique.Reactor;
-
+import citrique.SiloReactorLink;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -40,7 +35,7 @@ public class ReactorImpl extends PlantNodeImpl implements Reactor {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<LinkSiloReactor> siloLinks;
+	protected EList<SiloReactorLink> siloLinks;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,9 +61,9 @@ public class ReactorImpl extends PlantNodeImpl implements Reactor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<LinkSiloReactor> getSiloLinks() {
+	public EList<SiloReactorLink> getSiloLinks() {
 		if (siloLinks == null) {
-			siloLinks = new EObjectWithInverseResolvingEList<LinkSiloReactor>(LinkSiloReactor.class, this, CitriquePackage.REACTOR__SILO_LINKS, CitriquePackage.LINK_SILO_REACTOR__REACTOR);
+			siloLinks = new EObjectWithInverseResolvingEList<SiloReactorLink>(SiloReactorLink.class, this, CitriquePackage.REACTOR__SILO_LINKS, CitriquePackage.SILO_REACTOR_LINK__REACTOR);
 		}
 		return siloLinks;
 	}
@@ -127,7 +122,7 @@ public class ReactorImpl extends PlantNodeImpl implements Reactor {
 		switch (featureID) {
 			case CitriquePackage.REACTOR__SILO_LINKS:
 				getSiloLinks().clear();
-				getSiloLinks().addAll((Collection<? extends LinkSiloReactor>)newValue);
+				getSiloLinks().addAll((Collection<? extends SiloReactorLink>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
