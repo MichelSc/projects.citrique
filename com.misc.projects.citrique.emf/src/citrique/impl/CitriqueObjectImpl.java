@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getType <em>Type</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortType <em>Short Type</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortDescription <em>Short Description</em>}</li>
+ *   <li>{@link citrique.impl.CitriqueObjectImpl#getLongDescription <em>Long Description</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.impl.CitriqueObjectImpl#getShortName <em>Short Name</em>}</li>
  * </ul>
@@ -143,6 +144,26 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String shortDescription = SHORT_DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLongDescription() <em>Long Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LONG_DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLongDescription() <em>Long Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLongDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String longDescription = LONG_DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -385,6 +406,27 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLongDescription() {
+		return longDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLongDescription(String newLongDescription) {
+		String oldLongDescription = longDescription;
+		longDescription = newLongDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION, oldLongDescription, longDescription));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getShortName() {
 		return shortName;
 	}
@@ -421,6 +463,15 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		String type = this.getShortType();
 		String name = this.getShortName();
 		String description = type + ": "+name;
+		this.setShortDescription(description);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void refreshLongDescription() {
+		String description = String.format("%1$s (children %2$d)", this.getLongDescription(), this.getChild().size());
 		this.setShortDescription(description);
 	}
 
@@ -500,6 +551,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return getShortType();
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				return getShortDescription();
+			case CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION:
+				return getLongDescription();
 			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 				return getDescription();
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
@@ -535,6 +588,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				setShortDescription((String)newValue);
+				return;
+			case CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION:
+				setLongDescription((String)newValue);
 				return;
 			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 				setDescription((String)newValue);
@@ -572,6 +628,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				setShortDescription(SHORT_DESCRIPTION_EDEFAULT);
 				return;
+			case CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION:
+				setLongDescription(LONG_DESCRIPTION_EDEFAULT);
+				return;
 			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
@@ -602,6 +661,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return SHORT_TYPE_EDEFAULT == null ? shortType != null : !SHORT_TYPE_EDEFAULT.equals(shortType);
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
 				return SHORT_DESCRIPTION_EDEFAULT == null ? shortDescription != null : !SHORT_DESCRIPTION_EDEFAULT.equals(shortDescription);
+			case CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION:
+				return LONG_DESCRIPTION_EDEFAULT == null ? longDescription != null : !LONG_DESCRIPTION_EDEFAULT.equals(longDescription);
 			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
@@ -623,6 +684,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION:
 				refreshShortDescription();
+				return null;
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION:
+				refreshLongDescription();
 				return null;
 			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_TYPE:
 				refreshType();
@@ -652,6 +716,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		result.append(shortType);
 		result.append(", ShortDescription: ");
 		result.append(shortDescription);
+		result.append(", LongDescription: ");
+		result.append(longDescription);
 		result.append(", Description: ");
 		result.append(description);
 		result.append(", ShortName: ");

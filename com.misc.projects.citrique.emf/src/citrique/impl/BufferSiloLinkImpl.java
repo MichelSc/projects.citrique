@@ -328,4 +328,13 @@ public class BufferSiloLinkImpl extends PlantLinkImpl implements BufferSiloLink 
 		String type = "B-L";
 		this.setShortType(type);
 	}
+
+	@Override
+	public void refreshDescription() {
+		String description = String.format("%1$s: %2$s (%3$5.2f m)",  this.getType(), this.getName(), this.getLength());
+		this.setDescription(description);
+	}
+
+
+
 } //BufferSiloLinkImpl

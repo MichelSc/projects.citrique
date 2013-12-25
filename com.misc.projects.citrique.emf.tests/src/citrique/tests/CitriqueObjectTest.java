@@ -18,6 +18,7 @@ import junit.textui.TestRunner;
  * <ul>
  *   <li>{@link citrique.CitriqueObject#refreshDescription() <em>Refresh Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#refreshShortDescription() <em>Refresh Short Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#refreshLongDescription() <em>Refresh Long Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#refreshType() <em>Refresh Type</em>}</li>
  *   <li>{@link citrique.CitriqueObject#refreshShortType() <em>Refresh Short Type</em>}</li>
  * </ul>
@@ -116,6 +117,19 @@ public class CitriqueObjectTest extends TestCase {
 	 * @generated
 	 */
 	public void testRefreshShortDescription() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link citrique.CitriqueObject#refreshLongDescription() <em>Refresh Long Description</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique.CitriqueObject#refreshLongDescription()
+	 * @generated
+	 */
+	public void testRefreshLongDescription() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

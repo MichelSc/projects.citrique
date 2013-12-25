@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link citrique.CitriqueObject#getType <em>Type</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortType <em>Short Type</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortDescription <em>Short Description</em>}</li>
+ *   <li>{@link citrique.CitriqueObject#getLongDescription <em>Long Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getDescription <em>Description</em>}</li>
  *   <li>{@link citrique.CitriqueObject#getShortName <em>Short Name</em>}</li>
  * </ul>
@@ -207,6 +208,32 @@ public interface CitriqueObject extends EObject {
 	void setShortDescription(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Long Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Long Description</em>' attribute.
+	 * @see #setLongDescription(String)
+	 * @see citrique.CitriquePackage#getCitriqueObject_LongDescription()
+	 * @model
+	 * @generated
+	 */
+	String getLongDescription();
+
+	/**
+	 * Sets the value of the '{@link citrique.CitriqueObject#getLongDescription <em>Long Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Long Description</em>' attribute.
+	 * @see #getLongDescription()
+	 * @generated
+	 */
+	void setLongDescription(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Short Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -247,6 +274,14 @@ public interface CitriqueObject extends EObject {
 	 * @generated
 	 */
 	void refreshShortDescription();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void refreshLongDescription();
 
 	/**
 	 * <!-- begin-user-doc -->

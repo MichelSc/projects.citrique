@@ -122,13 +122,22 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_OBJECT__SHORT_DESCRIPTION = 5;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_OBJECT__LONG_DESCRIPTION = 6;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__DESCRIPTION = 6;
+	int CITRIQUE_OBJECT__DESCRIPTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -137,7 +146,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_NAME = 7;
+	int CITRIQUE_OBJECT__SHORT_NAME = 8;
 
 	/**
 	 * The number of structural features of the '<em>Object</em>' class.
@@ -146,7 +155,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_FEATURE_COUNT = 8;
+	int CITRIQUE_OBJECT_FEATURE_COUNT = 9;
 
 	/**
 	 * The operation id for the '<em>Refresh Description</em>' operation.
@@ -167,13 +176,22 @@ public interface CitriquePackage extends EPackage {
 	int CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = 1;
 
 	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION = 2;
+
+	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_TYPE = 2;
+	int CITRIQUE_OBJECT___REFRESH_TYPE = 3;
 
 	/**
 	 * The operation id for the '<em>Refresh Short Type</em>' operation.
@@ -182,7 +200,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_SHORT_TYPE = 3;
+	int CITRIQUE_OBJECT___REFRESH_SHORT_TYPE = 4;
 
 	/**
 	 * The number of operations of the '<em>Object</em>' class.
@@ -191,7 +209,7 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_OPERATION_COUNT = 4;
+	int CITRIQUE_OBJECT_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link citrique.impl.CitriqueDomainImpl <em>Domain</em>}' class.
@@ -304,6 +322,15 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_OBJECT__SHORT_DESCRIPTION = CITRIQUE_OBJECT__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_OBJECT__LONG_DESCRIPTION = CITRIQUE_OBJECT__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -356,6 +383,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_OBJECT___REFRESH_LONG_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -447,6 +483,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT__SHORT_DESCRIPTION = CITRIQUE_OBJECT__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__LONG_DESCRIPTION = CITRIQUE_OBJECT__LONG_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -564,6 +609,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT___REFRESH_SHORT_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT___REFRESH_LONG_DESCRIPTION = CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -684,6 +738,15 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_NODE__SHORT_DESCRIPTION = PLANT_OBJECT__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_NODE__LONG_DESCRIPTION = PLANT_OBJECT__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -736,6 +799,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_NODE___REFRESH_SHORT_DESCRIPTION = PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_NODE___REFRESH_LONG_DESCRIPTION = PLANT_OBJECT___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -829,6 +901,15 @@ public interface CitriquePackage extends EPackage {
 	int BUFFER__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER__LONG_DESCRIPTION = PLANT_NODE__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -899,6 +980,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER___REFRESH_LONG_DESCRIPTION = PLANT_NODE___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -992,6 +1082,15 @@ public interface CitriquePackage extends EPackage {
 	int SILO__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO__LONG_DESCRIPTION = PLANT_NODE__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1071,6 +1170,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int SILO___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO___REFRESH_LONG_DESCRIPTION = PLANT_NODE___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -1164,6 +1272,15 @@ public interface CitriquePackage extends EPackage {
 	int REACTOR__SHORT_DESCRIPTION = PLANT_NODE__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACTOR__LONG_DESCRIPTION = PLANT_NODE__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1225,6 +1342,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int REACTOR___REFRESH_SHORT_DESCRIPTION = PLANT_NODE___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACTOR___REFRESH_LONG_DESCRIPTION = PLANT_NODE___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -1318,6 +1444,15 @@ public interface CitriquePackage extends EPackage {
 	int PLANT_LINK__SHORT_DESCRIPTION = PLANT_OBJECT__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_LINK__LONG_DESCRIPTION = PLANT_OBJECT__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1397,6 +1532,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_OBJECT___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_LINK___REFRESH_LONG_DESCRIPTION = PLANT_OBJECT___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -1488,6 +1632,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER_SILO_LINK__SHORT_DESCRIPTION = PLANT_LINK__SHORT_DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK__LONG_DESCRIPTION = PLANT_LINK__LONG_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1587,6 +1740,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER_SILO_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_LINK___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK___REFRESH_LONG_DESCRIPTION = PLANT_LINK___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -1689,6 +1851,15 @@ public interface CitriquePackage extends EPackage {
 	int SILO_REACTOR_LINK__SHORT_DESCRIPTION = PLANT_LINK__SHORT_DESCRIPTION;
 
 	/**
+	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK__LONG_DESCRIPTION = PLANT_LINK__LONG_DESCRIPTION;
+
+	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1786,6 +1957,15 @@ public interface CitriquePackage extends EPackage {
 	 * @ordered
 	 */
 	int SILO_REACTOR_LINK___REFRESH_SHORT_DESCRIPTION = PLANT_LINK___REFRESH_SHORT_DESCRIPTION;
+
+	/**
+	 * The operation id for the '<em>Refresh Long Description</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK___REFRESH_LONG_DESCRIPTION = PLANT_LINK___REFRESH_LONG_DESCRIPTION;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -1911,6 +2091,17 @@ public interface CitriquePackage extends EPackage {
 	EAttribute getCitriqueObject_ShortDescription();
 
 	/**
+	 * Returns the meta object for the attribute '{@link citrique.CitriqueObject#getLongDescription <em>Long Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Long Description</em>'.
+	 * @see citrique.CitriqueObject#getLongDescription()
+	 * @see #getCitriqueObject()
+	 * @generated
+	 */
+	EAttribute getCitriqueObject_LongDescription();
+
+	/**
 	 * Returns the meta object for the attribute '{@link citrique.CitriqueObject#getShortName <em>Short Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1940,6 +2131,16 @@ public interface CitriquePackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCitriqueObject__RefreshShortDescription();
+
+	/**
+	 * Returns the meta object for the '{@link citrique.CitriqueObject#refreshLongDescription() <em>Refresh Long Description</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Long Description</em>' operation.
+	 * @see citrique.CitriqueObject#refreshLongDescription()
+	 * @generated
+	 */
+	EOperation getCitriqueObject__RefreshLongDescription();
 
 	/**
 	 * Returns the meta object for the '{@link citrique.CitriqueObject#refreshType() <em>Refresh Type</em>}' operation.
@@ -2330,7 +2531,7 @@ public interface CitriquePackage extends EPackage {
 	 * @see citrique.BufferSiloLink#refreshDispose()
 	 * @generated
 	 */
-	EOperation getBufferSiloLink__RefreshDispose_1();
+	EOperation getBufferSiloLink__RefreshDispose();
 
 	/**
 	 * Returns the meta object for class '{@link citrique.SiloReactorLink <em>Silo Reactor Link</em>}'.
@@ -2372,7 +2573,7 @@ public interface CitriquePackage extends EPackage {
 	 * @see citrique.SiloReactorLink#refreshDispose()
 	 * @generated
 	 */
-	EOperation getSiloReactorLink__RefreshDispose_1();
+	EOperation getSiloReactorLink__RefreshDispose();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2464,6 +2665,14 @@ public interface CitriquePackage extends EPackage {
 		EAttribute CITRIQUE_OBJECT__SHORT_DESCRIPTION = eINSTANCE.getCitriqueObject_ShortDescription();
 
 		/**
+		 * The meta object literal for the '<em><b>Long Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CITRIQUE_OBJECT__LONG_DESCRIPTION = eINSTANCE.getCitriqueObject_LongDescription();
+
+		/**
 		 * The meta object literal for the '<em><b>Short Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2486,6 +2695,14 @@ public interface CitriquePackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = eINSTANCE.getCitriqueObject__RefreshShortDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Long Description</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION = eINSTANCE.getCitriqueObject__RefreshLongDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Refresh Type</b></em>' operation.
@@ -2799,7 +3016,7 @@ public interface CitriquePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BUFFER_SILO_LINK___REFRESH_DISPOSE = eINSTANCE.getBufferSiloLink__RefreshDispose_1();
+		EOperation BUFFER_SILO_LINK___REFRESH_DISPOSE = eINSTANCE.getBufferSiloLink__RefreshDispose();
 
 		/**
 		 * The meta object literal for the '{@link citrique.impl.SiloReactorLinkImpl <em>Silo Reactor Link</em>}' class.
@@ -2833,7 +3050,7 @@ public interface CitriquePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SILO_REACTOR_LINK___REFRESH_DISPOSE = eINSTANCE.getSiloReactorLink__RefreshDispose_1();
+		EOperation SILO_REACTOR_LINK___REFRESH_DISPOSE = eINSTANCE.getSiloReactorLink__RefreshDispose();
 
 	}
 

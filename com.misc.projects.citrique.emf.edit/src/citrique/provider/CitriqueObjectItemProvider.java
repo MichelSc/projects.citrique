@@ -66,6 +66,7 @@ public class CitriqueObjectItemProvider
 			addTypePropertyDescriptor(object);
 			addShortTypePropertyDescriptor(object);
 			addShortDescriptionPropertyDescriptor(object);
+			addLongDescriptionPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addShortNamePropertyDescriptor(object);
 		}
@@ -227,6 +228,28 @@ public class CitriqueObjectItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Long Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLongDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CitriqueObject_LongDescription_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_LongDescription_feature", "_UI_CitriqueObject_type"),
+				 CitriquePackage.Literals.CITRIQUE_OBJECT__LONG_DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Short Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,6 +312,7 @@ public class CitriqueObjectItemProvider
 			case CitriquePackage.CITRIQUE_OBJECT__TYPE:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_TYPE:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
+			case CitriquePackage.CITRIQUE_OBJECT__LONG_DESCRIPTION:
 			case CitriquePackage.CITRIQUE_OBJECT__DESCRIPTION:
 			case CitriquePackage.CITRIQUE_OBJECT__SHORT_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

@@ -80,7 +80,7 @@ public class SiloReactorLinkTest extends PlantLinkTest {
 	 * @see citrique.SiloReactorLink#refreshDispose()
 	 * @generated
 	 */
-	public void testRefreshDispose_1() {
+	public void testRefreshDispose() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();
