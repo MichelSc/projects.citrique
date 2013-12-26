@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.misc.common.moplaf.propagator.ContainmentListenerAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
@@ -213,6 +214,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		super();
 		this.eAdapters().add(this.createPropagatorCalcObjectInit());
 		this.eAdapters().add(this.createPropagatorCalcObjectFinalize());
+		this.eAdapters().add(new ContainmentListenerAdapter());
 	}
 
 	/**
@@ -770,7 +772,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 
 		@Override
 		public void onContained(Notifier newcontainer) {
-			super.onNotContained(newcontainer);
+			super.onContained(newcontainer);
 			this.touch();
 		}
 		
