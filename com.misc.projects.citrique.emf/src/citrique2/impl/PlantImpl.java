@@ -13,23 +13,16 @@ import citrique2.Reactor;
 import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Package;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
-import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -495,25 +488,5 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 		this.setShortType(type);
 	}
 	
-	// propagator create methods ----------------------------------------------
-	@Override
-	PropagatorFunctionAdapter createPropagatorCalcObjectInit(){
-		return new ObjectInit();
-	}
-
-	// propagator class methods
-	
-	public class PlantInit extends ObjectInit {
-
-		@Override
-		protected PropagatorFunctionAdapter getParent() {
-			Notifier target = this.target;
-			EObject targetobject = (EObject)target;
-			EObject citriquedomain = targetobject.eContainer();
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(citriquedomain, 
-					                                                                      CitriqueDomainImpl.LayerInit.class);
-			return parent;
-		}
-	} // class LayerInit
 			
 } //PlantImpl

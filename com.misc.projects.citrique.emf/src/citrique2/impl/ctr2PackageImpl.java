@@ -318,6 +318,15 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCitriqueObject__Init() {
+		return citriqueObjectEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCitriqueDomain() {
 		return citriqueDomainEClass;
 	}
@@ -699,6 +708,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_TYPE);
 		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_SHORT_TYPE);
 		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___REFRESH_CHILDREN);
+		createEOperation(citriqueObjectEClass, CITRIQUE_OBJECT___INIT);
 
 		citriqueDomainEClass = createEClass(CITRIQUE_DOMAIN);
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANT);
@@ -811,6 +821,8 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEOperation(getCitriqueObject__RefreshShortType(), null, "refreshShortType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCitriqueObject__RefreshChildren(), null, "refreshChildren", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getCitriqueObject__Init(), null, "init", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(citriqueDomainEClass, CitriqueDomain.class, "CitriqueDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCitriqueDomain_Plant(), this.getPlant(), null, "Plant", null, 0, -1, CitriqueDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

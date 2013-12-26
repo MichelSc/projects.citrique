@@ -212,13 +212,22 @@ public interface ctr2Package extends EPackage {
 	int CITRIQUE_OBJECT___REFRESH_CHILDREN = 5;
 
 	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_OBJECT___INIT = 6;
+
+	/**
 	 * The number of operations of the '<em>Citrique Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_OPERATION_COUNT = 6;
+	int CITRIQUE_OBJECT_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link citrique2.impl.CitriqueDomainImpl <em>Citrique Domain</em>}' class.
@@ -382,6 +391,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int CITRIQUE_DOMAIN___REFRESH_CHILDREN = CITRIQUE_OBJECT___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_DOMAIN___INIT = CITRIQUE_OBJECT___INIT;
 
 	/**
 	 * The operation id for the '<em>Refresh</em>' operation.
@@ -563,6 +581,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_OBJECT___REFRESH_CHILDREN = CITRIQUE_OBJECT___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_OBJECT___INIT = CITRIQUE_OBJECT___INIT;
 
 	/**
 	 * The number of operations of the '<em>Plant Object</em>' class.
@@ -800,6 +827,15 @@ public interface ctr2Package extends EPackage {
 	int PLANT___REFRESH_CHILDREN = CITRIQUE_OBJECT___REFRESH_CHILDREN;
 
 	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT___INIT = CITRIQUE_OBJECT___INIT;
+
+	/**
 	 * The operation id for the '<em>Refresh Nodes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -990,6 +1026,15 @@ public interface ctr2Package extends EPackage {
 	int PLANT_NODE___REFRESH_CHILDREN = PLANT_OBJECT___REFRESH_CHILDREN;
 
 	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_NODE___INIT = PLANT_OBJECT___INIT;
+
+	/**
 	 * The number of operations of the '<em>Plant Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1178,6 +1223,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER___INIT = PLANT_NODE___INIT;
 
 	/**
 	 * The number of operations of the '<em>Buffer</em>' class.
@@ -1379,6 +1433,15 @@ public interface ctr2Package extends EPackage {
 	int SILO___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
 
 	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO___INIT = PLANT_NODE___INIT;
+
+	/**
 	 * The number of operations of the '<em>Silo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1558,6 +1621,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int REACTOR___REFRESH_CHILDREN = PLANT_NODE___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REACTOR___INIT = PLANT_NODE___INIT;
 
 	/**
 	 * The number of operations of the '<em>Reactor</em>' class.
@@ -1757,6 +1829,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int PLANT_LINK___REFRESH_CHILDREN = PLANT_OBJECT___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT_LINK___INIT = PLANT_OBJECT___INIT;
 
 	/**
 	 * The number of operations of the '<em>Plant Link</em>' class.
@@ -1974,6 +2055,15 @@ public interface ctr2Package extends EPackage {
 	 * @ordered
 	 */
 	int BUFFER_SILO_LINK___REFRESH_CHILDREN = PLANT_LINK___REFRESH_CHILDREN;
+
+	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUFFER_SILO_LINK___INIT = PLANT_LINK___INIT;
 
 	/**
 	 * The operation id for the '<em>Refresh Dispose</em>' operation.
@@ -2202,6 +2292,15 @@ public interface ctr2Package extends EPackage {
 	int SILO_REACTOR_LINK___REFRESH_CHILDREN = PLANT_LINK___REFRESH_CHILDREN;
 
 	/**
+	 * The operation id for the '<em>Init</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SILO_REACTOR_LINK___INIT = PLANT_LINK___INIT;
+
+	/**
 	 * The operation id for the '<em>Refresh Dispose</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2388,6 +2487,16 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 */
 	EOperation getCitriqueObject__RefreshChildren();
+
+	/**
+	 * Returns the meta object for the '{@link citrique2.CitriqueObject#init() <em>Init</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Init</em>' operation.
+	 * @see citrique2.CitriqueObject#init()
+	 * @generated
+	 */
+	EOperation getCitriqueObject__Init();
 
 	/**
 	 * Returns the meta object for class '{@link citrique2.CitriqueDomain <em>Citrique Domain</em>}'.
@@ -2944,6 +3053,14 @@ public interface ctr2Package extends EPackage {
 		 * @generated
 		 */
 		EOperation CITRIQUE_OBJECT___REFRESH_CHILDREN = eINSTANCE.getCitriqueObject__RefreshChildren();
+
+		/**
+		 * The meta object literal for the '<em><b>Init</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CITRIQUE_OBJECT___INIT = eINSTANCE.getCitriqueObject__Init();
 
 		/**
 		 * The meta object literal for the '{@link citrique2.impl.CitriqueDomainImpl <em>Citrique Domain</em>}' class.

@@ -22,6 +22,7 @@ import junit.textui.TestRunner;
  *   <li>{@link citrique2.CitriqueObject#refreshType() <em>Refresh Type</em>}</li>
  *   <li>{@link citrique2.CitriqueObject#refreshShortType() <em>Refresh Short Type</em>}</li>
  *   <li>{@link citrique2.CitriqueObject#refreshChildren() <em>Refresh Children</em>}</li>
+ *   <li>{@link citrique2.CitriqueObject#init() <em>Init</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -170,6 +171,19 @@ public class CitriqueObjectTest extends TestCase {
 	 * @generated
 	 */
 	public void testRefreshChildren() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link citrique2.CitriqueObject#init() <em>Init</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique2.CitriqueObject#init()
+	 * @generated
+	 */
+	public void testInit() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

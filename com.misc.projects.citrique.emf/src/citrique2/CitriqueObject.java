@@ -307,4 +307,12 @@ public interface CitriqueObject extends EObject {
 	 */
 	void refreshChildren();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void init();
+
 } // CitriqueObject

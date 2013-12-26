@@ -8,6 +8,7 @@
     <eOperations name="refreshType"/>
     <eOperations name="refreshShortType"/>
     <eOperations name="refreshChildren"/>
+    <eOperations name="init"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Child" upperBound="-1"
         eType="#//CitriqueObject" eOpposite="#//CitriqueObject/Parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Parent" eType="#//CitriqueObject"

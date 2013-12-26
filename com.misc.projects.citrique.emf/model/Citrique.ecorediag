@@ -61,6 +61,10 @@
         <element xmi:type="ecore:EOperation" href="Citrique.ecore#//CitriqueObject/refreshChildren"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Rp4tEWx9EeOepOv8xFvw4g"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_AHoDkG5nEeOoWph2jfYTQQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="Citrique.ecore#//CitriqueObject/init"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_AHoDkW5nEeOoWph2jfYTQQ"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_l7qzMWvYEeOkOcYVLdileg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_l7qzMmvYEeOkOcYVLdileg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_l7qzM2vYEeOkOcYVLdileg"/>
