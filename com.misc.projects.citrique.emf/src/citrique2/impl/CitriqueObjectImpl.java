@@ -212,9 +212,11 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected CitriqueObjectImpl() {
 		super();
+		this.eAdapters().add(new ContainmentListenerAdapter());
 		this.eAdapters().add(this.createPropagatorCalcObjectInit());
 		this.eAdapters().add(this.createPropagatorCalcObjectFinalize());
-		this.eAdapters().add(new ContainmentListenerAdapter());
+		this.eAdapters().add(this.createPropagatorCalcDescription());
+		
 	}
 
 	/**
@@ -750,7 +752,11 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	PropagatorFunctionAdapter createPropagatorCalcObjectFinalize(){
 		return new ObjectFinalize();
 	}
-
+	
+	PropagatorFunctionAdapter createPropagatorCalcDescription(){
+		return new PropagatorCalcDescription();
+	}
+	
 	
 	// PropagatorFunctionAdapters ----------------------------------------------------------------------------
 	public class ObjectInit extends PropagatorFunctionAdapter {
@@ -758,8 +764,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		@Override
 		protected PropagatorFunctionAdapter getParent() {
 			CitriqueObject target = (CitriqueObject)this.getTarget();
-			EObject parenthost = Util.getContainer(target, ctr2Package.Literals.CITRIQUE_DOMAIN);
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(parenthost, CitriqueDomainImpl.LayerInit.class);
+			EObject citriquedomain = Util.getContainer(target, ctr2Package.Literals.CITRIQUE_DOMAIN);
+			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainImpl.LayerInit.class);
 			return parent;
 		}
 
@@ -782,4 +788,32 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	
 	public class ObjectFinalize extends PropagatorFunctionAdapter {
 	}; // class ObjectFinalize
+
+
+	public class PropagatorCalcDescription extends PropagatorFunctionAdapter {
+
+		@Override
+		protected PropagatorFunctionAdapter getParent() {
+			CitriqueObject citriqueobject = (CitriqueObject)this.getTarget();
+			EObject citriquedomain = Util.getContainer(citriqueobject, ctr2Package.Literals.CITRIQUE_DOMAIN);
+			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainImpl.LayerObjectDescription.class);
+			return parent;
+		}
+
+		@Override
+		protected void calculate() {
+			CitriqueObject citriqueobject = (CitriqueObject)this.getTarget();
+			citriqueobject.refreshDescription();
+		}
+
+		@Override
+		public void notifyChanged(Notification msg) {
+			super.notifyChanged(msg);
+			if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_Name() )
+			   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject__RefreshType())) {
+				this.touch();				
+			}
+		}
+	};  // class CalcDescription
+		
 } //CitriqueObjectImpl
