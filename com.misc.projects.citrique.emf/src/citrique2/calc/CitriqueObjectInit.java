@@ -5,7 +5,6 @@ import org.eclipse.emf.ecore.EObject;
 
 import citrique2.CitriqueObject;
 import citrique2.ctr2Package;
-import citrique2.impl.CitriqueDomainImpl;
 
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
@@ -15,7 +14,7 @@ public class CitriqueObjectInit extends PropagatorFunctionAdapter {
 	protected PropagatorFunctionAdapter getParent() {
 		CitriqueObject target = (CitriqueObject)this.getTarget();
 		EObject citriquedomain = Util.getContainer(target, ctr2Package.Literals.CITRIQUE_DOMAIN);
-		PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainImpl.LayerInit.class);
+		PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainLayerObjectInit.class);
 		return parent;
 	}
 

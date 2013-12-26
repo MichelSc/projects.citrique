@@ -6,15 +6,16 @@ import citrique2.CitriqueDomain;
 import citrique2.CitriqueObject;
 import citrique2.Plant;
 import citrique2.ctr2Package;
+import citrique2.calc.CitriqueDomainLayerObjectChildren;
+import citrique2.calc.CitriqueDomainLayerObjectDescription;
+import citrique2.calc.CitriqueDomainLayerObjectInit;
+import citrique2.calc.CitriqueDomainScope;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -88,7 +89,7 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	 */
 	public void refresh() {
 		CitriqueDomain domain = this;
-		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(domain, Scope.class);
+		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(domain, CitriqueDomainScope.class);
 		scope.refresh();
 	}
 
@@ -210,76 +211,21 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	
 	// propagator create methods ----------------------------------------------
 	PropagatorFunctionAdapter createPropagatorScope(){
-		return new Scope();
+		return new CitriqueDomainScope();
 	}
 	
 	PropagatorFunctionAdapter createPropagatorLayerObjectChildren(){
-		return new LayerObjectChildren();
+		return new CitriqueDomainLayerObjectChildren();
 	}
 	
 	PropagatorFunctionAdapter createPropagatorLayerObjectDescription(){
-		return new LayerObjectDescription();
+		return new CitriqueDomainLayerObjectDescription();
 	}
 	
 	PropagatorFunctionAdapter createPropagatorLayerInit(){
-		return new LayerInit();
+		return new CitriqueDomainLayerObjectInit();
 	}
 	
-	// propagator  class definitions ------------------------------------------
-	public static class Scope extends PropagatorFunctionAdapter {
-	} // class Scope
-
-	public class LayerInit extends PropagatorFunctionAdapter {
-
-		@Override
-		protected PropagatorFunctionAdapter getParent() {
-			Notifier target = this.target;
-			CitriqueDomain domain= (CitriqueDomain)target;
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(domain, Scope.class);
-			return parent;
-		}
-	} // class LayerInit
 			
-	public class LayerFinalize extends PropagatorFunctionAdapter {
-
-		@Override
-		protected PropagatorFunctionAdapter getParent() {
-			Notifier target = this.target;
-			CitriqueDomain domain= (CitriqueDomain)target;
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(domain, Scope.class);
-			return parent;
-		}
-	} // class FinalizeInit
 			
-	public class LayerObjectChildren extends PropagatorFunctionAdapter {
-
-		@Override
-		protected PropagatorFunctionAdapter getParent() {
-			Notifier target = this.target;
-			CitriqueDomain domain= (CitriqueDomain)target;
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(domain, Scope.class);
-			return parent;
-		}
-	} // class LayerObjectChildren
-			
-	public class LayerObjectDescription extends PropagatorFunctionAdapter {
-
-		@Override
-		protected PropagatorFunctionAdapter getParent() {
-			Notifier target = this.target;
-			CitriqueDomain domain= (CitriqueDomain)target;
-			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(domain, Scope.class);
-			return parent;
-		}
-		@Override
-		protected List<PropagatorFunctionAdapter> getAntecedents() {
-			Notifier target = this.target;
-			CitriqueDomain domain= (CitriqueDomain)target;
-			PropagatorFunctionAdapter layerchildren = (PropagatorFunctionAdapter)Util.getAdapter(domain, LayerObjectChildren.class);
-			
-			ArrayList<PropagatorFunctionAdapter> antecedents = new ArrayList<PropagatorFunctionAdapter>();
-			antecedents.add(layerchildren);
-			return antecedents;
-		}
-	} // class LayerObjectDescription
 } //CitriqueDomainImpl
