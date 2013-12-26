@@ -13,9 +13,12 @@ import citrique2.Reactor;
 import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Package;
+import citrique2.calc.PlantCalcNodes;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -23,6 +26,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -128,10 +132,10 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected PlantImpl() {
 		super();
+		this.eAdapters().add(new PlantCalcNodes());
 	}
 
 	/**
