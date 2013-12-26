@@ -13,18 +13,25 @@ import citrique.PlantObject;
 import citrique.Reactor;
 import citrique.Silo;
 import citrique.SiloReactorLink;
+//import citrique.impl.CitriqueDomainImpl.LayerInit;
+//import citrique.impl.CitriqueDomainImpl.Scope;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -246,7 +253,7 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void RefreshNodes() {
+	public void refreshNodes() {
 		HashSet<PlantNode> nodestobe = new HashSet<PlantNode>();
 		nodestobe.addAll(this.getBuffer());
 		nodestobe.addAll(this.getSilo());
@@ -268,7 +275,7 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void RefreshLinks() {
+	public void refreshLinks() {
 		HashSet<PlantLink> linkstobe = new HashSet<PlantLink>();
 		linkstobe.addAll(this.getBufferSiloLink());
 		linkstobe.addAll(this.getSiloReactorLink());
@@ -289,7 +296,8 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
-	public void RefreshChildren() {
+	@Override
+	public void refreshChildren() {
 		HashSet<CitriqueObject> objectstobe = new HashSet<CitriqueObject>();
 		objectstobe.addAll(this.getNode());
 		objectstobe.addAll(this.getLink());
@@ -474,13 +482,10 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case CitriquePackage.PLANT___REFRESH_NODES:
-				RefreshNodes();
+				refreshNodes();
 				return null;
 			case CitriquePackage.PLANT___REFRESH_LINKS:
-				RefreshLinks();
-				return null;
-			case CitriquePackage.PLANT___REFRESH_CHILDREN:
-				RefreshChildren();
+				refreshLinks();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
@@ -491,4 +496,27 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 		String type = "PL";
 		this.setShortType(type);
 	}
+	
+	// propagator create methods ----------------------------------------------
+	@Override
+	PropagatorFunctionAdapter createPropagatorCalcObjectInit(){
+		return new ObjectInit();
+	}
+
+	// propagator class methods
+	
+	public class PlantInit extends ObjectInit {
+
+		@Override
+		protected PropagatorFunctionAdapter getParent() {
+			Notifier target = this.target;
+			EObject targetobject = (EObject)target;
+			EObject citriquedomain = targetobject.eContainer();
+			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(citriquedomain, 
+					                                                                      CitriqueDomainImpl.LayerInit.class);
+			return parent;
+		}
+	} // class LayerInit
+			
+
 } //PlantImpl

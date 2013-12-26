@@ -2,26 +2,28 @@
  */
 package citrique.impl;
 
+import citrique.CitriqueDomain;
 import citrique.CitriqueObject;
 import citrique.CitriquePackage;
+import citrique.impl.CitriqueDomainImpl.Scope;
 
 import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -208,10 +210,11 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	protected CitriqueObjectImpl() {
 		super();
+		this.eAdapters().add(this.createPropagatorCalcObjectInit());
+		this.eAdapters().add(this.createPropagatorCalcObjectFinalize());
 	}
 
 	/**
@@ -500,6 +503,17 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void refreshChildren() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -694,6 +708,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_SHORT_TYPE:
 				refreshShortType();
 				return null;
+			case CitriquePackage.CITRIQUE_OBJECT___REFRESH_CHILDREN:
+				refreshChildren();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -726,4 +743,45 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		return result.toString();
 	}
 
+	// propagator create methods ----------------------------------------------
+	PropagatorFunctionAdapter createPropagatorCalcObjectInit(){
+		return new ObjectInit();
+	}
+	
+	PropagatorFunctionAdapter createPropagatorCalcObjectFinalize(){
+		return new ObjectFinalize();
+	}
+
+	
+	// PropagatorFunctionAdapters ----------------------------------------------------------------------------
+	public class ObjectInit extends PropagatorFunctionAdapter {
+
+		@Override
+		protected PropagatorFunctionAdapter getParent() {
+			CitriqueObject target = (CitriqueObject)this.getTarget();
+			EObject parenthost = Util.getContainer(target, CitriquePackage.Literals.CITRIQUE_DOMAIN);
+			PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(parenthost, CitriqueDomainImpl.LayerInit.class);
+			return parent;
+		}
+
+		@Override
+		protected void calculate() {
+			CitriqueObject target = (CitriqueObject)this.getTarget();
+			target.refreshShortType();
+			target.refreshType();
+		}
+
+		@Override
+		public void onContained(Notifier newcontainer) {
+			super.onNotContained(newcontainer);
+			this.touch();
+		}
+		
+		
+		
+	}; // class ObjectInit
+	
+	public class ObjectFinalize extends PropagatorFunctionAdapter {
+	}; // class ObjectFinalize
+	
 } //CitriqueObjectImpl

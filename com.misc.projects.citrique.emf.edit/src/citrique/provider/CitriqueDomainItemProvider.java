@@ -6,24 +6,17 @@ package citrique.provider;
 import citrique.CitriqueDomain;
 import citrique.CitriqueFactory;
 import citrique.CitriquePackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -33,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class CitriqueDomainItemProvider
-	extends ItemProviderAdapter
+	extends CitriqueObjectItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -77,7 +70,7 @@ public class CitriqueDomainItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CitriquePackage.Literals.CITRIQUE_DOMAIN__PLANTS);
+			childrenFeatures.add(CitriquePackage.Literals.CITRIQUE_DOMAIN__PLANT);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +107,10 @@ public class CitriqueDomainItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CitriqueDomain_type");
+		String label = ((CitriqueDomain)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CitriqueDomain_type") :
+			getString("_UI_CitriqueDomain_type") + " " + label;
 	}
 
 	/**
@@ -129,7 +125,7 @@ public class CitriqueDomainItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CitriqueDomain.class)) {
-			case CitriquePackage.CITRIQUE_DOMAIN__PLANTS:
+			case CitriquePackage.CITRIQUE_DOMAIN__PLANT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,19 +145,8 @@ public class CitriqueDomainItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CitriquePackage.Literals.CITRIQUE_DOMAIN__PLANTS,
+				(CitriquePackage.Literals.CITRIQUE_DOMAIN__PLANT,
 				 CitriqueFactory.eINSTANCE.createPlant()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return CitriqueEditPlugin.INSTANCE;
 	}
 
 }

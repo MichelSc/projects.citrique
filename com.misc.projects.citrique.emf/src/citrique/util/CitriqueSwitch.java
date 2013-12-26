@@ -75,6 +75,7 @@ public class CitriqueSwitch<T> extends Switch<T> {
 			case CitriquePackage.CITRIQUE_DOMAIN: {
 				CitriqueDomain citriqueDomain = (CitriqueDomain)theEObject;
 				T result = caseCitriqueDomain(citriqueDomain);
+				if (result == null) result = caseCitriqueObject(citriqueDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

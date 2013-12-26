@@ -4,9 +4,6 @@ package citrique.tests;
 
 import citrique.CitriqueDomain;
 import citrique.CitriqueFactory;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -16,20 +13,12 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link citrique.CitriqueDomain#Refresh() <em>Refresh</em>}</li>
+ *   <li>{@link citrique.CitriqueDomain#refresh() <em>Refresh</em>}</li>
  * </ul>
  * </p>
  * @generated
  */
-public class CitriqueDomainTest extends TestCase {
-
-	/**
-	 * The fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CitriqueDomain fixture = null;
+public class CitriqueDomainTest extends CitriqueObjectTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -51,23 +40,14 @@ public class CitriqueDomainTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Domain test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(CitriqueDomain fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Domain test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected CitriqueDomain getFixture() {
-		return fixture;
+		return (CitriqueDomain)fixture;
 	}
 
 	/**
@@ -93,10 +73,10 @@ public class CitriqueDomainTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link citrique.CitriqueDomain#Refresh() <em>Refresh</em>}' operation.
+	 * Tests the '{@link citrique.CitriqueDomain#refresh() <em>Refresh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see citrique.CitriqueDomain#Refresh()
+	 * @see citrique.CitriqueDomain#refresh()
 	 * @generated
 	 */
 	public void testRefresh() {

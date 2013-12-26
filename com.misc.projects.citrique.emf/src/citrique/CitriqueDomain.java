@@ -4,8 +4,6 @@ package citrique;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Domain</b></em>'.
@@ -14,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link citrique.CitriqueDomain#getPlants <em>Plants</em>}</li>
+ *   <li>{@link citrique.CitriqueDomain#getPlant <em>Plant</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,22 +20,22 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CitriqueDomain extends EObject {
+public interface CitriqueDomain extends CitriqueObject {
 	/**
-	 * Returns the value of the '<em><b>Plants</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Plant</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique.Plant}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Plants</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Plant</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Plants</em>' containment reference list.
-	 * @see citrique.CitriquePackage#getCitriqueDomain_Plants()
+	 * @return the value of the '<em>Plant</em>' containment reference list.
+	 * @see citrique.CitriquePackage#getCitriqueDomain_Plant()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Plant> getPlants();
+	EList<Plant> getPlant();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,6 +43,6 @@ public interface CitriqueDomain extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void Refresh();
+	void refresh();
 
 } // CitriqueDomain

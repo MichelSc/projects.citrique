@@ -162,7 +162,7 @@ public interface Plant extends CitriqueObject {
 	 * @model
 	 * @generated
 	 */
-	void RefreshNodes();
+	void refreshNodes();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,14 +170,6 @@ public interface Plant extends CitriqueObject {
 	 * @model
 	 * @generated
 	 */
-	void RefreshLinks();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void RefreshChildren();
+	void refreshLinks();
 
 } // Plant
