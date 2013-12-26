@@ -10,7 +10,7 @@
       <!-- @generated Citrique -->
       <factory
             uri="http://com.misc.projects.citrique.emf"
-            class="citrique.provider.CitriqueItemProviderAdapterFactory"
+            class="citrique2.provider.ctr2ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

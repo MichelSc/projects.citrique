@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: citrique,
- citrique.impl,
- citrique.util
+Export-Package: citrique2,
+ citrique2.impl,
+ citrique2.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,
  com.misc.common.moplaf.propagator;bundle-version="1.0.0"

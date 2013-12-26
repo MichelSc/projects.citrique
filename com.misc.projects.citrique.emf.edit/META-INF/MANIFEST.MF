@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: com.misc.projects.citrique.emf.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: citrique.provider.CitriqueEditPlugin$Implementation
+Bundle-Activator: citrique2.provider.CitriqueEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: citrique.provider
+Export-Package: citrique2.provider
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.projects.citrique.emf;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="citrique.presentation.CitriqueModelWizardID"
-            name="%_UI_CitriqueModelWizard_label"
-            class="citrique.presentation.CitriqueModelWizard"
+            id="citrique2.presentation.ctr2ModelWizardID"
+            name="%_UI_ctr2ModelWizard_label"
+            class="citrique2.presentation.ctr2ModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/CitriqueModelFile.gif">
-         <description>%_UI_CitriqueModelWizard_description</description>
+            icon="icons/full/obj16/ctr2ModelFile.gif">
+         <description>%_UI_ctr2ModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated Citrique -->
       <editor
-            id="citrique.presentation.CitriqueEditorID"
-            name="%_UI_CitriqueEditor_label"
-            icon="icons/full/obj16/CitriqueModelFile.gif"
-            extensions="citrique"
-            class="citrique.presentation.CitriqueEditor"
-            contributorClass="citrique.presentation.CitriqueActionBarContributor">
+            id="citrique2.presentation.ctr2EditorID"
+            name="%_UI_ctr2Editor_label"
+            icon="icons/full/obj16/ctr2ModelFile.gif"
+            extensions="ctr2"
+            class="citrique2.presentation.ctr2Editor"
+            contributorClass="citrique2.presentation.ctr2ActionBarContributor">
       </editor>
    </extension>
 

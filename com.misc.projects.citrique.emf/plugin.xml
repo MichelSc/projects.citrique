@@ -10,7 +10,7 @@
       <!-- @generated Citrique -->
       <package
             uri="http://com.misc.projects.citrique.emf"
-            class="citrique.CitriquePackage"
+            class="citrique2.ctr2Package"
             genModel="model/Citrique.genmodel"/>
    </extension>
 
