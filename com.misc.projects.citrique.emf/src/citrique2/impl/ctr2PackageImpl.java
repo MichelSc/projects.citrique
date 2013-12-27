@@ -354,6 +354,15 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCitriqueDomain__ResetTouched() {
+		return citriqueDomainEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPlantObject() {
 		return plantObjectEClass;
 	}
@@ -722,6 +731,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		citriqueDomainEClass = createEClass(CITRIQUE_DOMAIN);
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANT);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___REFRESH);
+		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___RESET_TOUCHED);
 
 		plantObjectEClass = createEClass(PLANT_OBJECT);
 		createEReference(plantObjectEClass, PLANT_OBJECT__PLANT);
@@ -838,6 +848,8 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEReference(getCitriqueDomain_Plant(), this.getPlant(), null, "Plant", null, 0, -1, CitriqueDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCitriqueDomain__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getCitriqueDomain__ResetTouched(), null, "resetTouched", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(plantObjectEClass, PlantObject.class, "PlantObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlantObject_Plant(), this.getPlant(), this.getPlant_PlantObject(), "Plant", null, 0, 1, PlantObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

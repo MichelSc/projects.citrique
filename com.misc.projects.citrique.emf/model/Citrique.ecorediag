@@ -86,6 +86,10 @@
         <element xmi:type="ecore:EOperation" href="Citrique.ecore#//CitriqueDomain/refresh"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_yKKxgWy2EeOa3OU7ZmCY3Q"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_FNuuYG7uEeOqAvpwXrI1ZA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Citrique.ecore#//CitriqueDomain/resetTouched"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FNuuYW7uEeOqAvpwXrI1ZA"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_pEHK0WvYEeOkOcYVLdileg"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_pEHK0mvYEeOkOcYVLdileg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_pEHK02vYEeOkOcYVLdileg"/>

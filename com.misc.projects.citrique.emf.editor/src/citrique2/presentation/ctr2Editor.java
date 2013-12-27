@@ -125,6 +125,7 @@ import citrique2.provider.ctr2ItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
+
 /**
  * This is an example of a ctr2 model editor.
  * <!-- begin-user-doc -->
@@ -671,7 +672,23 @@ public class ctr2Editor
 
 		// Create the command stack that will notify this editor as commands are executed.
 		//
-		BasicCommandStack commandStack = new BasicCommandStack();
+		BasicCommandStack commandStack = new BasicCommandStack(){
+
+			@Override
+			public void execute(Command command) {
+				super.execute(command);
+				CommonPlugin.INSTANCE.log( "CommandStack: after execute");
+				for (Resource resource : editingDomain.getResourceSet().getResources()) {
+					 for ( EObject object : resource.getContents()){
+						 if ( object instanceof CitriqueDomain ){
+							 CitriqueDomain domain = (CitriqueDomain)object;
+							 CommonPlugin.INSTANCE.log( "..: refresh domain "+ domain.toString());
+							 domain.refresh();
+						 }  // traversed Object is a CitriqueDomain
+					 }  // traverse the EObjects
+				} // traverse the Resources
+			}
+		};
 
 		// Add a listener to set the most recent command's affected objects to be the selection of the viewer with focus.
 		//
@@ -680,18 +697,6 @@ public class ctr2Editor
 				 public void commandStackChanged(final EventObject event) {
 					// some command has done something
 					CommonPlugin.INSTANCE.log( "Editor Command stack changed: "+ event.toString());
-					CommonPlugin.INSTANCE.log( "Editor Command changed resources");
-					for (Resource resource : editingDomain.getResourceSet().getResources()) {
-						 CommonPlugin.INSTANCE.log( "..: "+ resource.toString());
-						 for ( EObject object : resource.getContents()){
-							 CommonPlugin.INSTANCE.log( "..: "+ object.toString());
-							 if ( object instanceof CitriqueDomain ){
-								 CitriqueDomain domain = (CitriqueDomain)object;
-								 CommonPlugin.INSTANCE.log( "..: domain "+ domain.toString());
-								 domain.refresh();
-							 }  // traversed Object is a CitriqueDomain
-						 }  // traverse the EObjects
-					 } // traverse the Resources
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
 							  public void run() {
@@ -925,7 +930,6 @@ public class ctr2Editor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public void createModel() {
 		URI resourceURI = EditUIUtil.getURI(getEditorInput());
@@ -940,6 +944,14 @@ public class ctr2Editor
 			exception = e;
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
+		CommonPlugin.INSTANCE.log( "CreateModel: after load");
+		for ( EObject object : resource.getContents()){
+			 if ( object instanceof CitriqueDomain ){
+				 CitriqueDomain domain = (CitriqueDomain)object;
+				 CommonPlugin.INSTANCE.log( "..: reset domain "+ domain.toString());
+				 domain.resetTouched();
+			 }  // traversed Object is a CitriqueDomain
+		}  // traverse the EObjects
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {

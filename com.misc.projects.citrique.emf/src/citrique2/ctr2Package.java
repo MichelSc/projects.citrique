@@ -411,13 +411,22 @@ public interface ctr2Package extends EPackage {
 	int CITRIQUE_DOMAIN___REFRESH = CITRIQUE_OBJECT_OPERATION_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Reset Touched</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CITRIQUE_DOMAIN___RESET_TOUCHED = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
+
+	/**
 	 * The number of operations of the '<em>Citrique Domain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_DOMAIN_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
+	int CITRIQUE_DOMAIN_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link citrique2.impl.PlantObjectImpl <em>Plant Object</em>}' class.
@@ -2539,6 +2548,16 @@ public interface ctr2Package extends EPackage {
 	EOperation getCitriqueDomain__Refresh();
 
 	/**
+	 * Returns the meta object for the '{@link citrique2.CitriqueDomain#resetTouched() <em>Reset Touched</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Reset Touched</em>' operation.
+	 * @see citrique2.CitriqueDomain#resetTouched()
+	 * @generated
+	 */
+	EOperation getCitriqueDomain__ResetTouched();
+
+	/**
 	 * Returns the meta object for class '{@link citrique2.PlantObject <em>Plant Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3106,6 +3125,14 @@ public interface ctr2Package extends EPackage {
 		 * @generated
 		 */
 		EOperation CITRIQUE_DOMAIN___REFRESH = eINSTANCE.getCitriqueDomain__Refresh();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Touched</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CITRIQUE_DOMAIN___RESET_TOUCHED = eINSTANCE.getCitriqueDomain__ResetTouched();
 
 		/**
 		 * The meta object literal for the '{@link citrique2.impl.PlantObjectImpl <em>Plant Object</em>}' class.

@@ -88,9 +88,17 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	 * <!-- end-user-doc -->
 	 */
 	public void refresh() {
-		CitriqueDomain domain = this;
-		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(domain, CitriqueDomainScope.class);
+		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
 		scope.refresh();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void resetTouched() {
+		 PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
+			 scope.resetTouched();
 	}
 
 	/**
@@ -177,6 +185,9 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 		switch (operationID) {
 			case ctr2Package.CITRIQUE_DOMAIN___REFRESH:
 				refresh();
+				return null;
+			case ctr2Package.CITRIQUE_DOMAIN___RESET_TOUCHED:
+				resetTouched();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);
