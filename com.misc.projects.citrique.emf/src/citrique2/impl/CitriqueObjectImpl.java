@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import com.misc.common.moplaf.propagator.ContainmentListenerAdapter;
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.PropagatorAbstractAdapter;
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -213,11 +214,15 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	protected CitriqueObjectImpl() {
 		super();
-		this.eAdapters().add(new ContainmentListenerAdapter());
-		this.eAdapters().add(this.createPropagatorCalcObjectInit());
-		this.eAdapters().add(this.createPropagatorCalcDescription());
-		this.eAdapters().add(this.createPropagatorCalcLongDescription());
-		this.eAdapters().add(this.createPropagatorCalcShortDescription());
+		this.constructPropagatorFunctionAdapters();
+	}
+	
+	protected void constructPropagatorFunctionAdapters(){
+		Util.adapt(this, ContainmentListenerAdapter.class );
+		Util.adapt(this, CitriqueObjectInit.class);
+		Util.adapt(this, CitriqueObjectCalcDescription.class );
+		Util.adapt(this, CitriqueObjectCalcLongDescription.class );
+		Util.adapt(this, CitriqueObjectCalcShortDescription.class );
 	}
 
 	/**
@@ -756,19 +761,4 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		this.setShortName("no");
 	}
 
-	// propagator create methods ----------------------------------------------
-	PropagatorFunctionAdapter createPropagatorCalcObjectInit(){
-		return new CitriqueObjectInit();
-	}
-	
-	PropagatorFunctionAdapter createPropagatorCalcDescription(){
-		return new CitriqueObjectCalcDescription();
-	}
-	PropagatorFunctionAdapter createPropagatorCalcLongDescription(){
-		return new CitriqueObjectCalcLongDescription();
-	}
-	
-	PropagatorFunctionAdapter createPropagatorCalcShortDescription(){
-		return new CitriqueObjectCalcShortDescription();
-	}
 } //CitriqueObjectImpl

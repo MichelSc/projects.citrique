@@ -4,10 +4,14 @@ package citrique2.impl;
 
 import citrique2.PlantLink;
 import citrique2.ctr2Package;
+import citrique2.calc.PlantLinkCalcDescription;
+import citrique2.calc.CitriqueObjectCalcDescription;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,6 +96,12 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 	 */
 	protected PlantLinkImpl() {
 		super();
+	}
+
+	@Override
+	protected void constructPropagatorFunctionAdapters() {
+		Util.adapt(this, PlantLinkCalcDescription.class );
+		super.constructPropagatorFunctionAdapters();
 	}
 
 	/**
@@ -266,4 +276,12 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 	}
 
 	
+	@Override
+	public void refreshDescription() {
+		String description = String.format("%1$s:%2$s; %3$5.2f m", 
+				                           this.getType(), 
+				                           this.getName(),
+				                           this.getLength());
+		this.setDescription(description);
+	}
 } //PlantLinkImpl

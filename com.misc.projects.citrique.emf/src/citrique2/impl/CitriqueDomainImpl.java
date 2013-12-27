@@ -10,6 +10,8 @@ import citrique2.calc.CitriqueDomainLayerObjectChildren;
 import citrique2.calc.CitriqueDomainLayerObjectDescription;
 import citrique2.calc.CitriqueDomainLayerObjectInit;
 import citrique2.calc.CitriqueDomainScope;
+import citrique2.calc.CitriqueObjectCalcDescription;
+import citrique2.calc.CitriqueObjectCalcLongDescription;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -22,6 +24,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.misc.common.moplaf.propagator.PropagatorAbstractAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
@@ -52,13 +55,19 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected CitriqueDomainImpl() {
 		super();
-		this.eAdapters().add(this.createPropagatorScope());
-		this.eAdapters().add(this.createPropagatorLayerInit());
-		this.eAdapters().add(this.createPropagatorLayerObjectChildren());
-		this.eAdapters().add(this.createPropagatorLayerObjectDescription());
+	}
+
+	@Override
+	protected void constructPropagatorFunctionAdapters() {
+		Util.adapt(this, CitriqueDomainScope.class );
+		Util.adapt(this, CitriqueDomainLayerObjectInit.class );
+		Util.adapt(this, CitriqueDomainLayerObjectChildren.class );
+		Util.adapt(this, CitriqueDomainLayerObjectDescription.class );
+		super.constructPropagatorFunctionAdapters();
 	}
 
 	/**
@@ -220,23 +229,4 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 		this.setShortType(type);
 	}
 	
-	// propagator create methods ----------------------------------------------
-	PropagatorFunctionAdapter createPropagatorScope(){
-		return new CitriqueDomainScope();
-	}
-	
-	PropagatorFunctionAdapter createPropagatorLayerObjectChildren(){
-		return new CitriqueDomainLayerObjectChildren();
-	}
-	
-	PropagatorFunctionAdapter createPropagatorLayerObjectDescription(){
-		return new CitriqueDomainLayerObjectDescription();
-	}
-	
-	PropagatorFunctionAdapter createPropagatorLayerInit(){
-		return new CitriqueDomainLayerObjectInit();
-	}
-	
-			
-			
 } //CitriqueDomainImpl
