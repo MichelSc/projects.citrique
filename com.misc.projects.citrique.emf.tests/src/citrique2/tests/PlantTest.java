@@ -16,6 +16,7 @@ import junit.textui.TestRunner;
  * <ul>
  *   <li>{@link citrique2.Plant#refreshNodes() <em>Refresh Nodes</em>}</li>
  *   <li>{@link citrique2.Plant#refreshLinks() <em>Refresh Links</em>}</li>
+ *   <li>{@link citrique2.Plant#refreshObjects() <em>Refresh Objects</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -95,6 +96,19 @@ public class PlantTest extends CitriqueObjectTest {
 	 * @generated
 	 */
 	public void testRefreshLinks() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link citrique2.Plant#refreshObjects() <em>Refresh Objects</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique2.Plant#refreshObjects()
+	 * @generated
+	 */
+	public void testRefreshObjects() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

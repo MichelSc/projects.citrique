@@ -471,6 +471,15 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getPlant__RefreshObjects() {
+		return plantEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBuffer() {
 		return bufferEClass;
 	}
@@ -728,6 +737,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		createEReference(plantEClass, PLANT__PLANT_OBJECT);
 		createEOperation(plantEClass, PLANT___REFRESH_NODES);
 		createEOperation(plantEClass, PLANT___REFRESH_LINKS);
+		createEOperation(plantEClass, PLANT___REFRESH_OBJECTS);
 
 		bufferEClass = createEClass(BUFFER);
 		createEReference(bufferEClass, BUFFER__SILO_LINKS);
@@ -830,7 +840,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEOperation(getCitriqueDomain__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(plantObjectEClass, PlantObject.class, "PlantObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlantObject_Plant(), this.getPlant(), null, "Plant", null, 0, 1, PlantObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlantObject_Plant(), this.getPlant(), this.getPlant_PlantObject(), "Plant", null, 0, 1, PlantObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(plantEClass, Plant.class, "Plant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlant_Buffer(), this.getBuffer(), null, "Buffer", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -840,11 +850,13 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEReference(getPlant_Link(), this.getPlantLink(), null, "Link", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_BufferSiloLink(), this.getBufferSiloLink(), null, "BufferSiloLink", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_SiloReactorLink(), this.getSiloReactorLink(), null, "SiloReactorLink", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlant_PlantObject(), this.getPlantObject(), null, "PlantObject", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlant_PlantObject(), this.getPlantObject(), this.getPlantObject_Plant(), "PlantObject", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPlant__RefreshNodes(), null, "refreshNodes", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getPlant__RefreshLinks(), null, "refreshLinks", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getPlant__RefreshObjects(), null, "refreshObjects", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(bufferEClass, Buffer.class, "Buffer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBuffer_SiloLinks(), this.getBufferSiloLink(), this.getBufferSiloLink_Buffer(), "SiloLinks", null, 0, -1, Buffer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

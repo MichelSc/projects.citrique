@@ -13,7 +13,7 @@ import citrique2.ctr2Package;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
-public class PlantCalcChildren extends PropagatorFunctionAdapter {
+public class PlantCalcObjects extends PropagatorFunctionAdapter {
 
 	@Override
 	protected PropagatorFunctionAdapter getParent() {
@@ -26,13 +26,14 @@ public class PlantCalcChildren extends PropagatorFunctionAdapter {
 	@Override
 	protected void calculate() {
 		Plant plant= (Plant)this.getTarget();
-		plant.refreshChildren();
+		plant.refreshObjects();
 	}
 
 	@Override
 	public void notifyChanged(Notification msg) {
 		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_PlantObject())){
+		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_Node())
+		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_Link())) {
 			this.touch();				
 		}
 	}
@@ -40,10 +41,12 @@ public class PlantCalcChildren extends PropagatorFunctionAdapter {
 	@Override
 	protected List<PropagatorFunctionAdapter> getAntecedents() {
 		Plant plant= (Plant)this.getTarget();
-		PropagatorFunctionAdapter calcobjects = (PropagatorFunctionAdapter)Util.getAdapter(plant, PlantCalcObjects.class);
+		PropagatorFunctionAdapter calcnode = (PropagatorFunctionAdapter)Util.getAdapter(plant, PlantCalcNodes.class);
+		PropagatorFunctionAdapter calclink = (PropagatorFunctionAdapter)Util.getAdapter(plant, PlantCalcLinks.class);
 		
 		ArrayList<PropagatorFunctionAdapter> antecedents = new ArrayList<PropagatorFunctionAdapter>();
-		antecedents.add(calcobjects);
+		antecedents.add(calcnode);
+		antecedents.add(calclink);
 		return antecedents;
 	}
 }

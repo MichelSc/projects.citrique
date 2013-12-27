@@ -13,7 +13,10 @@ import citrique2.Reactor;
 import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Package;
+import citrique2.calc.PlantCalcChildren;
+import citrique2.calc.PlantCalcLinks;
 import citrique2.calc.PlantCalcNodes;
+import citrique2.calc.PlantCalcObjects;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -25,6 +28,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 
@@ -136,6 +140,9 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	protected PlantImpl() {
 		super();
 		this.eAdapters().add(new PlantCalcNodes());
+		this.eAdapters().add(new PlantCalcLinks());
+		this.eAdapters().add(new PlantCalcObjects());
+		this.eAdapters().add(new PlantCalcChildren());
 	}
 
 	/**
@@ -239,7 +246,7 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 */
 	public EList<PlantObject> getPlantObject() {
 		if (plantObject == null) {
-			plantObject = new EObjectResolvingEList<PlantObject>(PlantObject.class, this, ctr2Package.PLANT__PLANT_OBJECT);
+			plantObject = new EObjectWithInverseResolvingEList<PlantObject>(PlantObject.class, this, ctr2Package.PLANT__PLANT_OBJECT, ctr2Package.PLANT_OBJECT__PLANT);
 		}
 		return plantObject;
 	}
@@ -291,11 +298,31 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 */
+	public void refreshObjects() {
+		HashSet<PlantObject> objectstobe = new HashSet<PlantObject>();
+		objectstobe.addAll(this.getNode());
+		objectstobe.addAll(this.getLink());
+
+		HashSet<PlantObject> objectsasis = new HashSet<PlantObject>(this.getPlantObject());
+		
+		HashSet<PlantObject> objectstoadd = new HashSet<PlantObject>(objectstobe); 
+		objectstoadd.removeAll(objectsasis);
+		
+		HashSet<PlantObject> objectstoremove = new HashSet<PlantObject>(objectsasis); 
+		objectstoremove.removeAll(objectstobe);
+		
+		this.getPlantObject().addAll(objectstoadd);
+		this.getPlantObject().removeAll(objectstoremove);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
 	@Override
 	public void refreshChildren() {
 		HashSet<CitriqueObject> objectstobe = new HashSet<CitriqueObject>();
-		objectstobe.addAll(this.getNode());
-		objectstobe.addAll(this.getLink());
+		objectstobe.addAll(this.getPlantObject());
 
 		HashSet<CitriqueObject> objectsasis = new HashSet<CitriqueObject>(this.getChild());
 		
@@ -307,6 +334,21 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 		
 		this.getChild().addAll(objectstoadd);
 		this.getChild().removeAll(objectstoremove);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ctr2Package.PLANT__PLANT_OBJECT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPlantObject()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -327,6 +369,8 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				return ((InternalEList<?>)getBufferSiloLink()).basicRemove(otherEnd, msgs);
 			case ctr2Package.PLANT__SILO_REACTOR_LINK:
 				return ((InternalEList<?>)getSiloReactorLink()).basicRemove(otherEnd, msgs);
+			case ctr2Package.PLANT__PLANT_OBJECT:
+				return ((InternalEList<?>)getPlantObject()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -481,6 +525,9 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 				return null;
 			case ctr2Package.PLANT___REFRESH_LINKS:
 				refreshLinks();
+				return null;
+			case ctr2Package.PLANT___REFRESH_OBJECTS:
+				refreshObjects();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

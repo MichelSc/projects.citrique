@@ -143,6 +143,7 @@ public interface Plant extends CitriqueObject {
 	/**
 	 * Returns the value of the '<em><b>Plant Object</b></em>' reference list.
 	 * The list contents are of type {@link citrique2.PlantObject}.
+	 * It is bidirectional and its opposite is '{@link citrique2.PlantObject#getPlant <em>Plant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Plant Object</em>' reference list isn't clear,
@@ -151,7 +152,8 @@ public interface Plant extends CitriqueObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plant Object</em>' reference list.
 	 * @see citrique2.ctr2Package#getPlant_PlantObject()
-	 * @model
+	 * @see citrique2.PlantObject#getPlant
+	 * @model opposite="Plant"
 	 * @generated
 	 */
 	EList<PlantObject> getPlantObject();
@@ -171,5 +173,13 @@ public interface Plant extends CitriqueObject {
 	 * @generated
 	 */
 	void refreshLinks();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void refreshObjects();
 
 } // Plant

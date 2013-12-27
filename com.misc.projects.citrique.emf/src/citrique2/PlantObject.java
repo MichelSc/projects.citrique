@@ -22,6 +22,7 @@ package citrique2;
 public interface PlantObject extends CitriqueObject {
 	/**
 	 * Returns the value of the '<em><b>Plant</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link citrique2.Plant#getPlantObject <em>Plant Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Plant</em>' reference isn't clear,
@@ -31,7 +32,8 @@ public interface PlantObject extends CitriqueObject {
 	 * @return the value of the '<em>Plant</em>' reference.
 	 * @see #setPlant(Plant)
 	 * @see citrique2.ctr2Package#getPlantObject_Plant()
-	 * @model
+	 * @see citrique2.Plant#getPlantObject
+	 * @model opposite="PlantObject"
 	 * @generated
 	 */
 	Plant getPlant();

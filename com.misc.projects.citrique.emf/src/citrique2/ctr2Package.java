@@ -854,13 +854,22 @@ public interface ctr2Package extends EPackage {
 	int PLANT___REFRESH_LINKS = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Refresh Objects</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT___REFRESH_OBJECTS = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Plant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
+	int PLANT_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link citrique2.impl.PlantNodeImpl <em>Plant Node</em>}' class.
@@ -2669,6 +2678,16 @@ public interface ctr2Package extends EPackage {
 	EOperation getPlant__RefreshLinks();
 
 	/**
+	 * Returns the meta object for the '{@link citrique2.Plant#refreshObjects() <em>Refresh Objects</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Refresh Objects</em>' operation.
+	 * @see citrique2.Plant#refreshObjects()
+	 * @generated
+	 */
+	EOperation getPlant__RefreshObjects();
+
+	/**
 	 * Returns the meta object for class '{@link citrique2.Buffer <em>Buffer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3195,6 +3214,14 @@ public interface ctr2Package extends EPackage {
 		 * @generated
 		 */
 		EOperation PLANT___REFRESH_LINKS = eINSTANCE.getPlant__RefreshLinks();
+
+		/**
+		 * The meta object literal for the '<em><b>Refresh Objects</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PLANT___REFRESH_OBJECTS = eINSTANCE.getPlant__RefreshObjects();
 
 		/**
 		 * The meta object literal for the '{@link citrique2.impl.BufferImpl <em>Buffer</em>}' class.

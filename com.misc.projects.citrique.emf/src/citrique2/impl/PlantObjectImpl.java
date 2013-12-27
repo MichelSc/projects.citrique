@@ -8,6 +8,7 @@ import citrique2.ctr2Package;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -87,11 +88,63 @@ public class PlantObjectImpl extends CitriqueObjectImpl implements PlantObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlant(Plant newPlant) {
+	public NotificationChain basicSetPlant(Plant newPlant, NotificationChain msgs) {
 		Plant oldPlant = plant;
 		plant = newPlant;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.PLANT_OBJECT__PLANT, oldPlant, plant));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ctr2Package.PLANT_OBJECT__PLANT, oldPlant, newPlant);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPlant(Plant newPlant) {
+		if (newPlant != plant) {
+			NotificationChain msgs = null;
+			if (plant != null)
+				msgs = ((InternalEObject)plant).eInverseRemove(this, ctr2Package.PLANT__PLANT_OBJECT, Plant.class, msgs);
+			if (newPlant != null)
+				msgs = ((InternalEObject)newPlant).eInverseAdd(this, ctr2Package.PLANT__PLANT_OBJECT, Plant.class, msgs);
+			msgs = basicSetPlant(newPlant, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.PLANT_OBJECT__PLANT, newPlant, newPlant));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ctr2Package.PLANT_OBJECT__PLANT:
+				if (plant != null)
+					msgs = ((InternalEObject)plant).eInverseRemove(this, ctr2Package.PLANT__PLANT_OBJECT, Plant.class, msgs);
+				return basicSetPlant((Plant)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ctr2Package.PLANT_OBJECT__PLANT:
+				return basicSetPlant(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -27,11 +27,13 @@
         eType="#//Plant" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlantObject" eSuperTypes="#//CitriqueObject">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" eType="#//Plant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" eType="#//Plant"
+        eOpposite="#//Plant/PlantObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plant" eSuperTypes="#//CitriqueObject">
     <eOperations name="refreshNodes"/>
     <eOperations name="refreshLinks"/>
+    <eOperations name="refreshObjects"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Buffer" upperBound="-1"
         eType="#//Buffer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" upperBound="-1" eType="#//Silo"
@@ -45,7 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="SiloReactorLink" upperBound="-1"
         eType="#//SiloReactorLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="PlantObject" upperBound="-1"
-        eType="#//PlantObject"/>
+        eType="#//PlantObject" eOpposite="#//PlantObject/Plant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Buffer" eSuperTypes="#//PlantNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SiloLinks" upperBound="-1"
