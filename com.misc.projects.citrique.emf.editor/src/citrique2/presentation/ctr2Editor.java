@@ -672,23 +672,7 @@ public class ctr2Editor
 
 		// Create the command stack that will notify this editor as commands are executed.
 		//
-		BasicCommandStack commandStack = new BasicCommandStack(){
-
-			@Override
-			public void execute(Command command) {
-				super.execute(command);
-				CommonPlugin.INSTANCE.log( "CommandStack: after execute");
-				for (Resource resource : editingDomain.getResourceSet().getResources()) {
-					 for ( EObject object : resource.getContents()){
-						 if ( object instanceof CitriqueDomain ){
-							 CitriqueDomain domain = (CitriqueDomain)object;
-							 CommonPlugin.INSTANCE.log( "..: refresh domain "+ domain.toString());
-							 domain.refresh();
-						 }  // traversed Object is a CitriqueDomain
-					 }  // traverse the EObjects
-				} // traverse the Resources
-			}
-		};
+		BasicCommandStack commandStack = new BasicCommandStack();
 
 		// Add a listener to set the most recent command's affected objects to be the selection of the viewer with focus.
 		//
@@ -697,6 +681,15 @@ public class ctr2Editor
 				 public void commandStackChanged(final EventObject event) {
 					// some command has done something
 					CommonPlugin.INSTANCE.log( "Editor Command stack changed: "+ event.toString());
+					for (Resource resource : editingDomain.getResourceSet().getResources()) {
+						 for ( EObject object : resource.getContents()){
+							 if ( object instanceof CitriqueDomain ){
+								 CitriqueDomain domain = (CitriqueDomain)object;
+								 CommonPlugin.INSTANCE.log( "..: refresh domain "+ domain.toString());
+								 domain.refresh();
+							 }  // traversed Object is a CitriqueDomain
+						 }  // traverse the EObjects
+					} // traverse the Resources
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
 							  public void run() {
