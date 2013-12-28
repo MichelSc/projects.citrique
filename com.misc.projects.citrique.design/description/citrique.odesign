@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" name="citrique" version="7.0.0">
+  <ownedViewpoints name="citrique.vp.standard" label="Standard Citrique ViewPoint" modelFileExtension="ctr2">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique2.Plant" enablePopupBars="true">
+      <defaultLayer name="Default" label="Plant Diagram Default Layer">
+        <nodeMappings name="plant.buffer" label="Buffer Node" semanticCandidatesExpression="[self.Buffer/]" domainClass="citrique2.Buffer">
+          <style xsi:type="style:SquareDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="plant.silo" label="Silo Node" semanticCandidatesExpression="[self.Silo/]" domainClass="citrique2.Silo">
+          <style xsi:type="style:LozengeNodeDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="planr.reactor" label="Reactor Node" semanticCandidatesExpression="[self.Reactor/]" domainClass="citrique2.Reactor">
+          <style xsi:type="style:EllipseNodeDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW" horizontalDiameterComputationExpression="" verticalDiameterComputationExpression="">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="plant.linkbuffersilo" label="Edge Link Buffer Silo" semanticCandidatesExpression="[self.BufferSiloLink/]" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.buffer']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetFinderExpression="[self.Silo/]" sourceFinderExpression="[self.Buffer/]" domainClass="citrique2.BufferSiloLink" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelExpression="[self.Description/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
