@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import com.misc.common.moplaf.propagator.ContainmentListenerAdapter;
-import com.misc.common.moplaf.propagator.PropagatorAbstractAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
 /**

@@ -5,7 +5,6 @@ package citrique2.impl;
 import citrique2.PlantLink;
 import citrique2.ctr2Package;
 import citrique2.calc.PlantLinkCalcDescription;
-import citrique2.calc.CitriqueObjectCalcDescription;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;

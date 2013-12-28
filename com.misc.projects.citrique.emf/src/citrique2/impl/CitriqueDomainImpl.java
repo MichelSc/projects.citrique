@@ -10,8 +10,6 @@ import citrique2.calc.CitriqueDomainLayerObjectChildren;
 import citrique2.calc.CitriqueDomainLayerObjectDescription;
 import citrique2.calc.CitriqueDomainLayerObjectInit;
 import citrique2.calc.CitriqueDomainScope;
-import citrique2.calc.CitriqueObjectCalcDescription;
-import citrique2.calc.CitriqueObjectCalcLongDescription;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -24,7 +22,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import com.misc.common.moplaf.propagator.PropagatorAbstractAdapter;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
 

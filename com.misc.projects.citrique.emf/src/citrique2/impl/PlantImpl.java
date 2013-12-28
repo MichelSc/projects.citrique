@@ -13,7 +13,6 @@ import citrique2.Reactor;
 import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Package;
-import citrique2.calc.CitriqueObjectInit;
 import citrique2.calc.PlantCalcChildren;
 import citrique2.calc.PlantCalcLinks;
 import citrique2.calc.PlantCalcNodes;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import com.misc.common.moplaf.propagator.ContainmentListenerAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
 
