@@ -75,6 +75,34 @@
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
+            <ownedTools xsi:type="tool:EdgeCreationDescription" name="plant.createlinkbuffersilo" label="Create LInk Buffer Silo" edgeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@edgeMappings[name='plant.linkbuffersilo']">
+              <sourceVariable name="source"/>
+              <targetVariable name="target"/>
+              <sourceViewVariable name="sourceView"/>
+              <targetViewVariable name="targetView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.Plant/]">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.BufferSiloLink" referenceName="BufferSiloLink">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Silo" valueExpression="var:target"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Buffer" valueExpression="var:source"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+            <ownedTools xsi:type="tool:EdgeCreationDescription" name="plant.createlinksiloreactor" label="Create LInk Silo Reactor" edgeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@edgeMappings[name='plant.linksiloreactor']">
+              <sourceVariable name="source"/>
+              <targetVariable name="target"/>
+              <sourceViewVariable name="sourceView"/>
+              <targetViewVariable name="targetView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.Plant/]">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.SiloReactorLink" referenceName="SiloReactorLink">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Reactor" valueExpression="var:target"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Silo" valueExpression="var:source"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
           </subSections>
           <subSections label="Usability tools"/>
         </toolSections>
