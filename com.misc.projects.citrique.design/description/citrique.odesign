@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" name="citrique" version="7.0.0">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="citrique" version="7.0.0">
   <ownedViewpoints name="citrique.vp.standard" label="Standard Citrique ViewPoint" modelFileExtension="ctr2">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique2.Plant" enablePopupBars="true">
       <defaultLayer name="Default" label="Plant Diagram Default Layer">
@@ -27,11 +27,57 @@
         <edgeMappings name="plant.linkbuffersilo" label="Edge Link Buffer Silo" semanticCandidatesExpression="[self.BufferSiloLink/]" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.buffer']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetFinderExpression="[self.Silo/]" sourceFinderExpression="[self.Buffer/]" domainClass="citrique2.BufferSiloLink" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelExpression="[self.Description/]">
+            <centerLabelStyleDescription showIcon="false" labelExpression="[self.Description/]">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="plant.linksiloreactor" label="Edge Link Silo Reactor" semanticCandidatesExpression="[self.SiloReactorLink/]" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='planr.reactor']" targetFinderExpression="[self.Reactor/]" sourceFinderExpression="[self.Silo/]" domainClass="citrique2.SiloReactorLink" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="[self.Description/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="plant.defaultpalette" label="Plant Default Palette">
+          <subSections label="Palette Tools">
+            <ownedTools xsi:type="tool:NodeCreationDescription" name="plant.create.buffer" label="Create Buffer" nodeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.buffer']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Buffer" referenceName="Buffer">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new buffer'/]"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+            <ownedTools xsi:type="tool:NodeCreationDescription" name="plant.create.silo" label="Create Silo" nodeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Silo" referenceName="Silo">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new silo'/]"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+            <ownedTools xsi:type="tool:NodeCreationDescription" name="plant.create.reactor" label="Create Reactor" nodeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='planr.reactor']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Reactor" referenceName="Reactor">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new reactor'/]"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </ownedTools>
+          </subSections>
+          <subSections label="Usability tools"/>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
