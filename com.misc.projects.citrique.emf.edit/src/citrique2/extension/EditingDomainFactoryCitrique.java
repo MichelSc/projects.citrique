@@ -14,13 +14,13 @@ import org.eclipse.emf.transaction.ResourceSetListenerImpl;
 import org.eclipse.emf.transaction.RollbackException;
 import org.eclipse.emf.transaction.Transaction;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.sirius.common.tools.api.editing.DefaultEditingDomainFactory;
+import org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.FactoryImpl;
+import org.eclipse.sirius.common.tools.api.editing.FileStatusPrecommitListener;
 import org.eclipse.sirius.common.tools.api.editing.IEditingDomainFactory;
 
 import citrique2.CitriqueDomain;
 
-public class EditingDomainFactoryCitrique extends DefaultEditingDomainFactory
-		implements IEditingDomainFactory {
+public class EditingDomainFactoryCitrique extends FactoryImpl implements IEditingDomainFactory {
 
 	public EditingDomainFactoryCitrique() {
 		CommonPlugin.INSTANCE.log( "Create Editing Domain Factory Citrique");
@@ -28,26 +28,20 @@ public class EditingDomainFactoryCitrique extends DefaultEditingDomainFactory
 
 	@Override
 	public TransactionalEditingDomain createEditingDomain() {
-		CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique begin");
+		// misc: this one is never called, i do not understand why
+		//CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique begin");
 		TransactionalEditingDomain neweditingdomain = super.createEditingDomain();
-		CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique end");
+		neweditingdomain.addResourceSetListener(new FileStatusPrecommitListener());
+		//CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique end");
 		return neweditingdomain;
 	}
 
 	@Override
 	public synchronized TransactionalEditingDomain createEditingDomain(
 			ResourceSet rset) {
-		CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique gegin, set "+rset.getResources().size());
 		final TransactionalEditingDomain neweditingdomain = super.createEditingDomain(rset);
-		CommonPlugin.INSTANCE.log( "Create Editing Domain Citrique end, set "+rset.getResources().size());
 
 		neweditingdomain.addResourceSetListener(new ResourceSetListenerImpl() {
-			public void resourceSetChanged(ResourceSetChangeEvent event) {
-				
-				CommonPlugin.INSTANCE.log( "ResourceListener,resourcesetchanged "+event.toString());
-				Transaction transaction = event.getTransaction();
-				CommonPlugin.INSTANCE.log( "..transaction "+(transaction==null?"null":transaction.getChangeDescription().toString()));
-			} // resourceSetChanged
 
 			@Override
 			public Command transactionAboutToCommit(ResourceSetChangeEvent event) throws RollbackException {
