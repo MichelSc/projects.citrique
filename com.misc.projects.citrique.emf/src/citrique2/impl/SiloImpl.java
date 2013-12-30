@@ -271,7 +271,7 @@ public class SiloImpl extends PlantNodeImpl implements Silo {
 	@Override
 	public void refreshShortType() {
 		String type = "SI";
-		this.shortType = type;
+		this.setShortType(type);
 	}
 	
 } //SiloImpl

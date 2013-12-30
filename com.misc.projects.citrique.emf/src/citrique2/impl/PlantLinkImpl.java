@@ -281,6 +281,6 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 				                           this.getType(), 
 				                           this.getName(),
 				                           this.getLength());
-		this.description = description;
+		this.setDescription( description);
 	}
 } //PlantLinkImpl

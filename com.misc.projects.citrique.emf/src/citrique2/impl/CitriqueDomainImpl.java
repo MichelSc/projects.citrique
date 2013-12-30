@@ -223,7 +223,7 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	@Override
 	public void refreshShortType() {
 		String type = "CI";
-		this.shortType = type;
+		this.setShortType(type);
 	}
 	
 } //CitriqueDomainImpl

@@ -60,7 +60,6 @@ public class CitriqueObjectItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addChildPropertyDescriptor(object);
 			addParentPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
@@ -71,28 +70,6 @@ public class CitriqueObjectItemProvider
 			addShortNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Child feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addChildPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CitriqueObject_Child_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Child_feature", "_UI_CitriqueObject_type"),
-				 ctr2Package.Literals.CITRIQUE_OBJECT__CHILD,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -109,7 +86,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_Parent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Parent_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__PARENT,
-				 true,
+				 false,
 				 false,
 				 true,
 				 null,
@@ -153,7 +130,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Type_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__TYPE,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -175,7 +152,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_ShortType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_ShortType_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__SHORT_TYPE,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -197,7 +174,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_ShortDescription_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_ShortDescription_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__SHORT_DESCRIPTION,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -219,7 +196,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_LongDescription_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_LongDescription_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__LONG_DESCRIPTION,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -241,7 +218,7 @@ public class CitriqueObjectItemProvider
 				 getString("_UI_CitriqueObject_Description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CitriqueObject_Description_feature", "_UI_CitriqueObject_type"),
 				 ctr2Package.Literals.CITRIQUE_OBJECT__DESCRIPTION,
-				 true,
+				 false,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,

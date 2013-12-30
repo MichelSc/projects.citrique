@@ -72,7 +72,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_l7nv4WvYEeOkOcYVLdileg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Citrique.ecore#//CitriqueObject"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l7nv4mvYEeOkOcYVLdileg" x="600" y="-120" width="255" height="243"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l7nv4mvYEeOkOcYVLdileg" x="624" y="-84" width="255" height="243"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_pEF8sGvYEeOkOcYVLdileg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_pEGjwGvYEeOkOcYVLdileg" type="4001"/>
@@ -96,7 +96,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_pEF8sWvYEeOkOcYVLdileg" fontColor="4210752" fontName="Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="Citrique.ecore#//CitriqueDomain"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pEF8smvYEeOkOcYVLdileg" x="156" y="-48"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pEF8smvYEeOkOcYVLdileg" x="168" y="-36"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_qtAbQGvYEeOkOcYVLdileg" type="1001">
     <children xmi:type="notation:Node" xmi:id="_qtBCUGvYEeOkOcYVLdileg" type="4001"/>
@@ -346,10 +346,10 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_OujW4GvZEeOkOcYVLdileg" type="3002" source="_pEF8sGvYEeOkOcYVLdileg" target="_sKK80GvYEeOkOcYVLdileg">
     <children xmi:type="notation:Node" xmi:id="_OuklAGvZEeOkOcYVLdileg" type="4011">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_OuklAWvZEeOkOcYVLdileg" x="-10" y="-10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OuklAWvZEeOkOcYVLdileg" x="-11" y="-23"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_OuklAmvZEeOkOcYVLdileg" type="4012">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_OuklA2vZEeOkOcYVLdileg" x="10" y="10"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OuklA2vZEeOkOcYVLdileg" x="1" y="-18"/>
     </children>
     <styles xmi:type="notation:ConnectorStyle" xmi:id="_OujW4WvZEeOkOcYVLdileg" lineColor="4210752"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_OujW4mvZEeOkOcYVLdileg" fontColor="4210752" fontName="Sans" fontHeight="10"/>

@@ -112,11 +112,22 @@ public interface CitriqueObject extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
 	 * @see citrique2.ctr2Package#getCitriqueObject_Type()
-	 * @model changeable="false"
+	 * @model
 	 * @generated
 	 */
 	String getType();
+
+	/**
+	 * Sets the value of the '{@link citrique2.CitriqueObject#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Short Type</b></em>' attribute.
@@ -127,11 +138,22 @@ public interface CitriqueObject extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Short Type</em>' attribute.
+	 * @see #setShortType(String)
 	 * @see citrique2.ctr2Package#getCitriqueObject_ShortType()
-	 * @model changeable="false"
+	 * @model
 	 * @generated
 	 */
 	String getShortType();
+
+	/**
+	 * Sets the value of the '{@link citrique2.CitriqueObject#getShortType <em>Short Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Short Type</em>' attribute.
+	 * @see #getShortType()
+	 * @generated
+	 */
+	void setShortType(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Short Description</b></em>' attribute.
@@ -142,11 +164,22 @@ public interface CitriqueObject extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Short Description</em>' attribute.
+	 * @see #setShortDescription(String)
 	 * @see citrique2.ctr2Package#getCitriqueObject_ShortDescription()
-	 * @model changeable="false"
+	 * @model
 	 * @generated
 	 */
 	String getShortDescription();
+
+	/**
+	 * Sets the value of the '{@link citrique2.CitriqueObject#getShortDescription <em>Short Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Short Description</em>' attribute.
+	 * @see #getShortDescription()
+	 * @generated
+	 */
+	void setShortDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Long Description</b></em>' attribute.
@@ -157,11 +190,22 @@ public interface CitriqueObject extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Long Description</em>' attribute.
+	 * @see #setLongDescription(String)
 	 * @see citrique2.ctr2Package#getCitriqueObject_LongDescription()
-	 * @model changeable="false"
+	 * @model
 	 * @generated
 	 */
 	String getLongDescription();
+
+	/**
+	 * Sets the value of the '{@link citrique2.CitriqueObject#getLongDescription <em>Long Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Long Description</em>' attribute.
+	 * @see #getLongDescription()
+	 * @generated
+	 */
+	void setLongDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
@@ -172,11 +216,22 @@ public interface CitriqueObject extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see citrique2.ctr2Package#getCitriqueObject_Description()
-	 * @model changeable="false"
+	 * @model
 	 * @generated
 	 */
 	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link citrique2.CitriqueObject#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Short Name</b></em>' attribute.
