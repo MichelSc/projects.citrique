@@ -325,7 +325,7 @@ public class SiloReactorLinkImpl extends PlantLinkImpl implements SiloReactorLin
 	@Override
 	public void refreshShortType() {
 		String type = "S-R";
-		this.setShortType(type);
+		this.shortType = type;
 	}
 	
 } //SiloReactorLinkImpl

@@ -1,11 +1,9 @@
 package citrique2.extension;
 
-import java.util.EventObject;
 
 import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.command.AbstractCommand;
 import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;

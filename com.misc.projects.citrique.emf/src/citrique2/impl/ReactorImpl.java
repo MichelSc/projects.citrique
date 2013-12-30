@@ -162,7 +162,7 @@ public class ReactorImpl extends PlantNodeImpl implements Reactor {
 	@Override
 	public void refreshShortType() {
 		String type = "RE";
-		this.setShortType(type);
+		this.shortType = type;
 	}
 	
 } //ReactorImpl

@@ -325,7 +325,7 @@ public class BufferSiloLinkImpl extends PlantLinkImpl implements BufferSiloLink 
 	@Override
 	public void refreshShortType() {
 		String type = "B-S";
-		this.setShortType(type);
+		this.shortType = type;
 	}
 	
 } //BufferSiloLinkImpl

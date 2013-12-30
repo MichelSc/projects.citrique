@@ -232,7 +232,7 @@ public class BufferImpl extends PlantNodeImpl implements Buffer {
 	@Override
 	public void refreshShortType() {
 		String type = "BU";
-		this.setShortType(type);
+		this.shortType = type;
 	}
 	
 } //BufferImpl

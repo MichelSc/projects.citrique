@@ -544,7 +544,7 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	@Override
 	public void refreshShortType() {
 		String type = "PL";
-		this.setShortType(type);
+		this.shortType = type;
 	}
 	
 			

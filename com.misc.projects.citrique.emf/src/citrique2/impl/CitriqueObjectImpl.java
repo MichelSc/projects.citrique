@@ -341,32 +341,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.CITRIQUE_OBJECT__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getShortType() {
 		return shortType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setShortType(String newShortType) {
-		String oldShortType = shortType;
-		shortType = newShortType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.CITRIQUE_OBJECT__SHORT_TYPE, oldShortType, shortType));
 	}
 
 	/**
@@ -383,18 +359,6 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setShortDescription(String newShortDescription) {
-		String oldShortDescription = shortDescription;
-		shortDescription = newShortDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.CITRIQUE_OBJECT__SHORT_DESCRIPTION, oldShortDescription, shortDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getLongDescription() {
 		return longDescription;
 	}
@@ -404,32 +368,8 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLongDescription(String newLongDescription) {
-		String oldLongDescription = longDescription;
-		longDescription = newLongDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.CITRIQUE_OBJECT__LONG_DESCRIPTION, oldLongDescription, longDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getDescription() {
 		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ctr2Package.CITRIQUE_OBJECT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -461,7 +401,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		String type = this.getType();
 		String name = this.getName();
 		String description = type + ": "+name;
-		this.setDescription(description);
+		this.description = description;
 	}
 
 	/**
@@ -472,7 +412,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 		String type = this.getShortType();
 		String name = this.getShortName();
 		String description = type + ": "+name;
-		this.setShortDescription(description);
+		this.shortDescription = description;
 	}
 
 	/**
@@ -481,7 +421,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public void refreshLongDescription() {
 		String description = String.format("%1$s (children %2$d)", this.getDescription(), this.getChild().size());
-		this.setLongDescription(description);
+		this.longDescription = description;
 	}
 
 	/**
@@ -490,7 +430,7 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public void refreshType() {
 		String type = this.eClass().getName();
-		this.setType(type);
+		this.type = type;
 	}
 
 	/**
@@ -600,21 +540,6 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 			case ctr2Package.CITRIQUE_OBJECT__NAME:
 				setName((String)newValue);
 				return;
-			case ctr2Package.CITRIQUE_OBJECT__TYPE:
-				setType((String)newValue);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__SHORT_TYPE:
-				setShortType((String)newValue);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
-				setShortDescription((String)newValue);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__LONG_DESCRIPTION:
-				setLongDescription((String)newValue);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
 			case ctr2Package.CITRIQUE_OBJECT__SHORT_NAME:
 				setShortName((String)newValue);
 				return;
@@ -638,21 +563,6 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case ctr2Package.CITRIQUE_OBJECT__NAME:
 				setName(NAME_EDEFAULT);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__SHORT_TYPE:
-				setShortType(SHORT_TYPE_EDEFAULT);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__SHORT_DESCRIPTION:
-				setShortDescription(SHORT_DESCRIPTION_EDEFAULT);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__LONG_DESCRIPTION:
-				setLongDescription(LONG_DESCRIPTION_EDEFAULT);
-				return;
-			case ctr2Package.CITRIQUE_OBJECT__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case ctr2Package.CITRIQUE_OBJECT__SHORT_NAME:
 				setShortName(SHORT_NAME_EDEFAULT);
