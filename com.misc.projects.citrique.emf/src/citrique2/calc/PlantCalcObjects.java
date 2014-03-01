@@ -1,8 +1,5 @@
 package citrique2.calc;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 
@@ -11,6 +8,7 @@ import citrique2.Plant;
 import citrique2.ctr2Package;
 
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapters;
 import com.misc.common.moplaf.propagator.Util;
 
 public class PlantCalcObjects extends PropagatorFunctionAdapter {
@@ -19,8 +17,20 @@ public class PlantCalcObjects extends PropagatorFunctionAdapter {
 	protected PropagatorFunctionAdapter getParent() {
 		CitriqueObject citriqueobject = (CitriqueObject)this.getTarget();
 		EObject citriquedomain = Util.getContainer(citriqueobject, ctr2Package.Literals.CITRIQUE_DOMAIN);
-		PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainLayerObjectChildren.class);
+		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(citriquedomain, CitriqueDomainLayerObjectChildren.class);
 		return parent;
+	}
+
+	@Override
+	protected PropagatorFunctionAdapters getAntecedents() {
+		Plant plant= (Plant)this.getTarget();
+		PropagatorFunctionAdapter calcnode = Util.getPropagatorFunctionAdapter(plant, PlantCalcNodes.class);
+		PropagatorFunctionAdapter calclink = Util.getPropagatorFunctionAdapter(plant, PlantCalcLinks.class);
+		
+		PropagatorFunctionAdapters antecedents = super.getAntecedents();
+		antecedents.add(calcnode);
+		antecedents.add(calclink);
+		return antecedents;
 	}
 
 	@Override
@@ -38,15 +48,4 @@ public class PlantCalcObjects extends PropagatorFunctionAdapter {
 		}
 	}
 
-	@Override
-	protected List<PropagatorFunctionAdapter> getAntecedents() {
-		Plant plant= (Plant)this.getTarget();
-		PropagatorFunctionAdapter calcnode = (PropagatorFunctionAdapter)Util.getAdapter(plant, PlantCalcNodes.class);
-		PropagatorFunctionAdapter calclink = (PropagatorFunctionAdapter)Util.getAdapter(plant, PlantCalcLinks.class);
-		
-		ArrayList<PropagatorFunctionAdapter> antecedents = new ArrayList<PropagatorFunctionAdapter>();
-		antecedents.add(calcnode);
-		antecedents.add(calclink);
-		return antecedents;
-	}
 }

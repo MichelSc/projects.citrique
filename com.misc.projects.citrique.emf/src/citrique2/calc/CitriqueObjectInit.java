@@ -14,7 +14,7 @@ public class CitriqueObjectInit extends PropagatorFunctionAdapter {
 	protected PropagatorFunctionAdapter getParent() {
 		CitriqueObject target = (CitriqueObject)this.getTarget();
 		EObject citriquedomain = Util.getContainer(target, ctr2Package.Literals.CITRIQUE_DOMAIN);
-		PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter) Util.getAdapter(citriquedomain, CitriqueDomainLayerObjectInit.class);
+		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(citriquedomain, CitriqueDomainLayerObjectInit.class);
 		return parent;
 	}
 

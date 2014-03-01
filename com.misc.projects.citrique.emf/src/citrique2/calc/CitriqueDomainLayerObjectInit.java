@@ -13,7 +13,7 @@ public class CitriqueDomainLayerObjectInit extends PropagatorFunctionAdapter {
 	protected PropagatorFunctionAdapter getParent() {
 		Notifier target = this.target;
 		CitriqueDomain domain= (CitriqueDomain)target;
-		PropagatorFunctionAdapter parent = (PropagatorFunctionAdapter)Util.getAdapter(domain, CitriqueDomainScope.class);
+		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(domain, CitriqueDomainScope.class);
 		return parent;
 	}
 }
