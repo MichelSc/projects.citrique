@@ -2,6 +2,7 @@
  */
 package citrique2.provider;
 
+import com.misc.common.moplaf.propagator.provider.PropagatorEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -38,6 +39,7 @@ public final class CitriqueEditPlugin extends EMFPlugin {
 	public CitriqueEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     PropagatorEditPlugin.INSTANCE,
 		   });
 	}
 

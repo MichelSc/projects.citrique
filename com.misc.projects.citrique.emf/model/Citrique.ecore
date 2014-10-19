@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="citrique2" nsURI="http://com.misc.projects.citrique.emf" nsPrefix="ctr2">
-  <eClassifiers xsi:type="ecore:EClass" name="CitriqueObject">
+  <eClassifiers xsi:type="ecore:EClass" name="CitriqueObject" eSuperTypes="../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapter">
     <eOperations name="refreshDescription"/>
     <eOperations name="refreshShortDescription"/>
     <eOperations name="refreshLongDescription"/>
@@ -44,6 +44,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="CitriqueDomain" eSuperTypes="#//CitriqueObject">
     <eOperations name="refresh"/>
     <eOperations name="resetTouched"/>
+    <eOperations name="activate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" upperBound="-1"
         eType="#//Plant" containment="true"/>
   </eClassifiers>
@@ -58,11 +59,27 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Buffer" upperBound="-1"
         eType="#//Buffer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Silo" upperBound="-1" eType="#//Silo"
-        containment="true"/>
+        containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="BufferSiloLink"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Reactor" upperBound="-1"
-        eType="#//Reactor" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Node" upperBound="-1" eType="#//PlantNode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Link" upperBound="-1" eType="#//PlantLink"/>
+        eType="#//Reactor" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="BufferSiloLink"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Node" upperBound="-1" eType="#//PlantNode">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="BufferSiloLink"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Link" upperBound="-1" eType="#//PlantLink">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="BufferSiloLink"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="BufferSiloLink" upperBound="-1"
         eType="#//BufferSiloLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="SiloReactorLink" upperBound="-1"

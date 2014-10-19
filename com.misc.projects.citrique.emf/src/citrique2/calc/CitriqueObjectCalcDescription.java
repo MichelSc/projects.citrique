@@ -1,6 +1,5 @@
 package citrique2.calc;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 
 import citrique2.CitriqueObject;
@@ -24,13 +23,12 @@ public class CitriqueObjectCalcDescription extends PropagatorFunctionAdapter {
 		CitriqueObject citriqueobject = (CitriqueObject)this.getTarget();
 		citriqueobject.refreshDescription();
 	}
-
+	
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_Name() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_Type())) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__NAME);
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__TYPE);
 	}
+
 };

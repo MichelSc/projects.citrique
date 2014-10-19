@@ -4,8 +4,6 @@ package citrique2;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Citrique Object</b></em>'.
@@ -30,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface CitriqueObject extends EObject {
+public interface CitriqueObject extends com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter {
 	/**
 	 * Returns the value of the '<em><b>Child</b></em>' reference list.
 	 * The list contents are of type {@link citrique2.CitriqueObject}.

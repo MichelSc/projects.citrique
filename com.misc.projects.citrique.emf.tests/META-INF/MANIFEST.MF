@@ -10,6 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: citrique2.tests
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.projects.citrique.emf;visibility:=reexport,
+ com.misc.common.moplaf.propagator;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

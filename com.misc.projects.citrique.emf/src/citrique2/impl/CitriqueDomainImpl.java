@@ -15,6 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
 
+import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -58,13 +59,16 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 		super();
 	}
 
-	@Override
-	protected void constructPropagatorFunctionAdapters() {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void addPropagatorFunctionAdapter() {
+		super.addPropagatorFunctionAdapter();
 		Util.adapt(this, CitriqueDomainScope.class );
 		Util.adapt(this, CitriqueDomainLayerObjectInit.class );
 		Util.adapt(this, CitriqueDomainLayerObjectChildren.class );
 		Util.adapt(this, CitriqueDomainLayerObjectDescription.class );
-		super.constructPropagatorFunctionAdapters();
 	}
 
 	/**
@@ -94,8 +98,12 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	 * <!-- end-user-doc -->
 	 */
 	public void refresh() {
+		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
+
+    	CommonPlugin.INSTANCE.log( "..: refresh");
 		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
 		scope.refresh();
+    	CommonPlugin.INSTANCE.log( "..: refresh done");
 	}
 
 	/**
@@ -103,8 +111,25 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	 * <!-- end-user-doc -->
 	 */
 	public void resetTouched() {
+		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
+
+    	CommonPlugin.INSTANCE.log( "..: reset");
 		 PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
 			 scope.resetTouched();
+    	CommonPlugin.INSTANCE.log( "..: reset done");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void activate() {
+		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
+
+    	CommonPlugin.INSTANCE.log( "..: activate");
+    	CitriqueDomainScope scope = (CitriqueDomainScope)Util.adapt(this, CitriqueDomainScope.class);	
+		scope.activate();
+    	CommonPlugin.INSTANCE.log( "..: activation done");
 	}
 
 	/**
@@ -194,6 +219,9 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 				return null;
 			case ctr2Package.CITRIQUE_DOMAIN___RESET_TOUCHED:
 				resetTouched();
+				return null;
+			case ctr2Package.CITRIQUE_DOMAIN___ACTIVATE:
+				activate();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

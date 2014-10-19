@@ -23,6 +23,14 @@ public class CitriqueObjectInit extends PropagatorFunctionAdapter {
 		CitriqueObject target = (CitriqueObject)this.getTarget();
 		target.init();
 	}
+	
+	
+
+	@Override
+	protected boolean isTouchOnOwned() {
+		// does the same as super, this is just to make it explicit
+		return true;
+	}
 
 	@Override
 	public void onContained(Notifier newcontainer) {

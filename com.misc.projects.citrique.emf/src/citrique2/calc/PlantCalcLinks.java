@@ -25,13 +25,12 @@ public class PlantCalcLinks extends PropagatorFunctionAdapter {
 		Plant plant= (Plant)this.getTarget();
 		plant.refreshLinks();
 	}
-
+	
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_BufferSiloLink() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_SiloReactorLink())) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.PLANT__BUFFER_SILO_LINK);
+		this.addFeatureListener(ctr2Package.PLANT__SILO_REACTOR_LINK);
 	}
+	
 }

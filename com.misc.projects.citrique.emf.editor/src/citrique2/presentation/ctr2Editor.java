@@ -14,7 +14,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -118,10 +117,8 @@ import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
 import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
 import org.eclipse.emf.edit.ui.util.EditUIUtil;
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
-
 import citrique2.CitriqueDomain;
 import citrique2.provider.ctr2ItemProviderAdapterFactory;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -942,7 +939,7 @@ public class ctr2Editor
 			 if ( object instanceof CitriqueDomain ){
 				 CitriqueDomain domain = (CitriqueDomain)object;
 				 CommonPlugin.INSTANCE.log( "..: reset domain "+ domain.toString());
-				 domain.resetTouched();
+				 domain.activate();
 			 }  // traversed Object is a CitriqueDomain
 		}  // traverse the EObjects
 

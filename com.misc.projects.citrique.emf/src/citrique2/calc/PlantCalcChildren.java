@@ -38,11 +38,9 @@ public class PlantCalcChildren extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_PlantObject())){
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.PLANT__PLANT_OBJECT);
 	}
 
 }

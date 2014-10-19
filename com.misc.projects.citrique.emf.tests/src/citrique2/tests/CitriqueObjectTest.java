@@ -23,6 +23,7 @@ import junit.textui.TestRunner;
  *   <li>{@link citrique2.CitriqueObject#refreshShortType() <em>Refresh Short Type</em>}</li>
  *   <li>{@link citrique2.CitriqueObject#refreshChildren() <em>Refresh Children</em>}</li>
  *   <li>{@link citrique2.CitriqueObject#init() <em>Init</em>}</li>
+ *   <li>{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter#addPropagatorFunctionAdapter() <em>Add Propagator Function Adapter</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -184,6 +185,19 @@ public class CitriqueObjectTest extends TestCase {
 	 * @generated
 	 */
 	public void testInit() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter#addPropagatorFunctionAdapter() <em>Add Propagator Function Adapter</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter#addPropagatorFunctionAdapter()
+	 * @generated
+	 */
+	public void testAddPropagatorFunctionAdapter() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

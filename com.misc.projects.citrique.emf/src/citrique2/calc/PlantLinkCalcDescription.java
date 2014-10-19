@@ -7,10 +7,9 @@ import citrique2.ctr2Package;
 public class PlantLinkCalcDescription extends CitriqueObjectCalcDescription {
 
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlantLink_Length() )) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.PLANT_LINK__LENGTH);
 	}
+	
 }

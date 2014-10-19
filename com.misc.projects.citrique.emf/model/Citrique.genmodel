@@ -3,6 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.misc.projects.citrique.emf/src" modelPluginID="com.misc.projects.citrique.emf"
     modelName="Citrique" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    usedGenPackages="../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Citrique.ecore</foreignModel>
   <genPackages prefix="ctr2" disposableProviderFactory="true" fileExtensions="ctr2"
@@ -31,6 +32,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//CitriqueDomain/Plant"/>
       <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/refresh"/>
       <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/resetTouched"/>
+      <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/activate"/>
     </genClasses>
     <genClasses ecoreClass="Citrique.ecore#//PlantObject">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Citrique.ecore#//PlantObject/Plant"/>

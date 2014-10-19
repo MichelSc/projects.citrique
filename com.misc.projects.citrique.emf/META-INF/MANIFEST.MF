@@ -11,6 +11,7 @@ Export-Package: citrique2,
  citrique2.impl,
  citrique2.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore,
- com.misc.common.moplaf.propagator;bundle-version="1.0.0"
+ org.eclipse.emf.ecore;visibility:=reexport,
+ com.misc.common.moplaf.propagator;bundle-version="1.0.0";visibility:=reexport,
+ com.misc.common.moplaf.propagator.edit;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

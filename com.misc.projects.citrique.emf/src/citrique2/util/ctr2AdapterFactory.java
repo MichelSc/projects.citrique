@@ -3,12 +3,9 @@
 package citrique2.util;
 
 import citrique2.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -110,6 +107,10 @@ public class ctr2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSiloReactorLink(SiloReactorLink object) {
 				return createSiloReactorLinkAdapter();
+			}
+			@Override
+			public Adapter caseObjectWithPropagatorFunctionAdapter(com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter object) {
+				return createObjectWithPropagatorFunctionAdapterAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -282,6 +283,20 @@ public class ctr2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSiloReactorLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter <em>Object With Propagator Function Adapter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter
+	 * @generated
+	 */
+	public Adapter createObjectWithPropagatorFunctionAdapterAdapter() {
 		return null;
 	}
 

@@ -26,11 +26,9 @@ public class CitriqueObjectCalcLongDescription extends PropagatorFunctionAdapter
 	}
 
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_Description() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_Child())) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__DESCRIPTION);
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__CHILD);
 	}
 };

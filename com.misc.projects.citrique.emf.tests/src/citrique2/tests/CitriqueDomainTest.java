@@ -16,6 +16,7 @@ import junit.textui.TestRunner;
  * <ul>
  *   <li>{@link citrique2.CitriqueDomain#refresh() <em>Refresh</em>}</li>
  *   <li>{@link citrique2.CitriqueDomain#resetTouched() <em>Reset Touched</em>}</li>
+ *   <li>{@link citrique2.CitriqueDomain#activate() <em>Activate</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -95,6 +96,19 @@ public class CitriqueDomainTest extends CitriqueObjectTest {
 	 * @generated
 	 */
 	public void testResetTouched() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link citrique2.CitriqueDomain#activate() <em>Activate</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see citrique2.CitriqueDomain#activate()
+	 * @generated
+	 */
+	public void testActivate() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

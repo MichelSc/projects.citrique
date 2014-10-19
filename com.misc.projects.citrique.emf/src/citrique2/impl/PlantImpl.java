@@ -144,13 +144,16 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 		super();
 	}
 
-	@Override
-	protected void constructPropagatorFunctionAdapters() {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void addPropagatorFunctionAdapter() {
+		super.addPropagatorFunctionAdapter();
 		Util.adapt(this, PlantCalcNodes.class );
 		Util.adapt(this, PlantCalcLinks.class);
 		Util.adapt(this, PlantCalcObjects.class);
 		Util.adapt(this, PlantCalcChildren.class);
-		super.constructPropagatorFunctionAdapters();
 	}
 
 	/**

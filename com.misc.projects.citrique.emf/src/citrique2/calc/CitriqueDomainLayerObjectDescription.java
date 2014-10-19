@@ -18,6 +18,8 @@ public class CitriqueDomainLayerObjectDescription extends PropagatorFunctionAdap
 		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(domain, CitriqueDomainScope.class);
 		return parent;
 	}
+	
+	
 	@Override
 	protected PropagatorFunctionAdapters getAntecedents() {
 		Notifier target = this.target;

@@ -56,6 +56,7 @@ public interface Plant extends CitriqueObject {
 	 * @return the value of the '<em>Silo</em>' containment reference list.
 	 * @see citrique2.ctr2Package#getPlant_Silo()
 	 * @model containment="true"
+	 *        extendedMetaData="name='BufferSiloLink'"
 	 * @generated
 	 */
 	EList<Silo> getSilo();
@@ -72,6 +73,7 @@ public interface Plant extends CitriqueObject {
 	 * @return the value of the '<em>Reactor</em>' containment reference list.
 	 * @see citrique2.ctr2Package#getPlant_Reactor()
 	 * @model containment="true"
+	 *        extendedMetaData="name='BufferSiloLink'"
 	 * @generated
 	 */
 	EList<Reactor> getReactor();
@@ -87,7 +89,7 @@ public interface Plant extends CitriqueObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference list.
 	 * @see citrique2.ctr2Package#getPlant_Node()
-	 * @model
+	 * @model extendedMetaData="name='BufferSiloLink'"
 	 * @generated
 	 */
 	EList<PlantNode> getNode();
@@ -103,7 +105,7 @@ public interface Plant extends CitriqueObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Link</em>' reference list.
 	 * @see citrique2.ctr2Package#getPlant_Link()
-	 * @model
+	 * @model extendedMetaData="name='BufferSiloLink'"
 	 * @generated
 	 */
 	EList<PlantLink> getLink();

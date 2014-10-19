@@ -1,7 +1,7 @@
 package citrique2.calc;
 
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapterRoot;
 
-public class CitriqueDomainScope extends PropagatorFunctionAdapter {
+public class CitriqueDomainScope extends PropagatorFunctionAdapterRoot {
 
 }

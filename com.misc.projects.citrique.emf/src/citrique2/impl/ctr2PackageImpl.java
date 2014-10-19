@@ -15,13 +15,11 @@ import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Factory;
 import citrique2.ctr2Package;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -153,6 +151,9 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		ctr2PackageImpl thectr2Package = (ctr2PackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ctr2PackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ctr2PackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		com.misc.common.moplaf.propagator.PropagatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thectr2Package.createPackageContents();
@@ -356,6 +357,15 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 	 */
 	public EOperation getCitriqueDomain__ResetTouched() {
 		return citriqueDomainEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCitriqueDomain__Activate() {
+		return citriqueDomainEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -732,6 +742,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANT);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___REFRESH);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___RESET_TOUCHED);
+		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___ACTIVATE);
 
 		plantObjectEClass = createEClass(PLANT_OBJECT);
 		createEReference(plantObjectEClass, PLANT_OBJECT__PLANT);
@@ -802,11 +813,15 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		com.misc.common.moplaf.propagator.PropagatorPackage thePropagatorPackage = (com.misc.common.moplaf.propagator.PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(com.misc.common.moplaf.propagator.PropagatorPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		citriqueObjectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		citriqueDomainEClass.getESuperTypes().add(this.getCitriqueObject());
 		plantObjectEClass.getESuperTypes().add(this.getCitriqueObject());
 		plantEClass.getESuperTypes().add(this.getCitriqueObject());
@@ -850,6 +865,8 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEOperation(getCitriqueDomain__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCitriqueDomain__ResetTouched(), null, "resetTouched", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getCitriqueDomain__Activate(), null, "activate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(plantObjectEClass, PlantObject.class, "PlantObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlantObject_Plant(), this.getPlant(), this.getPlant_PlantObject(), "Plant", null, 0, 1, PlantObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -903,6 +920,44 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (getPlant_Silo(), 
+		   source, 
+		   new String[] {
+			 "name", "BufferSiloLink"
+		   });	
+		addAnnotation
+		  (getPlant_Reactor(), 
+		   source, 
+		   new String[] {
+			 "name", "BufferSiloLink"
+		   });	
+		addAnnotation
+		  (getPlant_Node(), 
+		   source, 
+		   new String[] {
+			 "name", "BufferSiloLink"
+		   });	
+		addAnnotation
+		  (getPlant_Link(), 
+		   source, 
+		   new String[] {
+			 "name", "BufferSiloLink"
+		   });
 	}
 
 } //ctr2PackageImpl

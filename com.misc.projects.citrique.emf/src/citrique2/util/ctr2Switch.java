@@ -3,10 +3,8 @@
 package citrique2.util;
 
 import citrique2.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -69,6 +67,7 @@ public class ctr2Switch<T> extends Switch<T> {
 			case ctr2Package.CITRIQUE_OBJECT: {
 				CitriqueObject citriqueObject = (CitriqueObject)theEObject;
 				T result = caseCitriqueObject(citriqueObject);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(citriqueObject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -76,6 +75,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				CitriqueDomain citriqueDomain = (CitriqueDomain)theEObject;
 				T result = caseCitriqueDomain(citriqueDomain);
 				if (result == null) result = caseCitriqueObject(citriqueDomain);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(citriqueDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -83,6 +83,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				PlantObject plantObject = (PlantObject)theEObject;
 				T result = casePlantObject(plantObject);
 				if (result == null) result = caseCitriqueObject(plantObject);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(plantObject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,6 +91,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				Plant plant = (Plant)theEObject;
 				T result = casePlant(plant);
 				if (result == null) result = caseCitriqueObject(plant);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(plant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -99,6 +101,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				if (result == null) result = casePlantNode(buffer);
 				if (result == null) result = casePlantObject(buffer);
 				if (result == null) result = caseCitriqueObject(buffer);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(buffer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,6 +111,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				if (result == null) result = casePlantNode(silo);
 				if (result == null) result = casePlantObject(silo);
 				if (result == null) result = caseCitriqueObject(silo);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(silo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,6 +121,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				if (result == null) result = casePlantNode(reactor);
 				if (result == null) result = casePlantObject(reactor);
 				if (result == null) result = caseCitriqueObject(reactor);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(reactor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,6 +130,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				T result = casePlantNode(plantNode);
 				if (result == null) result = casePlantObject(plantNode);
 				if (result == null) result = caseCitriqueObject(plantNode);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(plantNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -133,6 +139,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				T result = casePlantLink(plantLink);
 				if (result == null) result = casePlantObject(plantLink);
 				if (result == null) result = caseCitriqueObject(plantLink);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(plantLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,6 +149,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				if (result == null) result = casePlantLink(bufferSiloLink);
 				if (result == null) result = casePlantObject(bufferSiloLink);
 				if (result == null) result = caseCitriqueObject(bufferSiloLink);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(bufferSiloLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -151,6 +159,7 @@ public class ctr2Switch<T> extends Switch<T> {
 				if (result == null) result = casePlantLink(siloReactorLink);
 				if (result == null) result = casePlantObject(siloReactorLink);
 				if (result == null) result = caseCitriqueObject(siloReactorLink);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(siloReactorLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -320,6 +329,21 @@ public class ctr2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSiloReactorLink(SiloReactorLink object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectWithPropagatorFunctionAdapter(com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter object) {
 		return null;
 	}
 

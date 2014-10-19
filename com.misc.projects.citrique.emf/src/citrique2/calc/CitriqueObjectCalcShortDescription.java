@@ -26,11 +26,9 @@ public class CitriqueObjectCalcShortDescription extends PropagatorFunctionAdapte
 	}
 
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_ShortName() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getCitriqueObject_ShortType())) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__SHORT_NAME);
+		this.addFeatureListener(ctr2Package.CITRIQUE_OBJECT__SHORT_TYPE);
 	}
 };

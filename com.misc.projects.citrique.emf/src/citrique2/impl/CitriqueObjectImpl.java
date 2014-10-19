@@ -210,13 +210,14 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected CitriqueObjectImpl() {
 		super();
-		this.constructPropagatorFunctionAdapters();
 	}
 	
-	protected void constructPropagatorFunctionAdapters(){
+
+	public void addPropagatorFunctionAdapter() {
 		Util.adapt(this, ContainmentListenerAdapter.class );
 		Util.adapt(this, CitriqueObjectInit.class);
 		Util.adapt(this, CitriqueObjectCalcDescription.class );
@@ -719,6 +720,9 @@ public class CitriqueObjectImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ctr2Package.CITRIQUE_OBJECT___INIT:
 				init();
+				return null;
+			case ctr2Package.CITRIQUE_OBJECT___ADD_PROPAGATOR_FUNCTION_ADAPTER:
+				addPropagatorFunctionAdapter();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

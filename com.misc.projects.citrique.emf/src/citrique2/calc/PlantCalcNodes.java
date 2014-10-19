@@ -27,12 +27,11 @@ public class PlantCalcNodes extends PropagatorFunctionAdapter {
 	}
 
 	@Override
-	public void notifyChanged(Notification msg) {
-		super.notifyChanged(msg);
-		if (  this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_Buffer() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_Silo() )
-		   || this.isFeatureChanged(msg, ctr2Package.eINSTANCE.getPlant_Reactor() )) {
-			this.touch();				
-		}
+	protected void addListeners() {
+		super.addListeners();
+		this.addFeatureListener(ctr2Package.PLANT__BUFFER);
+		this.addFeatureListener(ctr2Package.PLANT__REACTOR);
+		this.addFeatureListener(ctr2Package.PLANT__SILO);
 	}
+	
 }

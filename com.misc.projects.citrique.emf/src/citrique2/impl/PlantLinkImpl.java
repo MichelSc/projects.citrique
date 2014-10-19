@@ -97,10 +97,13 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 		super();
 	}
 
-	@Override
-	protected void constructPropagatorFunctionAdapters() {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 */
+	public void addPropagatorFunctionAdapter() {
+		super.addPropagatorFunctionAdapter();
 		Util.adapt(this, PlantLinkCalcDescription.class );
-		super.constructPropagatorFunctionAdapters();
 	}
 
 	/**
