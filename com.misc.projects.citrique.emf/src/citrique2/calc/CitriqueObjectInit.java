@@ -7,14 +7,15 @@ import citrique2.CitriqueObject;
 import citrique2.ctr2Package;
 
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapterParent;
 import com.misc.common.moplaf.propagator.Util;
 
 public class CitriqueObjectInit extends PropagatorFunctionAdapter {
 	@Override
-	protected PropagatorFunctionAdapter getParent() {
+	protected PropagatorFunctionAdapterParent getParent() {
 		CitriqueObject target = (CitriqueObject)this.getTarget();
 		EObject citriquedomain = Util.getContainer(target, ctr2Package.Literals.CITRIQUE_DOMAIN);
-		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(citriquedomain, CitriqueDomainLayerObjectInit.class);
+		PropagatorFunctionAdapterParent parent = Util.getPropagatorFunctionAdapterParent(citriquedomain, CitriqueDomainLayerObjectInit.class);
 		return parent;
 	}
 

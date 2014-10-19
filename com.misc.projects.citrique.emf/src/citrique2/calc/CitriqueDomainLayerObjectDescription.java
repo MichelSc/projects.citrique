@@ -6,16 +6,17 @@ import org.eclipse.emf.common.notify.Notifier;
 import citrique2.CitriqueDomain;
 
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapterParent;
 import com.misc.common.moplaf.propagator.PropagatorFunctionAdapters;
 import com.misc.common.moplaf.propagator.Util;
 
 public class CitriqueDomainLayerObjectDescription extends PropagatorFunctionAdapter {
 
 	@Override
-	protected PropagatorFunctionAdapter getParent() {
+	protected PropagatorFunctionAdapterParent getParent() {
 		Notifier target = this.target;
 		CitriqueDomain domain= (CitriqueDomain)target;
-		PropagatorFunctionAdapter parent = Util.getPropagatorFunctionAdapter(domain, CitriqueDomainScope.class);
+		PropagatorFunctionAdapterParent parent = Util.getPropagatorFunctionAdapterParent(domain, CitriqueDomainScope.class);
 		return parent;
 	}
 	
