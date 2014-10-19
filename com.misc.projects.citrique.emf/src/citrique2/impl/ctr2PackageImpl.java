@@ -15,6 +15,7 @@ import citrique2.Silo;
 import citrique2.SiloReactorLink;
 import citrique2.ctr2Factory;
 import citrique2.ctr2Package;
+import com.misc.common.moplaf.propagator.PropagatorPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -153,7 +154,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		isInited = true;
 
 		// Initialize simple dependencies
-		com.misc.common.moplaf.propagator.PropagatorPackage.eINSTANCE.eClass();
+		PropagatorPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thectr2Package.createPackageContents();
@@ -355,17 +356,8 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCitriqueDomain__ResetTouched() {
-		return citriqueDomainEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getCitriqueDomain__Activate() {
-		return citriqueDomainEClass.getEOperations().get(2);
+		return citriqueDomainEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -741,7 +733,6 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		citriqueDomainEClass = createEClass(CITRIQUE_DOMAIN);
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANT);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___REFRESH);
-		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___RESET_TOUCHED);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___ACTIVATE);
 
 		plantObjectEClass = createEClass(PLANT_OBJECT);
@@ -814,7 +805,7 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		com.misc.common.moplaf.propagator.PropagatorPackage thePropagatorPackage = (com.misc.common.moplaf.propagator.PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(com.misc.common.moplaf.propagator.PropagatorPackage.eNS_URI);
+		PropagatorPackage thePropagatorPackage = (PropagatorPackage)EPackage.Registry.INSTANCE.getEPackage(PropagatorPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -863,8 +854,6 @@ public class ctr2PackageImpl extends EPackageImpl implements ctr2Package {
 		initEReference(getCitriqueDomain_Plant(), this.getPlant(), null, "Plant", null, 0, -1, CitriqueDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCitriqueDomain__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCitriqueDomain__ResetTouched(), null, "resetTouched", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCitriqueDomain__Activate(), null, "activate", 0, 1, IS_UNIQUE, IS_ORDERED);
 

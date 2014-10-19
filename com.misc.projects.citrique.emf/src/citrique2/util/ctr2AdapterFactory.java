@@ -3,6 +3,7 @@
 package citrique2.util;
 
 import citrique2.*;
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
@@ -109,7 +110,7 @@ public class ctr2AdapterFactory extends AdapterFactoryImpl {
 				return createSiloReactorLinkAdapter();
 			}
 			@Override
-			public Adapter caseObjectWithPropagatorFunctionAdapter(com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter object) {
+			public Adapter caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
 				return createObjectWithPropagatorFunctionAdapterAdapter();
 			}
 			@Override

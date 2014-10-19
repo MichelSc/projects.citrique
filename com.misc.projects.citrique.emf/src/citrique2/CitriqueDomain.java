@@ -51,14 +51,6 @@ public interface CitriqueDomain extends CitriqueObject {
 	 * @model
 	 * @generated
 	 */
-	void resetTouched();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
 	void activate();
 
 } // CitriqueDomain

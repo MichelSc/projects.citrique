@@ -43,7 +43,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CitriqueDomain" eSuperTypes="#//CitriqueObject">
     <eOperations name="refresh"/>
-    <eOperations name="resetTouched"/>
     <eOperations name="activate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" upperBound="-1"
         eType="#//Plant" containment="true"/>

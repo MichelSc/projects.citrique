@@ -31,7 +31,6 @@
     <genClasses ecoreClass="Citrique.ecore#//CitriqueDomain">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Citrique.ecore#//CitriqueDomain/Plant"/>
       <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/refresh"/>
-      <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/resetTouched"/>
       <genOperations ecoreOperation="Citrique.ecore#//CitriqueDomain/activate"/>
     </genClasses>
     <genClasses ecoreClass="Citrique.ecore#//PlantObject">

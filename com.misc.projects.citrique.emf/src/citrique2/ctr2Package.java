@@ -2,6 +2,7 @@
  */
 package citrique2;
 
+import com.misc.common.moplaf.propagator.PropagatorPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EOperation;
@@ -74,7 +75,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__CHILD = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
+	int CITRIQUE_OBJECT__CHILD = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -83,7 +84,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__PARENT = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
+	int CITRIQUE_OBJECT__PARENT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -92,7 +93,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__NAME = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
+	int CITRIQUE_OBJECT__NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -101,7 +102,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__TYPE = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
+	int CITRIQUE_OBJECT__TYPE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Short Type</b></em>' attribute.
@@ -110,7 +111,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_TYPE = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
+	int CITRIQUE_OBJECT__SHORT_TYPE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Short Description</b></em>' attribute.
@@ -119,7 +120,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
+	int CITRIQUE_OBJECT__SHORT_DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Long Description</b></em>' attribute.
@@ -128,7 +129,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__LONG_DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 6;
+	int CITRIQUE_OBJECT__LONG_DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -137,7 +138,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 7;
+	int CITRIQUE_OBJECT__DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Short Name</b></em>' attribute.
@@ -146,7 +147,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT__SHORT_NAME = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 8;
+	int CITRIQUE_OBJECT__SHORT_NAME = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Citrique Object</em>' class.
@@ -155,7 +156,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_FEATURE_COUNT = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 9;
+	int CITRIQUE_OBJECT_FEATURE_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Add Propagator Function Adapter</em>' operation.
@@ -164,7 +165,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___ADD_PROPAGATOR_FUNCTION_ADAPTER = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
+	int CITRIQUE_OBJECT___ADD_PROPAGATOR_FUNCTION_ADAPTER = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER___ADD_PROPAGATOR_FUNCTION_ADAPTER;
 
 	/**
 	 * The operation id for the '<em>Refresh Description</em>' operation.
@@ -173,7 +174,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
+	int CITRIQUE_OBJECT___REFRESH_DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Refresh Short Description</em>' operation.
@@ -182,7 +183,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
+	int CITRIQUE_OBJECT___REFRESH_SHORT_DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Refresh Long Description</em>' operation.
@@ -191,7 +192,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 2;
+	int CITRIQUE_OBJECT___REFRESH_LONG_DESCRIPTION = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Refresh Type</em>' operation.
@@ -200,7 +201,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_TYPE = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 3;
+	int CITRIQUE_OBJECT___REFRESH_TYPE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Refresh Short Type</em>' operation.
@@ -209,7 +210,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_SHORT_TYPE = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 4;
+	int CITRIQUE_OBJECT___REFRESH_SHORT_TYPE = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Refresh Children</em>' operation.
@@ -218,7 +219,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___REFRESH_CHILDREN = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 5;
+	int CITRIQUE_OBJECT___REFRESH_CHILDREN = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Init</em>' operation.
@@ -227,7 +228,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT___INIT = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
+	int CITRIQUE_OBJECT___INIT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Citrique Object</em>' class.
@@ -236,7 +237,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_OBJECT_OPERATION_COUNT = com.misc.common.moplaf.propagator.PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 7;
+	int CITRIQUE_OBJECT_OPERATION_COUNT = PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_OPERATION_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link citrique2.impl.CitriqueDomainImpl <em>Citrique Domain</em>}' class.
@@ -429,22 +430,13 @@ public interface ctr2Package extends EPackage {
 	int CITRIQUE_DOMAIN___REFRESH = CITRIQUE_OBJECT_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Reset Touched</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CITRIQUE_DOMAIN___RESET_TOUCHED = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
-
-	/**
 	 * The operation id for the '<em>Activate</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_DOMAIN___ACTIVATE = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
+	int CITRIQUE_DOMAIN___ACTIVATE = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Citrique Domain</em>' class.
@@ -453,7 +445,7 @@ public interface ctr2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_DOMAIN_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 3;
+	int CITRIQUE_DOMAIN_OPERATION_COUNT = CITRIQUE_OBJECT_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link citrique2.impl.PlantObjectImpl <em>Plant Object</em>}' class.
@@ -2656,16 +2648,6 @@ public interface ctr2Package extends EPackage {
 	EOperation getCitriqueDomain__Refresh();
 
 	/**
-	 * Returns the meta object for the '{@link citrique2.CitriqueDomain#resetTouched() <em>Reset Touched</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Reset Touched</em>' operation.
-	 * @see citrique2.CitriqueDomain#resetTouched()
-	 * @generated
-	 */
-	EOperation getCitriqueDomain__ResetTouched();
-
-	/**
 	 * Returns the meta object for the '{@link citrique2.CitriqueDomain#activate() <em>Activate</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3243,14 +3225,6 @@ public interface ctr2Package extends EPackage {
 		 * @generated
 		 */
 		EOperation CITRIQUE_DOMAIN___REFRESH = eINSTANCE.getCitriqueDomain__Refresh();
-
-		/**
-		 * The meta object literal for the '<em><b>Reset Touched</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CITRIQUE_DOMAIN___RESET_TOUCHED = eINSTANCE.getCitriqueDomain__ResetTouched();
 
 		/**
 		 * The meta object literal for the '<em><b>Activate</b></em>' operation.

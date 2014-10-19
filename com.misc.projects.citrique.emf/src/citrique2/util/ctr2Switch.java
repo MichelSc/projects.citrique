@@ -3,6 +3,7 @@
 package citrique2.util;
 
 import citrique2.*;
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -343,7 +344,7 @@ public class ctr2Switch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseObjectWithPropagatorFunctionAdapter(com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter object) {
+	public T caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
 		return null;
 	}
 

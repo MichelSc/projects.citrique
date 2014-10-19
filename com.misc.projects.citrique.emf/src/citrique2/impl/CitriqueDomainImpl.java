@@ -10,11 +10,9 @@ import citrique2.calc.CitriqueDomainLayerObjectChildren;
 import citrique2.calc.CitriqueDomainLayerObjectDescription;
 import citrique2.calc.CitriqueDomainLayerObjectInit;
 import citrique2.calc.CitriqueDomainScope;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.HashSet;
-
 import org.eclipse.emf.common.CommonPlugin;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -22,8 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import com.misc.common.moplaf.propagator.PropagatorFunctionAdapter;
 import com.misc.common.moplaf.propagator.Util;
 
 /**
@@ -101,23 +97,11 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
 
     	CommonPlugin.INSTANCE.log( "..: refresh");
-		PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
+    	CitriqueDomainScope scope = (CitriqueDomainScope)Util.getAdapter(this, CitriqueDomainScope.class);
 		scope.refresh();
     	CommonPlugin.INSTANCE.log( "..: refresh done");
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 */
-	public void resetTouched() {
-		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
-
-    	CommonPlugin.INSTANCE.log( "..: reset");
-		 PropagatorFunctionAdapter scope = (PropagatorFunctionAdapter)Util.getAdapter(this, CitriqueDomainScope.class);
-			 scope.resetTouched();
-    	CommonPlugin.INSTANCE.log( "..: reset done");
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,9 +200,6 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 		switch (operationID) {
 			case ctr2Package.CITRIQUE_DOMAIN___REFRESH:
 				refresh();
-				return null;
-			case ctr2Package.CITRIQUE_DOMAIN___RESET_TOUCHED:
-				resetTouched();
 				return null;
 			case ctr2Package.CITRIQUE_DOMAIN___ACTIVATE:
 				activate();
