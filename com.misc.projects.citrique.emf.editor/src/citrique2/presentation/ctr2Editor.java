@@ -940,6 +940,7 @@ public class ctr2Editor
 				 CitriqueDomain domain = (CitriqueDomain)object;
 				 CommonPlugin.INSTANCE.log( "..: reset domain "+ domain.toString());
 				 domain.activate();
+				 domain.refresh();
 			 }  // traversed Object is a CitriqueDomain
 		}  // traverse the EObjects
 
