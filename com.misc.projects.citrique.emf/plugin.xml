@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated Citrique -->
       <package
-            uri="http://com.misc.projects.citrique.emf"
-            class="citrique2.ctr2Package"
+            uri="http://com.misc.projects.citrique3.emf"
+            class="citrique3.Citrique3Package"
             genModel="model/Citrique.genmodel"/>
    </extension>
 

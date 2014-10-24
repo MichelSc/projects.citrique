@@ -16,7 +16,7 @@ import org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.FactoryIm
 import org.eclipse.sirius.common.tools.api.editing.FileStatusPrecommitListener;
 import org.eclipse.sirius.common.tools.api.editing.IEditingDomainFactory;
 
-import citrique2.CitriqueDomain;
+import citrique3.CitriqueDomain;
 
 public class EditingDomainFactoryCitrique extends FactoryImpl implements IEditingDomainFactory {
 

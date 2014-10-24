@@ -4,7 +4,7 @@
   <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
   <models xmi:type="ecore:EPackage" href="platform:/resource/com.misc.common.moplaf.propagator/model/propagator.ecore#/"/>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_WsrBUFdoEeSWZ7cb9SwI6Q" initialized="true">
-    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_W64ccFdoEeSWZ7cb9SwI6Q" name="citrique2 class diagram">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_W64ccFdoEeSWZ7cb9SwI6Q" name="citrique3 class diagram">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_W7ReAFdoEeSWZ7cb9SwI6Q" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_W7ReAVdoEeSWZ7cb9SwI6Q" type="Sirius" element="_W64ccFdoEeSWZ7cb9SwI6Q" measurementUnit="Pixel">
           <children xmi:type="notation:Node" xmi:id="_gEwLAFdoEeSWZ7cb9SwI6Q" type="2003" element="_gCx1EFdoEeSWZ7cb9SwI6Q">

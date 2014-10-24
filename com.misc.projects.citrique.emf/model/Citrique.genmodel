@@ -6,7 +6,7 @@
     usedGenPackages="../../com.misc.common.moplaf.propagator/model/propagator.genmodel#//propagator"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Citrique.ecore</foreignModel>
-  <genPackages prefix="ctr2" disposableProviderFactory="true" fileExtensions="ctr2"
+  <genPackages prefix="Citrique3" disposableProviderFactory="true" fileExtensions="citrique3"
       ecorePackage="Citrique.ecore#/">
     <genClasses ecoreClass="Citrique.ecore#//CitriqueObject">
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="citrique" version="7.0.0">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="citrique" version="8.1.0">
   <ownedViewpoints name="citrique.vp.standard" label="Standard Citrique ViewPoint" modelFileExtension="ctr2">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique2.Plant" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique2.Plant" enablePopupBars="true">
+      <metamodel href="../../com.misc.projects.citrique.emf/model/Citrique.ecore#/"/>
       <defaultLayer name="Default" label="Plant Diagram Default Layer">
         <nodeMappings name="plant.buffer" label="Buffer Node" semanticCandidatesExpression="[self.Buffer/]" domainClass="citrique2.Buffer">
           <style xsi:type="style:SquareDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW">
@@ -46,9 +47,9 @@
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Buffer" referenceName="Buffer">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new buffer'/]"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Buffer" referenceName="Buffer">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new buffer'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -57,9 +58,9 @@
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Silo" referenceName="Silo">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new silo'/]"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Silo" referenceName="Silo">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new silo'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -68,9 +69,9 @@
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.Reactor" referenceName="Reactor">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Name" valueExpression="['new reactor'/]"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Reactor" referenceName="Reactor">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new reactor'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -81,10 +82,10 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.Plant/]">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.BufferSiloLink" referenceName="BufferSiloLink">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Silo" valueExpression="var:target"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Buffer" valueExpression="var:source"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.Plant/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.BufferSiloLink" referenceName="BufferSiloLink">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:target"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Buffer" valueExpression="var:source"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
@@ -95,10 +96,10 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source.Plant/]">
-                  <subModelOperations xsi:type="tool:CreateInstance" typeName="citrique2.SiloReactorLink" referenceName="SiloReactorLink">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Reactor" valueExpression="var:target"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="Silo" valueExpression="var:source"/>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.Plant/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.SiloReactorLink" referenceName="SiloReactorLink">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Reactor" valueExpression="var:target"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:source"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>

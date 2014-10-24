@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: citrique2.tests
+Export-Package: citrique3.tests
 Require-Bundle: org.eclipse.core.runtime,
  com.misc.projects.citrique.emf;visibility:=reexport,
  com.misc.common.moplaf.propagator;visibility:=reexport,

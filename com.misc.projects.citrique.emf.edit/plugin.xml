@@ -9,24 +9,14 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated Citrique -->
       <factory
-            uri="http://com.misc.projects.citrique.emf"
-            class="citrique2.provider.ctr2ItemProviderAdapterFactory"
+            uri="http://com.misc.projects.citrique3.emf"
+            class="citrique3.provider.Citrique3ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
                org.eclipse.emf.edit.provider.ITreeItemContentProvider
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension
-         id="id1"
-         name="name"
-         point="org.eclipse.sirius.common.editingDomainFactory">
-      <editingDomainFactory
-            class="citrique2.extension.EditingDomainFactoryCitrique"
-            override="org.eclipse.sirius.LocalSessionEditingDomainFactory">
-      </editingDomainFactory>
    </extension>
 
 </plugin>
