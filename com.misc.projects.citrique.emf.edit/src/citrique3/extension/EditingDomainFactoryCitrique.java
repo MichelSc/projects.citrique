@@ -1,4 +1,4 @@
-package citrique2.extension;
+package citrique3.extension;
 
 
 import org.eclipse.emf.common.CommonPlugin;
