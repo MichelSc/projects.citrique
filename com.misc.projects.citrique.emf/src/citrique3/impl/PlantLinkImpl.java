@@ -4,10 +4,13 @@ package citrique3.impl;
 
 import citrique3.Citrique3Package;
 import citrique3.PlantLink;
+import citrique3.calc.PlantLinkCalcDescription;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,6 +96,11 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 	protected PlantLinkImpl() {
 		super();
 	}
+	
+	public void addPropagatorFunctionAdapter() {
+		Util.adapt(this, PlantLinkCalcDescription.class );
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

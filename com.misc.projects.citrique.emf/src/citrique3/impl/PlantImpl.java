@@ -13,6 +13,10 @@ import citrique3.PlantObject;
 import citrique3.Reactor;
 import citrique3.Silo;
 import citrique3.SiloReactorLink;
+import citrique3.calc.PlantCalcChildren;
+import citrique3.calc.PlantCalcLinks;
+import citrique3.calc.PlantCalcNodes;
+import citrique3.calc.PlantCalcObjects;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
@@ -26,6 +30,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import com.misc.common.moplaf.propagator.Util;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,6 +142,14 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	protected PlantImpl() {
 		super();
 	}
+	
+	public void addPropagatorFunctionAdapter() {
+		Util.adapt(this, PlantCalcChildren.class );
+		Util.adapt(this, PlantCalcNodes.class );
+		Util.adapt(this, PlantCalcLinks.class );
+		Util.adapt(this, PlantCalcObjects.class );
+	}
+
 
 	/**
 	 * <!-- begin-user-doc -->

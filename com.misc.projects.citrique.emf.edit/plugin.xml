@@ -18,14 +18,5 @@
                org.eclipse.emf.edit.provider.IItemLabelProvider
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
-   <extension
-         id="id1"
-         name="name"
-         point="org.eclipse.sirius.common.editingDomainFactory">
-      <editingDomainFactory
-            class="citrique3.extension.EditingDomainFactoryCitrique"
-            override="org.eclipse.sirius.LocalSessionEditingDomainFactory">
-      </editingDomainFactory>
-   </extension>
 
 </plugin>

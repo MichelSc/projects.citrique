@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="citrique" version="8.1.0">
-  <ownedViewpoints name="citrique.vp.standard" label="Standard Citrique ViewPoint" modelFileExtension="ctr2">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique2.Plant" enablePopupBars="true">
+  <ownedViewpoints name="citrique.vp.standard" label="Standard Citrique ViewPoint" modelFileExtension="citrique3">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="plant.diagram" label="Plant Diagram" titleExpression="['Plant: '+self.Name/]" domainClass="citrique3.Plant" enablePopupBars="true">
       <metamodel href="../../com.misc.projects.citrique.emf/model/Citrique.ecore#/"/>
       <defaultLayer name="Default" label="Plant Diagram Default Layer">
-        <nodeMappings name="plant.buffer" label="Buffer Node" semanticCandidatesExpression="[self.Buffer/]" domainClass="citrique2.Buffer">
+        <nodeMappings name="plant.buffer" label="Buffer Node" semanticCandidatesExpression="[self.Buffer/]" domainClass="citrique3.Buffer">
           <style xsi:type="style:SquareDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="plant.silo" label="Silo Node" semanticCandidatesExpression="[self.Silo/]" domainClass="citrique2.Silo">
+        <nodeMappings name="plant.silo" label="Silo Node" semanticCandidatesExpression="[self.Silo/]" domainClass="citrique3.Silo">
           <style xsi:type="style:LozengeNodeDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="planr.reactor" label="Reactor Node" semanticCandidatesExpression="[self.Reactor/]" domainClass="citrique2.Reactor">
+        <nodeMappings name="plant.reactor" label="Reactor Node" semanticCandidatesExpression="[self.Reactor/]" domainClass="citrique3.Reactor">
           <style xsi:type="style:EllipseNodeDescription" labelExpression="[self.Name/]" tooltipExpression="[self.LongDescription/]" resizeKind="NSEW" horizontalDiameterComputationExpression="" verticalDiameterComputationExpression="">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="plant.linkbuffersilo" label="Edge Link Buffer Silo" semanticCandidatesExpression="[self.BufferSiloLink/]" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.buffer']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetFinderExpression="[self.Silo/]" sourceFinderExpression="[self.Buffer/]" domainClass="citrique2.BufferSiloLink" useDomainElement="true">
+        <edgeMappings name="plant.linkbuffersilo" label="Edge Link Buffer Silo" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.buffer']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetFinderExpression="[self.Silo/]" sourceFinderExpression="[self.Buffer/]" domainClass="citrique3.BufferSiloLink" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="[self.Description/]">
@@ -33,7 +33,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="plant.linksiloreactor" label="Edge Link Silo Reactor" semanticCandidatesExpression="[self.SiloReactorLink/]" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='planr.reactor']" targetFinderExpression="[self.Reactor/]" sourceFinderExpression="[self.Silo/]" domainClass="citrique2.SiloReactorLink" useDomainElement="true">
+        <edgeMappings name="plant.linksiloreactor" label="Edge Link Silo Reactor" sourceMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.silo']" targetMapping="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.reactor']" targetFinderExpression="[self.Reactor/]" sourceFinderExpression="[self.Silo/]" domainClass="citrique3.SiloReactorLink" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="[self.Description/]">
@@ -48,7 +48,7 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Buffer" referenceName="Buffer">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.Buffer" referenceName="Buffer">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new buffer'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
@@ -59,18 +59,18 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Silo" referenceName="Silo">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.Silo" referenceName="Silo">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new silo'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
               </initialOperation>
             </ownedTools>
-            <ownedTools xsi:type="tool:NodeCreationDescription" name="plant.create.reactor" label="Create Reactor" nodeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='planr.reactor']">
+            <ownedTools xsi:type="tool:NodeCreationDescription" name="plant.create.reactor" label="Create Reactor" nodeMappings="//@ownedViewpoints[name='citrique.vp.standard']/@ownedRepresentations[name='plant.diagram']/@defaultLayer/@nodeMappings[name='plant.reactor']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.Reactor" referenceName="Reactor">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.Reactor" referenceName="Reactor">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Name" valueExpression="['new reactor'/]"/>
                   </subModelOperations>
                 </firstModelOperations>
@@ -82,8 +82,8 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.Plant/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.BufferSiloLink" referenceName="BufferSiloLink">
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.oclAsType(Silo).Plant/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.BufferSiloLink" referenceName="BufferSiloLink3p">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:target"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Buffer" valueExpression="var:source"/>
                   </subModelOperations>
@@ -96,8 +96,8 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.Plant/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique2.SiloReactorLink" referenceName="SiloReactorLink">
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[sourceView/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.SiloReactorLink" referenceName="SiloReactorLinkpp">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Reactor" valueExpression="var:target"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:source"/>
                   </subModelOperations>

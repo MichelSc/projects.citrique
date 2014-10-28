@@ -14,8 +14,8 @@ public class PlantCalcNodes extends PropagatorFunctionAdapter {
 
 	@Override
 	protected PropagatorFunctionAdapterParent getParent() {
-		CitriqueObject citriqueobject = (CitriqueObject)this.getTarget();
-		EObject citriquedomain = Util.getContainer(citriqueobject, Citrique3Package.Literals.CITRIQUE_DOMAIN);
+		Plant plant= (Plant)this.getTarget();
+		EObject citriquedomain = Util.getContainer(plant, Citrique3Package.Literals.CITRIQUE_DOMAIN);
 		PropagatorFunctionAdapterParent parent = Util.getPropagatorFunctionAdapterParent(citriquedomain, CitriqueDomainLayerObjectChildren.class);
 		return parent;
 	}
