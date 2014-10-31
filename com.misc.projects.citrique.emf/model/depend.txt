@@ -1,6 +1,6 @@
 install PDE (Plug-in development): do install software and filter on RCP plug-in
 
-the edit project implement the following extension
+the edit project implements the following extension
   extension: org.eclipse.sirius.common.editingDomainFactory
     with the class citrique2.extension.EditingDomainFactoryCitrique
     that overrides org.eclipse.sirius.LocalSessionEditingDomainFactory

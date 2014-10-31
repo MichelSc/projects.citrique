@@ -98,6 +98,7 @@ public class PlantLinkImpl extends PlantObjectImpl implements PlantLink {
 	}
 	
 	public void addPropagatorFunctionAdapter() {
+		super.addPropagatorFunctionAdapter();
 		Util.adapt(this, PlantLinkCalcDescription.class );
 	}
 

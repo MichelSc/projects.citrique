@@ -144,6 +144,7 @@ public class PlantImpl extends CitriqueObjectImpl implements Plant {
 	}
 	
 	public void addPropagatorFunctionAdapter() {
+		super.addPropagatorFunctionAdapter();
 		Util.adapt(this, PlantCalcChildren.class );
 		Util.adapt(this, PlantCalcNodes.class );
 		Util.adapt(this, PlantCalcLinks.class );

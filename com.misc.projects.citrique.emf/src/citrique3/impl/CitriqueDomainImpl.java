@@ -100,7 +100,9 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 
     	CommonPlugin.INSTANCE.log( "..: refresh");
     	CitriqueDomainScope scope = (CitriqueDomainScope)Util.getAdapter(this, CitriqueDomainScope.class);
-		scope.refresh();
+    	if ( scope!=null){
+    		scope.refresh();
+    	}
     	CommonPlugin.INSTANCE.log( "..: refresh done");
 	}
 

@@ -83,7 +83,7 @@
               <targetViewVariable name="targetView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[target.oclAsType(Silo).Plant/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.BufferSiloLink" referenceName="BufferSiloLink3p">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.BufferSiloLink" referenceName="BufferSiloLink">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:target"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Buffer" valueExpression="var:source"/>
                   </subModelOperations>
@@ -96,8 +96,8 @@
               <sourceViewVariable name="sourceView"/>
               <targetViewVariable name="targetView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[sourceView/]">
-                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.SiloReactorLink" referenceName="SiloReactorLinkpp">
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.Plant/]">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="citrique3.SiloReactorLink" referenceName="SiloReactorLink">
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Reactor" valueExpression="var:target"/>
                     <subModelOperations xsi:type="tool_1:SetValue" featureName="Silo" valueExpression="var:source"/>
                   </subModelOperations>
