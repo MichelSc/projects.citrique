@@ -47,7 +47,7 @@ public class EditingDomainFactoryCitrique extends FactoryImpl implements IEditin
 		@Override
 		public void notifyChanged(Notification msg) {
 			if ( msg.getFeatureID(Resource.class)!=Resource.RESOURCE__IS_LOADED ){ return ; }
-			CommonPlugin.INSTANCE.log( "ResourceActivatorAdapter.NotifyChanged "+Util.FormatNotification(this, msg));
+			//CommonPlugin.INSTANCE.log( "ResourceActivatorAdapter.NotifyChanged "+Util.FormatNotification(this, msg));
 			boolean isLoaded = msg.getNewBooleanValue();
 			if ( !isLoaded ) { return; }
 			for ( EObject object : ((Resource)msg.getNotifier()).getContents()){
@@ -64,11 +64,11 @@ public class EditingDomainFactoryCitrique extends FactoryImpl implements IEditin
 		
 		@Override
 		public Command transactionAboutToCommit(ResourceSetChangeEvent event) throws RollbackException {
-			CommonPlugin.INSTANCE.log( "ResourceListener,transaction about to commit "+event.toString());
+			//CommonPlugin.INSTANCE.log( "ResourceListener,transaction about to commit "+event.toString());
 			
 	
 			Transaction transaction = event.getTransaction();
-			CommonPlugin.INSTANCE.log( "..transaction "+(transaction==null?"null":transaction.getChangeDescription().toString()));
+			//CommonPlugin.INSTANCE.log( "..transaction "+(transaction==null?"null":transaction.getChangeDescription().toString()));
 			final TransactionalEditingDomain editingDomain = event.getEditingDomain();
 			Command refreshcommand = new AbstractCommand(){
 				
