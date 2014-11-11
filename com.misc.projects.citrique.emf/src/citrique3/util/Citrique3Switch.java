@@ -6,6 +6,7 @@ import citrique3.*;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -79,6 +80,7 @@ public class Citrique3Switch<T> extends Switch<T> {
 				CitriqueDomain citriqueDomain = (CitriqueDomain)theEObject;
 				T result = caseCitriqueDomain(citriqueDomain);
 				if (result == null) result = caseCitriqueObject(citriqueDomain);
+				if (result == null) result = caseObjectWithPropagatorFunctionAdapterScope(citriqueDomain);
 				if (result == null) result = caseObjectWithPropagatorFunctionAdapter(citriqueDomain);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -348,6 +350,21 @@ public class Citrique3Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Object With Propagator Function Adapter Scope</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
 		return null;
 	}
 

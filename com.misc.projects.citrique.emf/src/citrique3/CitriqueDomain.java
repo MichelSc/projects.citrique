@@ -2,6 +2,7 @@
  */
 package citrique3;
 
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface CitriqueDomain extends CitriqueObject {
+public interface CitriqueDomain extends CitriqueObject, ObjectWithPropagatorFunctionAdapterScope {
 	/**
 	 * Returns the value of the '<em><b>Plant</b></em>' containment reference list.
 	 * The list contents are of type {@link citrique3.Plant}.
@@ -44,13 +45,5 @@ public interface CitriqueDomain extends CitriqueObject {
 	 * @generated
 	 */
 	void refresh();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void activate();
 
 } // CitriqueDomain

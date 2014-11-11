@@ -41,9 +41,8 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ShortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CitriqueDomain" eSuperTypes="#//CitriqueObject">
+  <eClassifiers xsi:type="ecore:EClass" name="CitriqueDomain" eSuperTypes="#//CitriqueObject ../../com.misc.common.moplaf.propagator/model/propagator.ecore#//ObjectWithPropagatorFunctionAdapterScope">
     <eOperations name="refresh"/>
-    <eOperations name="activate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Plant" upperBound="-1"
         eType="#//Plant" containment="true"/>
   </eClassifiers>

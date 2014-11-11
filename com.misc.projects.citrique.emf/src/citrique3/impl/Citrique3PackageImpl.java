@@ -359,15 +359,6 @@ public class Citrique3PackageImpl extends EPackageImpl implements Citrique3Packa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCitriqueDomain__Activate() {
-		return citriqueDomainEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPlantObject() {
 		return plantObjectEClass;
 	}
@@ -736,7 +727,6 @@ public class Citrique3PackageImpl extends EPackageImpl implements Citrique3Packa
 		citriqueDomainEClass = createEClass(CITRIQUE_DOMAIN);
 		createEReference(citriqueDomainEClass, CITRIQUE_DOMAIN__PLANT);
 		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___REFRESH);
-		createEOperation(citriqueDomainEClass, CITRIQUE_DOMAIN___ACTIVATE);
 
 		plantObjectEClass = createEClass(PLANT_OBJECT);
 		createEReference(plantObjectEClass, PLANT_OBJECT__PLANT);
@@ -817,6 +807,7 @@ public class Citrique3PackageImpl extends EPackageImpl implements Citrique3Packa
 		// Add supertypes to classes
 		citriqueObjectEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapter());
 		citriqueDomainEClass.getESuperTypes().add(this.getCitriqueObject());
+		citriqueDomainEClass.getESuperTypes().add(thePropagatorPackage.getObjectWithPropagatorFunctionAdapterScope());
 		plantObjectEClass.getESuperTypes().add(this.getCitriqueObject());
 		plantEClass.getESuperTypes().add(this.getCitriqueObject());
 		bufferEClass.getESuperTypes().add(this.getPlantNode());
@@ -857,8 +848,6 @@ public class Citrique3PackageImpl extends EPackageImpl implements Citrique3Packa
 		initEReference(getCitriqueDomain_Plant(), this.getPlant(), null, "Plant", null, 0, -1, CitriqueDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCitriqueDomain__Refresh(), null, "refresh", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getCitriqueDomain__Activate(), null, "activate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(plantObjectEClass, PlantObject.class, "PlantObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlantObject_Plant(), this.getPlant(), this.getPlant_PlantObject(), "Plant", null, 0, 1, PlantObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

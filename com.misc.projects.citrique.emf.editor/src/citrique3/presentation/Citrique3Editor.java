@@ -122,6 +122,7 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import citrique3.CitriqueDomain;
 import citrique3.provider.Citrique3ItemProviderAdapterFactory;
 
+import com.misc.common.moplaf.propagator.PropagatorFunctionAdapterManager;
 import com.misc.common.moplaf.propagator.provider.PropagatorItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -933,6 +934,7 @@ public class Citrique3Editor
 			// Load the resource through the editing domain.
 			//
 			resource = editingDomain.getResourceSet().getResource(resourceURI, true);
+			resource.eAdapters().add(new PropagatorFunctionAdapterManager());
 		}
 		catch (Exception e) {
 			exception = e;
@@ -940,14 +942,6 @@ public class Citrique3Editor
 		}
 
 		CommonPlugin.INSTANCE.log( "CreateModel: after load");
-		for ( EObject object : resource.getContents()){
-			 if ( object instanceof CitriqueDomain ){
-				 CitriqueDomain domain = (CitriqueDomain)object;
-				 CommonPlugin.INSTANCE.log( "..: reset domain "+ domain.toString());
-				 domain.activate();
-				 domain.refresh();
-			 }  // traversed Object is a CitriqueDomain
-		}  // traverse the EObjects
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {

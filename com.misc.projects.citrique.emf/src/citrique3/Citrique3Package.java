@@ -428,16 +428,7 @@ public interface Citrique3Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CITRIQUE_DOMAIN___REFRESH = CITRIQUE_OBJECT_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Activate</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CITRIQUE_DOMAIN___ACTIVATE = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
+	int CITRIQUE_DOMAIN___REFRESH = CITRIQUE_OBJECT_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Citrique Domain</em>' class.
@@ -2649,16 +2640,6 @@ public interface Citrique3Package extends EPackage {
 	EOperation getCitriqueDomain__Refresh();
 
 	/**
-	 * Returns the meta object for the '{@link citrique3.CitriqueDomain#activate() <em>Activate</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Activate</em>' operation.
-	 * @see citrique3.CitriqueDomain#activate()
-	 * @generated
-	 */
-	EOperation getCitriqueDomain__Activate();
-
-	/**
 	 * Returns the meta object for class '{@link citrique3.PlantObject <em>Plant Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3226,14 +3207,6 @@ public interface Citrique3Package extends EPackage {
 		 * @generated
 		 */
 		EOperation CITRIQUE_DOMAIN___REFRESH = eINSTANCE.getCitriqueDomain__Refresh();
-
-		/**
-		 * The meta object literal for the '<em><b>Activate</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation CITRIQUE_DOMAIN___ACTIVATE = eINSTANCE.getCitriqueDomain__Activate();
 
 		/**
 		 * The meta object literal for the '{@link citrique3.impl.PlantObjectImpl <em>Plant Object</em>}' class.

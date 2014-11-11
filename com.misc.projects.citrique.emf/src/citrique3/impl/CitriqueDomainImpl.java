@@ -10,6 +10,8 @@ import citrique3.calc.CitriqueDomainLayerObjectDescription;
 import citrique3.calc.CitriqueDomainLayerObjectInit;
 import citrique3.calc.CitriqueDomainScope;
 
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
+import com.misc.common.moplaf.propagator.PropagatorPackage;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
@@ -110,19 +112,6 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 */
-	public void activate() {
-		CommonPlugin.INSTANCE.log( "domain "+ this.toString());
-
-    	CommonPlugin.INSTANCE.log( "..: activate");
-    	CitriqueDomainScope scope = (CitriqueDomainScope)Util.adapt(this, CitriqueDomainScope.class);	
-		scope.activate();
-    	CommonPlugin.INSTANCE.log( "..: activation done");
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -200,13 +189,26 @@ public class CitriqueDomainImpl extends CitriqueObjectImpl implements CitriqueDo
 	 * @generated
 	 */
 	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == ObjectWithPropagatorFunctionAdapterScope.class) {
+			switch (baseOperationID) {
+				case PropagatorPackage.OBJECT_WITH_PROPAGATOR_FUNCTION_ADAPTER_SCOPE___REFRESH: return Citrique3Package.CITRIQUE_DOMAIN___REFRESH;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case Citrique3Package.CITRIQUE_DOMAIN___REFRESH:
 				refresh();
-				return null;
-			case Citrique3Package.CITRIQUE_DOMAIN___ACTIVATE:
-				activate();
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

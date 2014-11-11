@@ -6,6 +6,7 @@ import citrique3.*;
 
 import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapter;
 
+import com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -116,6 +117,10 @@ public class Citrique3AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseObjectWithPropagatorFunctionAdapter(ObjectWithPropagatorFunctionAdapter object) {
 				return createObjectWithPropagatorFunctionAdapterAdapter();
+			}
+			@Override
+			public Adapter caseObjectWithPropagatorFunctionAdapterScope(ObjectWithPropagatorFunctionAdapterScope object) {
+				return createObjectWithPropagatorFunctionAdapterScopeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -302,6 +307,20 @@ public class Citrique3AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectWithPropagatorFunctionAdapterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope <em>Object With Propagator Function Adapter Scope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.misc.common.moplaf.propagator.ObjectWithPropagatorFunctionAdapterScope
+	 * @generated
+	 */
+	public Adapter createObjectWithPropagatorFunctionAdapterScopeAdapter() {
 		return null;
 	}
 
